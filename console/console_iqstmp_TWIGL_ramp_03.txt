@@ -1,0 +1,3698 @@
+
+************************************************************************************
+
+                                     YakTest       
+
+************************************************************************************
+
+
+
+YAK version:             git commit 9828d9d on 2016-04-14
+
+Framework Information:
+MOOSE version:           git commit 8582609 on 2016-04-15
+PETSc Version:           3.6.3
+Current Time:            Tue Apr 19 17:09:20 2016
+Executable Timestamp:    Fri Apr 15 13:41:31 2016
+
+Parallelism:
+  Num Processors:        6
+  Num Threads:           1
+
+
+ Total 18 values read, 2 function(s) found in material seed2!
+
+Objects counting with Action *diff* :
+      Variables - 2
+   AuxVariables - 4
+        Kernels - 12
+     AuxKernels - 2
+            BCs - 4
+ Postprocessors - 6
+    UserObjects - 1
+
+[33m*** Warning, This code is deprecated, and likely to be removed in future library versions!
+Factory::create() is deprecated, please use Factory::create<T>() instead
+/home/prinzach/projects/moose/framework/src/base/Factory.C, line 55, compiled Apr 15 2016 at 13:24:56 ***[39m
+
+Running App: main
+Mesh: 
+  Distribution:            serial
+  Mesh Dimension:          2
+  Spatial Dimension:       2
+  Nodes:                   
+    Total:                 6561
+    Local:                 1139
+  Elems:                   
+    Total:                 8500
+    Local:                 1442
+  Num Subdomains:          3
+  Num Partitions:          6
+  Partitioner:             metis
+
+Nonlinear System:
+  Num DOFs:                13122
+  Num Local DOFs:          2278
+  Variables:               { "sflux_g0" "sflux_g1" } 
+  Finite Element Types:    "LAGRANGE" 
+  Approximation Orders:    "FIRST" 
+
+Auxiliary System:
+  Num DOFs:                77444
+  Num Local DOFs:          13092
+  Variables:               { "adjoint_flux_g0" "adjoint_flux_g1" } { "IQSresidual_g0" "IQSresidual_g1" 
+                             } { "fission_source" "diff_dnp_i0" } 
+  Finite Element Types:    "LAGRANGE" "LAGRANGE" "L2_LAGRANGE" 
+  Approximation Orders:    "FIRST" "FIRST" "FIRST" 
+
+Execution Information:
+  Executioner:             IQStmp
+  TimeStepper:             ConstantDT
+  Solver Mode:             Preconditioned JFNK
+  Preconditioner:          hypre boomeramg 
+
+
+
+[36mInitializing MultiApps[39m
+[36minitial_solve0: [39m
+[36minitial_solve0: [39m Total 16 values read, 2 function(s) found in material seed2!
+[36minitial_solve0: [39m
+[36minitial_solve0: [39mObjects counting with Action *diff* :
+[36minitial_solve0: [39m      Variables - 2
+[36minitial_solve0: [39m   AuxVariables - 2
+[36minitial_solve0: [39m        Kernels - 8
+[36minitial_solve0: [39m     AuxKernels - 2
+[36minitial_solve0: [39m            BCs - 2
+[36minitial_solve0: [39m Postprocessors - 2
+[36minitial_solve0: [39m
+[36minitial_solve0: [39m
+[36minitial_solve0: [39mRunning App: initial_solve0
+[36minitial_solve0: [39mParallelism:
+[36minitial_solve0: [39m  Num Processors:          6
+[36minitial_solve0: [39m  Num Threads:             1
+[36minitial_solve0: [39m
+[36minitial_solve0: [39mMesh: 
+[36minitial_solve0: [39m  Distribution:            serial
+[36minitial_solve0: [39m  Mesh Dimension:          2
+[36minitial_solve0: [39m  Spatial Dimension:       2
+[36minitial_solve0: [39m  Nodes:                   
+[36minitial_solve0: [39m    Total:                 6561
+[36minitial_solve0: [39m    Local:                 1139
+[36minitial_solve0: [39m  Elems:                   
+[36minitial_solve0: [39m    Total:                 8500
+[36minitial_solve0: [39m    Local:                 1442
+[36minitial_solve0: [39m  Num Subdomains:          3
+[36minitial_solve0: [39m  Num Partitions:          6
+[36minitial_solve0: [39m  Partitioner:             metis
+[36minitial_solve0: [39m
+[36minitial_solve0: [39mNonlinear System:
+[36minitial_solve0: [39m  Num DOFs:                13122
+[36minitial_solve0: [39m  Num Local DOFs:          2278
+[36minitial_solve0: [39m  Variables:               { "sflux_g0" "sflux_g1" } 
+[36minitial_solve0: [39m  Finite Element Types:    "LAGRANGE" 
+[36minitial_solve0: [39m  Approximation Orders:    "FIRST" 
+[36minitial_solve0: [39m
+[36minitial_solve0: [39mAuxiliary System:
+[36minitial_solve0: [39m  Num DOFs:                51200
+[36minitial_solve0: [39m  Num Local DOFs:          8536
+[36minitial_solve0: [39m  Variables:               { "fission_source" "diff_dnp_i0" } 
+[36minitial_solve0: [39m  Finite Element Types:    "L2_LAGRANGE" 
+[36minitial_solve0: [39m  Approximation Orders:    "FIRST" 
+[36minitial_solve0: [39m
+[36minitial_solve0: [39mExecution Information:
+[36minitial_solve0: [39m  Executioner:             NonlinearEigen
+[36minitial_solve0: [39m  Solver Mode:             Preconditioned JFNK
+[36minitial_solve0: [39m  Preconditioner:          hypre boomeramg 
+[36minitial_solve0: [39m
+[36minitial_solve0: [39m
+[36minitial_solve0: [39m
+[36minitial_solve0: [39m
+[36minitial_solve0: [39m|Bx| = 1.0000000000
+[36minitial_solve0: [39m
+[36minitial_solve0: [39mTime Step  0, time = 0
+[36minitial_solve0: [39m                dt = 1
+[36minitial_solve0: [39m
+[36minitial_solve0: [39mPostprocessor Values:
+[36minitial_solve0: [39m+----------------+----------------+-------------------------+----------------+---------------------+
+[36minitial_solve0: [39m| time           | eigenvalue     | fission_source_integral | power          | solution_difference |
+[36minitial_solve0: [39m+----------------+----------------+-------------------------+----------------+---------------------+
+[36minitial_solve0: [39m|   0.000000e+00 |   1.000000e+00 |            1.000000e+00 |   0.000000e+00 |        1.448151e-02 |
+[36minitial_solve0: [39m+----------------+----------------+-------------------------+----------------+---------------------+
+[36minitial_solve0: [39m
+[36minitial_solve0: [39m Free power iteration starts
+[36minitial_solve0: [39m
+[36minitial_solve0: [39m Power iterations starts
+[36minitial_solve0: [39m ________________________________________________________________________________ 
+[36minitial_solve0: [39m Power iteration= 0
+[36minitial_solve0: [39m0  Nonlinear |R| = [32m2.818272e-02[39m
+[36minitial_solve0: [39m0       Linear |R| = [32m2.818272e-02[39m
+[36minitial_solve0: [39m1       Linear |R| = [32m4.836464e-03[39m
+[36minitial_solve0: [39m2       Linear |R| = [32m2.519466e-04[39m
+[36minitial_solve0: [39m1  Nonlinear |R| = [32m2.519466e-04[39m
+[36minitial_solve0: [39m
+[36minitial_solve0: [39m +================+=====================+
+[36minitial_solve0: [39m | iteration      | eigenvalue          |
+[36minitial_solve0: [39m +================+=====================+
+[36minitial_solve0: [39m |              0 |      8.36611068e-01 |
+[36minitial_solve0: [39m +================+=====================+
+[36minitial_solve0: [39m
+[36minitial_solve0: [39m ________________________________________________________________________________ 
+[36minitial_solve0: [39m Power iteration= 1
+[36minitial_solve0: [39m0  Nonlinear |R| = [32m2.508837e-03[39m
+[36minitial_solve0: [39m0       Linear |R| = [32m2.508837e-03[39m
+[36minitial_solve0: [39m1       Linear |R| = [32m7.083277e-04[39m
+[36minitial_solve0: [39m2       Linear |R| = [32m3.523977e-05[39m
+[36minitial_solve0: [39m3       Linear |R| = [32m1.211950e-06[39m
+[36minitial_solve0: [39m1  Nonlinear |R| = [32m1.211953e-06[39m
+[36minitial_solve0: [39m
+[36minitial_solve0: [39m +================+=====================+
+[36minitial_solve0: [39m | iteration      | eigenvalue          |
+[36minitial_solve0: [39m +================+=====================+
+[36minitial_solve0: [39m |              0 |      8.36611068e-01 |
+[36minitial_solve0: [39m |              1 |      8.90333485e-01 |
+[36minitial_solve0: [39m +================+=====================+
+[36minitial_solve0: [39m
+[36minitial_solve0: [39m ________________________________________________________________________________ 
+[36minitial_solve0: [39m Power iteration= 2
+[36minitial_solve0: [39m0  Nonlinear |R| = [32m8.257285e-04[39m
+[36minitial_solve0: [39m0       Linear |R| = [32m8.257285e-04[39m
+[36minitial_solve0: [39m1       Linear |R| = [32m3.175819e-04[39m
+[36minitial_solve0: [39m2       Linear |R| = [32m1.705556e-05[39m
+[36minitial_solve0: [39m3       Linear |R| = [32m5.299253e-07[39m
+[36minitial_solve0: [39m1  Nonlinear |R| = [32m5.299262e-07[39m
+[36minitial_solve0: [39m
+[36minitial_solve0: [39m +================+=====================+
+[36minitial_solve0: [39m | iteration      | eigenvalue          |
+[36minitial_solve0: [39m +================+=====================+
+[36minitial_solve0: [39m |              0 |      8.36611068e-01 |
+[36minitial_solve0: [39m |              1 |      8.90333485e-01 |
+[36minitial_solve0: [39m |              2 |      8.99734995e-01 |
+[36minitial_solve0: [39m +================+=====================+
+[36minitial_solve0: [39m
+[36minitial_solve0: [39m ________________________________________________________________________________ 
+[36minitial_solve0: [39m Power iteration= 3
+[36minitial_solve0: [39m0  Nonlinear |R| = [32m5.737982e-04[39m
+[36minitial_solve0: [39m0       Linear |R| = [32m5.737982e-04[39m
+[36minitial_solve0: [39m1       Linear |R| = [32m2.275001e-04[39m
+[36minitial_solve0: [39m2       Linear |R| = [32m1.229306e-05[39m
+[36minitial_solve0: [39m3       Linear |R| = [32m3.997956e-07[39m
+[36minitial_solve0: [39m1  Nonlinear |R| = [32m3.997939e-07[39m
+[36minitial_solve0: [39m
+[36minitial_solve0: [39m +================+=====================+
+[36minitial_solve0: [39m | iteration      | eigenvalue          |
+[36minitial_solve0: [39m +================+=====================+
+[36minitial_solve0: [39m |              0 |      8.36611068e-01 |
+[36minitial_solve0: [39m |              1 |      8.90333485e-01 |
+[36minitial_solve0: [39m |              2 |      8.99734995e-01 |
+[36minitial_solve0: [39m |              3 |      9.04007816e-01 |
+[36minitial_solve0: [39m +================+=====================+
+[36minitial_solve0: [39m
+[36minitial_solve0: [39m ________________________________________________________________________________ 
+[36minitial_solve0: [39m
+[36minitial_solve0: [39mPostprocessor Values:
+[36minitial_solve0: [39m+----------------+----------------+-------------------------+----------------+---------------------+
+[36minitial_solve0: [39m| time           | eigenvalue     | fission_source_integral | power          | solution_difference |
+[36minitial_solve0: [39m+----------------+----------------+-------------------------+----------------+---------------------+
+[36minitial_solve0: [39m|   0.000000e+00 |   1.000000e+00 |            1.000000e+00 |   0.000000e+00 |        1.448151e-02 |
+[36minitial_solve0: [39m|   1.000000e+00 |   9.040078e-01 |            9.040078e-01 |   9.040078e-01 |        4.189179e-04 |
+[36minitial_solve0: [39m+----------------+----------------+-------------------------+----------------+---------------------+
+[36minitial_solve0: [39m
+[36madjoint_solve0: [39m
+[36madjoint_solve0: [39m Total 16 values read, 2 function(s) found in material seed2!
+[36madjoint_solve0: [39m
+[36madjoint_solve0: [39mObjects counting with Action *diff* :
+[36madjoint_solve0: [39m      Variables - 2
+[36madjoint_solve0: [39m   AuxVariables - 2
+[36madjoint_solve0: [39m        Kernels - 8
+[36madjoint_solve0: [39m     AuxKernels - 2
+[36madjoint_solve0: [39m            BCs - 2
+[36madjoint_solve0: [39m Postprocessors - 2
+[36madjoint_solve0: [39m
+[36madjoint_solve0: [39m
+[36madjoint_solve0: [39mRunning App: adjoint_solve0
+[36madjoint_solve0: [39mParallelism:
+[36madjoint_solve0: [39m  Num Processors:          6
+[36madjoint_solve0: [39m  Num Threads:             1
+[36madjoint_solve0: [39m
+[36madjoint_solve0: [39mMesh: 
+[36madjoint_solve0: [39m  Distribution:            serial
+[36madjoint_solve0: [39m  Mesh Dimension:          2
+[36madjoint_solve0: [39m  Spatial Dimension:       2
+[36madjoint_solve0: [39m  Nodes:                   
+[36madjoint_solve0: [39m    Total:                 6561
+[36madjoint_solve0: [39m    Local:                 1139
+[36madjoint_solve0: [39m  Elems:                   
+[36madjoint_solve0: [39m    Total:                 8500
+[36madjoint_solve0: [39m    Local:                 1442
+[36madjoint_solve0: [39m  Num Subdomains:          3
+[36madjoint_solve0: [39m  Num Partitions:          6
+[36madjoint_solve0: [39m  Partitioner:             metis
+[36madjoint_solve0: [39m
+[36madjoint_solve0: [39mNonlinear System:
+[36madjoint_solve0: [39m  Num DOFs:                13122
+[36madjoint_solve0: [39m  Num Local DOFs:          2278
+[36madjoint_solve0: [39m  Variables:               { "sflux_g0" "sflux_g1" } 
+[36madjoint_solve0: [39m  Finite Element Types:    "LAGRANGE" 
+[36madjoint_solve0: [39m  Approximation Orders:    "FIRST" 
+[36madjoint_solve0: [39m
+[36madjoint_solve0: [39mAuxiliary System:
+[36madjoint_solve0: [39m  Num DOFs:                51200
+[36madjoint_solve0: [39m  Num Local DOFs:          8536
+[36madjoint_solve0: [39m  Variables:               { "fission_source" "diff_dnp_i0" } 
+[36madjoint_solve0: [39m  Finite Element Types:    "L2_LAGRANGE" 
+[36madjoint_solve0: [39m  Approximation Orders:    "FIRST" 
+[36madjoint_solve0: [39m
+[36madjoint_solve0: [39mExecution Information:
+[36madjoint_solve0: [39m  Executioner:             NonlinearEigen
+[36madjoint_solve0: [39m  Solver Mode:             Preconditioned JFNK
+[36madjoint_solve0: [39m  Preconditioner:          hypre boomeramg 
+[36madjoint_solve0: [39m
+[36madjoint_solve0: [39m
+[36madjoint_solve0: [39m
+[36madjoint_solve0: [39m
+[36madjoint_solve0: [39m|Bx| = 1.0000000000
+[36madjoint_solve0: [39m
+[36madjoint_solve0: [39mTime Step  0, time = 0
+[36madjoint_solve0: [39m                dt = 1
+[36madjoint_solve0: [39m
+[36madjoint_solve0: [39mPostprocessor Values:
+[36madjoint_solve0: [39m+----------------+----------------+-------------------------+----------------+---------------------+
+[36madjoint_solve0: [39m| time           | eigenvalue     | fission_source_integral | power          | solution_difference |
+[36madjoint_solve0: [39m+----------------+----------------+-------------------------+----------------+---------------------+
+[36madjoint_solve0: [39m|   0.000000e+00 |   1.000000e+00 |            1.000000e+00 |   0.000000e+00 |        1.250000e-02 |
+[36madjoint_solve0: [39m+----------------+----------------+-------------------------+----------------+---------------------+
+[36madjoint_solve0: [39m
+[36madjoint_solve0: [39m Free power iteration starts
+[36madjoint_solve0: [39m
+[36madjoint_solve0: [39m Power iterations starts
+[36madjoint_solve0: [39m ________________________________________________________________________________ 
+[36madjoint_solve0: [39m Power iteration= 0
+[36madjoint_solve0: [39m0  Nonlinear |R| = [32m2.833198e-03[39m
+[36madjoint_solve0: [39m0       Linear |R| = [32m2.833198e-03[39m
+[36madjoint_solve0: [39m1       Linear |R| = [32m8.466239e-05[39m
+[36madjoint_solve0: [39m2       Linear |R| = [32m3.860565e-06[39m
+[36madjoint_solve0: [39m1  Nonlinear |R| = [32m3.860565e-06[39m
+[36madjoint_solve0: [39m
+[36madjoint_solve0: [39m +================+=====================+
+[36madjoint_solve0: [39m | iteration      | eigenvalue          |
+[36madjoint_solve0: [39m +================+=====================+
+[36madjoint_solve0: [39m |              0 |      7.29913868e-01 |
+[36madjoint_solve0: [39m +================+=====================+
+[36madjoint_solve0: [39m
+[36madjoint_solve0: [39m ________________________________________________________________________________ 
+[36madjoint_solve0: [39m Power iteration= 1
+[36madjoint_solve0: [39m0  Nonlinear |R| = [32m5.390589e-04[39m
+[36madjoint_solve0: [39m0       Linear |R| = [32m5.390589e-04[39m
+[36madjoint_solve0: [39m1       Linear |R| = [32m4.852740e-05[39m
+[36madjoint_solve0: [39m2       Linear |R| = [32m4.461636e-06[39m
+[36madjoint_solve0: [39m1  Nonlinear |R| = [32m4.461636e-06[39m
+[36madjoint_solve0: [39m
+[36madjoint_solve0: [39m +================+=====================+
+[36madjoint_solve0: [39m | iteration      | eigenvalue          |
+[36madjoint_solve0: [39m +================+=====================+
+[36madjoint_solve0: [39m |              0 |      7.29913868e-01 |
+[36madjoint_solve0: [39m |              1 |      8.43345198e-01 |
+[36madjoint_solve0: [39m +================+=====================+
+[36madjoint_solve0: [39m
+[36madjoint_solve0: [39m ________________________________________________________________________________ 
+[36madjoint_solve0: [39m Power iteration= 2
+[36madjoint_solve0: [39m0  Nonlinear |R| = [32m2.451762e-04[39m
+[36madjoint_solve0: [39m0       Linear |R| = [32m2.451762e-04[39m
+[36madjoint_solve0: [39m1       Linear |R| = [32m2.290590e-05[39m
+[36madjoint_solve0: [39m2       Linear |R| = [32m2.130960e-06[39m
+[36madjoint_solve0: [39m1  Nonlinear |R| = [32m2.130960e-06[39m
+[36madjoint_solve0: [39m
+[36madjoint_solve0: [39m +================+=====================+
+[36madjoint_solve0: [39m | iteration      | eigenvalue          |
+[36madjoint_solve0: [39m +================+=====================+
+[36madjoint_solve0: [39m |              0 |      7.29913868e-01 |
+[36madjoint_solve0: [39m |              1 |      8.43345198e-01 |
+[36madjoint_solve0: [39m |              2 |      8.75847465e-01 |
+[36madjoint_solve0: [39m +================+=====================+
+[36madjoint_solve0: [39m
+[36madjoint_solve0: [39m ________________________________________________________________________________ 
+[36madjoint_solve0: [39m Power iteration= 3
+[36madjoint_solve0: [39m0  Nonlinear |R| = [32m1.464982e-04[39m
+[36madjoint_solve0: [39m0       Linear |R| = [32m1.464982e-04[39m
+[36madjoint_solve0: [39m1       Linear |R| = [32m1.365913e-05[39m
+[36madjoint_solve0: [39m2       Linear |R| = [32m1.225000e-06[39m
+[36madjoint_solve0: [39m1  Nonlinear |R| = [32m1.225000e-06[39m
+[36madjoint_solve0: [39m
+[36madjoint_solve0: [39m +================+=====================+
+[36madjoint_solve0: [39m | iteration      | eigenvalue          |
+[36madjoint_solve0: [39m +================+=====================+
+[36madjoint_solve0: [39m |              0 |      7.29913868e-01 |
+[36madjoint_solve0: [39m |              1 |      8.43345198e-01 |
+[36madjoint_solve0: [39m |              2 |      8.75847465e-01 |
+[36madjoint_solve0: [39m |              3 |      8.91494398e-01 |
+[36madjoint_solve0: [39m +================+=====================+
+[36madjoint_solve0: [39m
+[36madjoint_solve0: [39m ________________________________________________________________________________ 
+[36madjoint_solve0: [39m
+[36madjoint_solve0: [39mPostprocessor Values:
+[36madjoint_solve0: [39m+----------------+----------------+-------------------------+----------------+---------------------+
+[36madjoint_solve0: [39m| time           | eigenvalue     | fission_source_integral | power          | solution_difference |
+[36madjoint_solve0: [39m+----------------+----------------+-------------------------+----------------+---------------------+
+[36madjoint_solve0: [39m|   0.000000e+00 |   1.000000e+00 |            1.000000e+00 |   0.000000e+00 |        1.250000e-02 |
+[36madjoint_solve0: [39m|   1.000000e+00 |   8.914944e-01 |            8.914944e-01 |   8.914944e-01 |        7.007040e-04 |
+[36madjoint_solve0: [39m+----------------+----------------+-------------------------+----------------+---------------------+
+[36madjoint_solve0: [39m
+[36mFinished Initializing MultiApps[39m
+[36mNo Transfers on INITIAL To MultiApps[39m
+[36mExecuting MultiApps on INITIAL[39m
+[36minitial_solve0: [39m Nonlinear iteration starts
+[36minitial_solve0: [39m0  Nonlinear |R| = [32m4.366381e-04[39m
+[36minitial_solve0: [39m0       Linear |R| = [32m4.366381e-04[39m
+[36minitial_solve0: [39m1       Linear |R| = [32m2.103013e-04[39m
+[36minitial_solve0: [39m2       Linear |R| = [32m9.568244e-05[39m
+[36minitial_solve0: [39m3       Linear |R| = [32m4.819150e-05[39m
+[36minitial_solve0: [39m4       Linear |R| = [32m2.666513e-05[39m
+[36minitial_solve0: [39m5       Linear |R| = [32m9.282535e-06[39m
+[36minitial_solve0: [39m6       Linear |R| = [32m3.833686e-06[39m
+[36minitial_solve0: [39m1  Nonlinear |R| = [32m1.659705e-05[39m
+[36minitial_solve0: [39m0       Linear |R| = [32m1.659705e-05[39m
+[36minitial_solve0: [39m1       Linear |R| = [32m8.324131e-06[39m
+[36minitial_solve0: [39m2       Linear |R| = [32m4.588187e-06[39m
+[36minitial_solve0: [39m3       Linear |R| = [32m2.321222e-06[39m
+[36minitial_solve0: [39m4       Linear |R| = [32m1.382701e-06[39m
+[36minitial_solve0: [39m5       Linear |R| = [32m6.335749e-07[39m
+[36minitial_solve0: [39m6       Linear |R| = [32m3.305858e-07[39m
+[36minitial_solve0: [39m7       Linear |R| = [32m1.479880e-07[39m
+[36minitial_solve0: [39m2  Nonlinear |R| = [32m1.493984e-07[39m
+[36minitial_solve0: [39m0       Linear |R| = [32m1.493984e-07[39m
+[36minitial_solve0: [39m1       Linear |R| = [32m1.130239e-07[39m
+[36minitial_solve0: [39m2       Linear |R| = [32m5.104221e-08[39m
+[36minitial_solve0: [39m3       Linear |R| = [32m2.827782e-08[39m
+[36minitial_solve0: [39m4       Linear |R| = [32m1.632511e-08[39m
+[36minitial_solve0: [39m5       Linear |R| = [32m8.254632e-09[39m
+[36minitial_solve0: [39m6       Linear |R| = [32m5.163273e-09[39m
+[36minitial_solve0: [39m7       Linear |R| = [32m3.459405e-09[39m
+[36minitial_solve0: [39m8       Linear |R| = [32m2.366475e-09[39m
+[36minitial_solve0: [39m9       Linear |R| = [32m1.485003e-09[39m
+[36minitial_solve0: [39m3  Nonlinear |R| = [32m1.485002e-09[39m
+[36minitial_solve0: [39m0       Linear |R| = [32m1.485002e-09[39m
+[36minitial_solve0: [39m1       Linear |R| = [32m9.809852e-10[39m
+[36minitial_solve0: [39m2       Linear |R| = [32m6.808630e-10[39m
+[36minitial_solve0: [39m3       Linear |R| = [32m4.761271e-10[39m
+[36minitial_solve0: [39m4       Linear |R| = [32m3.177499e-10[39m
+[36minitial_solve0: [39m5       Linear |R| = [32m1.531893e-10[39m
+[36minitial_solve0: [39m6       Linear |R| = [32m8.798980e-11[39m
+[36minitial_solve0: [39m7       Linear |R| = [32m3.235282e-11[39m
+[36minitial_solve0: [39m8       Linear |R| = [32m1.941855e-11[39m
+[36minitial_solve0: [39m9       Linear |R| = [32m1.032589e-11[39m
+[36minitial_solve0: [39m4  Nonlinear |R| = [32m1.032589e-11[39m
+[36minitial_solve0: [39m0       Linear |R| = [32m1.032589e-11[39m
+[36minitial_solve0: [39m1       Linear |R| = [32m9.194652e-12[39m
+[36minitial_solve0: [39m2       Linear |R| = [32m4.387974e-12[39m
+[36minitial_solve0: [39m3       Linear |R| = [32m2.889373e-12[39m
+[36minitial_solve0: [39m4       Linear |R| = [32m1.526606e-12[39m
+[36minitial_solve0: [39m5       Linear |R| = [32m1.101975e-12[39m
+[36minitial_solve0: [39m6       Linear |R| = [32m5.167964e-13[39m
+[36minitial_solve0: [39m7       Linear |R| = [32m3.599337e-13[39m
+[36minitial_solve0: [39m8       Linear |R| = [32m1.550158e-13[39m
+[36minitial_solve0: [39m9       Linear |R| = [32m1.057785e-13[39m
+[36minitial_solve0: [39m10      Linear |R| = [32m4.961564e-14[39m
+[36minitial_solve0: [39m5  Nonlinear |R| = [32m4.961797e-14[39m
+[36minitial_solve0: [39m
+[36minitial_solve0: [39m*******************************************************
+[36minitial_solve0: [39m Eigenvalue = 0.9132195712
+[36minitial_solve0: [39m*******************************************************
+[36minitial_solve0: [39m
+[36minitial_solve0: [39mPostprocessor Values:
+[36minitial_solve0: [39m+----------------+----------------+-------------------------+----------------+---------------------+
+[36minitial_solve0: [39m| time           | eigenvalue     | fission_source_integral | power          | solution_difference |
+[36minitial_solve0: [39m+----------------+----------------+-------------------------+----------------+---------------------+
+[36minitial_solve0: [39m|   0.000000e+00 |   1.000000e+00 |            1.000000e+00 |   0.000000e+00 |        1.448151e-02 |
+[36minitial_solve0: [39m|   1.000000e+00 |   9.040078e-01 |            9.040078e-01 |   9.040078e-01 |        4.189179e-04 |
+[36minitial_solve0: [39m|   2.000000e+00 |   9.132196e-01 |            9.132196e-01 |   9.132196e-01 |        1.412569e-03 |
+[36minitial_solve0: [39m+----------------+----------------+-------------------------+----------------+---------------------+
+[36minitial_solve0: [39m
+[36madjoint_solve0: [39m Nonlinear iteration starts
+[36madjoint_solve0: [39m0  Nonlinear |R| = [32m9.479765e-05[39m
+[36madjoint_solve0: [39m0       Linear |R| = [32m9.479765e-05[39m
+[36madjoint_solve0: [39m1       Linear |R| = [32m1.182439e-05[39m
+[36madjoint_solve0: [39m2       Linear |R| = [33m1.174474e-05[39m
+[36madjoint_solve0: [39m3       Linear |R| = [32m5.667390e-06[39m
+[36madjoint_solve0: [39m4       Linear |R| = [32m4.041317e-06[39m
+[36madjoint_solve0: [39m5       Linear |R| = [32m2.384072e-06[39m
+[36madjoint_solve0: [39m6       Linear |R| = [32m9.282934e-07[39m
+[36madjoint_solve0: [39m1  Nonlinear |R| = [32m6.699760e-06[39m
+[36madjoint_solve0: [39m0       Linear |R| = [32m6.699760e-06[39m
+[36madjoint_solve0: [39m1       Linear |R| = [32m1.319775e-06[39m
+[36madjoint_solve0: [39m2       Linear |R| = [32m4.981070e-07[39m
+[36madjoint_solve0: [39m3       Linear |R| = [32m2.765394e-07[39m
+[36madjoint_solve0: [39m4       Linear |R| = [32m1.824902e-07[39m
+[36madjoint_solve0: [39m5       Linear |R| = [32m1.322904e-07[39m
+[36madjoint_solve0: [39m6       Linear |R| = [32m7.261353e-08[39m
+[36madjoint_solve0: [39m7       Linear |R| = [32m2.843533e-08[39m
+[36madjoint_solve0: [39m2  Nonlinear |R| = [32m3.205287e-08[39m
+[36madjoint_solve0: [39m0       Linear |R| = [32m3.205287e-08[39m
+[36madjoint_solve0: [39m1       Linear |R| = [32m2.929623e-08[39m
+[36madjoint_solve0: [39m2       Linear |R| = [32m1.149082e-08[39m
+[36madjoint_solve0: [39m3       Linear |R| = [32m1.048041e-08[39m
+[36madjoint_solve0: [39m4       Linear |R| = [32m4.786765e-09[39m
+[36madjoint_solve0: [39m5       Linear |R| = [32m2.800765e-09[39m
+[36madjoint_solve0: [39m6       Linear |R| = [32m1.203403e-09[39m
+[36madjoint_solve0: [39m7       Linear |R| = [32m8.871658e-10[39m
+[36madjoint_solve0: [39m8       Linear |R| = [32m3.607117e-10[39m
+[36madjoint_solve0: [39m9       Linear |R| = [32m2.178978e-10[39m
+[36madjoint_solve0: [39m3  Nonlinear |R| = [32m2.179683e-10[39m
+[36madjoint_solve0: [39m0       Linear |R| = [32m2.179683e-10[39m
+[36madjoint_solve0: [39m1       Linear |R| = [33m2.151884e-10[39m
+[36madjoint_solve0: [39m2       Linear |R| = [32m1.302275e-10[39m
+[36madjoint_solve0: [39m3       Linear |R| = [32m1.152052e-10[39m
+[36madjoint_solve0: [39m4       Linear |R| = [32m5.143124e-11[39m
+[36madjoint_solve0: [39m5       Linear |R| = [32m2.210678e-11[39m
+[36madjoint_solve0: [39m6       Linear |R| = [32m1.216265e-11[39m
+[36madjoint_solve0: [39m7       Linear |R| = [32m9.528268e-12[39m
+[36madjoint_solve0: [39m8       Linear |R| = [32m4.602238e-12[39m
+[36madjoint_solve0: [39m9       Linear |R| = [32m3.369076e-12[39m
+[36madjoint_solve0: [39m10      Linear |R| = [32m1.610891e-12[39m
+[36madjoint_solve0: [39m4  Nonlinear |R| = [32m1.610897e-12[39m
+[36madjoint_solve0: [39m0       Linear |R| = [32m1.610897e-12[39m
+[36madjoint_solve0: [39m1       Linear |R| = [33m1.607431e-12[39m
+[36madjoint_solve0: [39m2       Linear |R| = [32m7.832612e-13[39m
+[36madjoint_solve0: [39m3       Linear |R| = [32m7.262831e-13[39m
+[36madjoint_solve0: [39m4       Linear |R| = [32m3.679270e-13[39m
+[36madjoint_solve0: [39m5       Linear |R| = [32m1.855983e-13[39m
+[36madjoint_solve0: [39m6       Linear |R| = [32m9.141408e-14[39m
+[36madjoint_solve0: [39m7       Linear |R| = [32m7.993183e-14[39m
+[36madjoint_solve0: [39m8       Linear |R| = [32m4.219852e-14[39m
+[36madjoint_solve0: [39m9       Linear |R| = [32m2.054257e-14[39m
+[36madjoint_solve0: [39m10      Linear |R| = [32m1.624572e-14[39m
+[36madjoint_solve0: [39m11      Linear |R| = [32m6.770567e-15[39m
+[36madjoint_solve0: [39m5  Nonlinear |R| = [32m6.770627e-15[39m
+[36madjoint_solve0: [39m
+[36madjoint_solve0: [39m*******************************************************
+[36madjoint_solve0: [39m Eigenvalue = 0.9132195712
+[36madjoint_solve0: [39m*******************************************************
+[36madjoint_solve0: [39m
+[36madjoint_solve0: [39mPostprocessor Values:
+[36madjoint_solve0: [39m+----------------+----------------+-------------------------+----------------+---------------------+
+[36madjoint_solve0: [39m| time           | eigenvalue     | fission_source_integral | power          | solution_difference |
+[36madjoint_solve0: [39m+----------------+----------------+-------------------------+----------------+---------------------+
+[36madjoint_solve0: [39m|   0.000000e+00 |   1.000000e+00 |            1.000000e+00 |   0.000000e+00 |        1.250000e-02 |
+[36madjoint_solve0: [39m|   1.000000e+00 |   8.914944e-01 |            8.914944e-01 |   8.914944e-01 |        7.007040e-04 |
+[36madjoint_solve0: [39m|   2.000000e+00 |   9.132196e-01 |            9.132196e-01 |   9.132196e-01 |        1.735931e-03 |
+[36madjoint_solve0: [39m+----------------+----------------+-------------------------+----------------+---------------------+
+[36madjoint_solve0: [39m
+Jobs complete: 1/6Jobs complete: 2/6Jobs complete: 3/6Jobs complete: 4/6Jobs complete: 5/6Jobs complete: 6/6
+Waiting For Other Processors To Finish
+[36mFinished Executing MultiApps on INITIAL[39m
+[36mStarting Transfers on INITIAL From MultiApps[39m
+Beginning Variable Transfer copy_solution
+Finished Variable Transfer copy_solution
+Beginning Variable Transfer copy_adjoint
+Finished Variable Transfer copy_adjoint
+>>>> Beginning Eigenvalue Transfer copy_eigenvalue
+>>>> Finished Eigenvalue Transfer copy_eigenvalue with eigenvalue 0.91322
+Jobs complete: 1/6Jobs complete: 2/6Jobs complete: 3/6Jobs complete: 4/6Jobs complete: 5/6Jobs complete: 6/6
+Waiting For Transfers To Finish
+[36mTransfers INITIAL Are Finished[39m
+Backing Up MultiApps
+Waiting For Other Processors To Finish
+Jobs complete: 1/6Jobs complete: 2/6Jobs complete: 3/6Jobs complete: 4/6Jobs complete: 5/6Jobs complete: 6/6
+Finished Backing Up MultiApps
+
+Time Step  0, time = 0
+                dt = 0
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |   4.957726e+01 |   9.132196e-01 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step  1, time = 0.0125
+                dt = 0.0125
+0  Nonlinear |R| = [32m5.248613e-06[39m
+0       Linear |R| = [32m5.248613e-06[39m
+1       Linear |R| = [32m4.221535e-06[39m
+2       Linear |R| = [32m2.909931e-06[39m
+3       Linear |R| = [32m2.731884e-06[39m
+4       Linear |R| = [32m2.166275e-06[39m
+5       Linear |R| = [33m2.160323e-06[39m
+6       Linear |R| = [32m2.008771e-06[39m
+7       Linear |R| = [33m2.005842e-06[39m
+8       Linear |R| = [33m1.909039e-06[39m
+9       Linear |R| = [33m1.887927e-06[39m
+10      Linear |R| = [32m1.553795e-06[39m
+11      Linear |R| = [32m1.292910e-06[39m
+12      Linear |R| = [32m6.201095e-07[39m
+13      Linear |R| = [32m4.132384e-07[39m
+14      Linear |R| = [32m1.772939e-07[39m
+15      Linear |R| = [32m9.546878e-08[39m
+16      Linear |R| = [32m3.587564e-08[39m
+17      Linear |R| = [32m1.594311e-08[39m
+18      Linear |R| = [32m7.170954e-09[39m
+19      Linear |R| = [32m2.709868e-09[39m
+20      Linear |R| = [32m1.727526e-09[39m
+21      Linear |R| = [32m8.828604e-10[39m
+22      Linear |R| = [32m8.188754e-10[39m
+23      Linear |R| = [32m3.989738e-10[39m
+24      Linear |R| = [32m1.870555e-10[39m
+25      Linear |R| = [32m6.983155e-11[39m
+26      Linear |R| = [32m3.284713e-11[39m
+1  Nonlinear |R| = [32m7.548757e-11[39m
+0       Linear |R| = [32m7.548757e-11[39m
+1       Linear |R| = [32m1.681675e-11[39m
+2       Linear |R| = [32m9.317878e-12[39m
+3       Linear |R| = [32m3.683821e-12[39m
+4       Linear |R| = [32m2.150557e-12[39m
+5       Linear |R| = [32m1.376061e-12[39m
+6       Linear |R| = [32m9.017515e-13[39m
+7       Linear |R| = [32m7.617798e-13[39m
+8       Linear |R| = [32m4.209443e-13[39m
+9       Linear |R| = [32m3.459476e-13[39m
+10      Linear |R| = [32m2.962346e-13[39m
+11      Linear |R| = [33m2.911940e-13[39m
+12      Linear |R| = [33m2.829708e-13[39m
+13      Linear |R| = [32m2.676426e-13[39m
+14      Linear |R| = [32m2.304650e-13[39m
+15      Linear |R| = [32m2.050401e-13[39m
+16      Linear |R| = [32m1.550497e-13[39m
+17      Linear |R| = [32m1.138929e-13[39m
+18      Linear |R| = [32m5.665487e-14[39m
+19      Linear |R| = [32m2.722651e-14[39m
+20      Linear |R| = [32m9.120094e-15[39m
+21      Linear |R| = [32m3.944084e-15[39m
+22      Linear |R| = [32m1.104091e-15[39m
+23      Linear |R| = [32m4.955368e-16[39m
+2  Nonlinear |R| = [32m5.184336e-16[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 1
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |   4.957726e+01 |   9.132196e-01 |
+|   1.250000e-02 |   1.000000e+00 |   5.069099e+01 |   9.339189e-01 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step  2, time = 0.025
+                dt = 0.0125
+0  Nonlinear |R| = [32m5.669594e-06[39m
+0       Linear |R| = [32m5.669594e-06[39m
+1       Linear |R| = [32m4.732408e-06[39m
+2       Linear |R| = [32m3.588624e-06[39m
+3       Linear |R| = [33m3.468868e-06[39m
+4       Linear |R| = [32m2.970248e-06[39m
+5       Linear |R| = [33m2.966382e-06[39m
+6       Linear |R| = [32m2.804129e-06[39m
+7       Linear |R| = [33m2.792135e-06[39m
+8       Linear |R| = [32m2.614200e-06[39m
+9       Linear |R| = [33m2.543861e-06[39m
+10      Linear |R| = [32m1.912073e-06[39m
+11      Linear |R| = [32m1.520609e-06[39m
+12      Linear |R| = [32m7.000508e-07[39m
+13      Linear |R| = [32m4.502397e-07[39m
+14      Linear |R| = [32m1.855405e-07[39m
+15      Linear |R| = [32m9.928678e-08[39m
+16      Linear |R| = [32m3.786170e-08[39m
+17      Linear |R| = [32m1.709513e-08[39m
+18      Linear |R| = [32m7.818216e-09[39m
+19      Linear |R| = [32m2.896315e-09[39m
+20      Linear |R| = [32m1.916123e-09[39m
+21      Linear |R| = [32m1.011530e-09[39m
+22      Linear |R| = [32m9.396435e-10[39m
+23      Linear |R| = [32m4.335452e-10[39m
+24      Linear |R| = [32m1.934708e-10[39m
+25      Linear |R| = [32m7.092874e-11[39m
+26      Linear |R| = [32m3.279103e-11[39m
+1  Nonlinear |R| = [32m1.182240e-10[39m
+0       Linear |R| = [32m1.182240e-10[39m
+1       Linear |R| = [32m1.682132e-11[39m
+2       Linear |R| = [32m9.332611e-12[39m
+3       Linear |R| = [32m3.594454e-12[39m
+4       Linear |R| = [32m2.106743e-12[39m
+5       Linear |R| = [32m1.294652e-12[39m
+6       Linear |R| = [32m8.416913e-13[39m
+7       Linear |R| = [32m7.064963e-13[39m
+8       Linear |R| = [32m4.072452e-13[39m
+9       Linear |R| = [32m3.242113e-13[39m
+10      Linear |R| = [32m2.752390e-13[39m
+11      Linear |R| = [33m2.675046e-13[39m
+12      Linear |R| = [33m2.601823e-13[39m
+13      Linear |R| = [32m2.431374e-13[39m
+14      Linear |R| = [32m2.190035e-13[39m
+15      Linear |R| = [32m1.971694e-13[39m
+16      Linear |R| = [32m1.614592e-13[39m
+17      Linear |R| = [32m1.158958e-13[39m
+18      Linear |R| = [32m6.126839e-14[39m
+19      Linear |R| = [32m3.190296e-14[39m
+20      Linear |R| = [32m1.265510e-14[39m
+21      Linear |R| = [32m7.234057e-15[39m
+22      Linear |R| = [32m3.215412e-15[39m
+23      Linear |R| = [32m1.792192e-15[39m
+24      Linear |R| = [32m8.352406e-16[39m
+2  Nonlinear |R| = [32m8.519791e-16[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 2
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |   4.957726e+01 |   9.132196e-01 |
+|   1.250000e-02 |   1.000000e+00 |   5.069099e+01 |   9.339189e-01 |
+|   2.500000e-02 |   1.019541e+00 |   5.215191e+01 |   9.610597e-01 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step  3, time = 0.0375
+                dt = 0.0125
+0  Nonlinear |R| = [32m5.976350e-06[39m
+0       Linear |R| = [32m5.976350e-06[39m
+1       Linear |R| = [32m4.924470e-06[39m
+2       Linear |R| = [32m3.793885e-06[39m
+3       Linear |R| = [33m3.656669e-06[39m
+4       Linear |R| = [32m3.169531e-06[39m
+5       Linear |R| = [33m3.159861e-06[39m
+6       Linear |R| = [32m3.000563e-06[39m
+7       Linear |R| = [33m2.979205e-06[39m
+8       Linear |R| = [32m2.789634e-06[39m
+9       Linear |R| = [33m2.702544e-06[39m
+10      Linear |R| = [32m2.025565e-06[39m
+11      Linear |R| = [32m1.617383e-06[39m
+12      Linear |R| = [32m7.566838e-07[39m
+13      Linear |R| = [32m4.803410e-07[39m
+14      Linear |R| = [32m1.956239e-07[39m
+15      Linear |R| = [32m1.044770e-07[39m
+16      Linear |R| = [32m4.002790e-08[39m
+17      Linear |R| = [32m1.823837e-08[39m
+18      Linear |R| = [32m8.384404e-09[39m
+19      Linear |R| = [32m3.086150e-09[39m
+20      Linear |R| = [32m2.055318e-09[39m
+21      Linear |R| = [32m1.093159e-09[39m
+22      Linear |R| = [32m1.014281e-09[39m
+23      Linear |R| = [32m4.640837e-10[39m
+24      Linear |R| = [32m2.036033e-10[39m
+25      Linear |R| = [32m7.412452e-11[39m
+26      Linear |R| = [32m3.398810e-11[39m
+1  Nonlinear |R| = [32m1.443379e-10[39m
+0       Linear |R| = [32m1.443379e-10[39m
+1       Linear |R| = [32m1.761126e-11[39m
+2       Linear |R| = [32m9.611502e-12[39m
+3       Linear |R| = [32m3.771547e-12[39m
+4       Linear |R| = [32m2.153144e-12[39m
+5       Linear |R| = [32m1.330614e-12[39m
+6       Linear |R| = [32m8.045931e-13[39m
+7       Linear |R| = [32m6.836147e-13[39m
+8       Linear |R| = [32m3.908867e-13[39m
+9       Linear |R| = [32m2.857207e-13[39m
+10      Linear |R| = [32m2.329604e-13[39m
+11      Linear |R| = [33m2.229683e-13[39m
+12      Linear |R| = [33m2.161488e-13[39m
+13      Linear |R| = [32m2.046141e-13[39m
+14      Linear |R| = [32m1.898066e-13[39m
+15      Linear |R| = [32m1.788757e-13[39m
+16      Linear |R| = [32m1.549424e-13[39m
+17      Linear |R| = [32m1.209036e-13[39m
+18      Linear |R| = [32m6.740340e-14[39m
+19      Linear |R| = [32m3.749818e-14[39m
+20      Linear |R| = [32m1.547150e-14[39m
+21      Linear |R| = [32m8.887877e-15[39m
+22      Linear |R| = [32m4.052884e-15[39m
+23      Linear |R| = [32m2.093333e-15[39m
+24      Linear |R| = [32m9.749459e-16[39m
+2  Nonlinear |R| = [32m9.918503e-16[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 3
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |   4.957726e+01 |   9.132196e-01 |
+|   1.250000e-02 |   1.000000e+00 |   5.069099e+01 |   9.339189e-01 |
+|   2.500000e-02 |   1.019541e+00 |   5.215191e+01 |   9.610597e-01 |
+|   3.750000e-02 |   1.051073e+00 |   5.387098e+01 |   9.929909e-01 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step  4, time = 0.05
+                dt = 0.0125
+0  Nonlinear |R| = [32m6.218167e-06[39m
+0       Linear |R| = [32m6.218167e-06[39m
+1       Linear |R| = [32m5.125233e-06[39m
+2       Linear |R| = [32m3.970252e-06[39m
+3       Linear |R| = [33m3.828785e-06[39m
+4       Linear |R| = [32m3.331894e-06[39m
+5       Linear |R| = [33m3.321315e-06[39m
+6       Linear |R| = [33m3.158712e-06[39m
+7       Linear |R| = [33m3.135459e-06[39m
+8       Linear |R| = [32m2.939491e-06[39m
+9       Linear |R| = [33m2.847874e-06[39m
+10      Linear |R| = [32m2.142751e-06[39m
+11      Linear |R| = [32m1.715589e-06[39m
+12      Linear |R| = [32m8.074377e-07[39m
+13      Linear |R| = [32m5.114247e-07[39m
+14      Linear |R| = [32m2.079327e-07[39m
+15      Linear |R| = [32m1.110427e-07[39m
+16      Linear |R| = [32m4.259040e-08[39m
+17      Linear |R| = [32m1.944022e-08[39m
+18      Linear |R| = [32m8.949221e-09[39m
+19      Linear |R| = [32m3.290712e-09[39m
+20      Linear |R| = [32m2.195534e-09[39m
+21      Linear |R| = [32m1.169686e-09[39m
+22      Linear |R| = [32m1.085172e-09[39m
+23      Linear |R| = [32m4.954387e-10[39m
+24      Linear |R| = [32m2.166750e-10[39m
+25      Linear |R| = [32m7.876194e-11[39m
+26      Linear |R| = [32m3.607946e-11[39m
+1  Nonlinear |R| = [32m1.680081e-10[39m
+0       Linear |R| = [32m1.680081e-10[39m
+1       Linear |R| = [32m1.861072e-11[39m
+2       Linear |R| = [32m1.015505e-11[39m
+3       Linear |R| = [32m3.965301e-12[39m
+4       Linear |R| = [32m2.271413e-12[39m
+5       Linear |R| = [32m1.407701e-12[39m
+6       Linear |R| = [32m8.553610e-13[39m
+7       Linear |R| = [32m7.256613e-13[39m
+8       Linear |R| = [32m4.141836e-13[39m
+9       Linear |R| = [32m2.970649e-13[39m
+10      Linear |R| = [32m2.398959e-13[39m
+11      Linear |R| = [33m2.298401e-13[39m
+12      Linear |R| = [33m2.220089e-13[39m
+13      Linear |R| = [33m2.115122e-13[39m
+14      Linear |R| = [32m1.947130e-13[39m
+15      Linear |R| = [32m1.840778e-13[39m
+16      Linear |R| = [32m1.599320e-13[39m
+17      Linear |R| = [32m1.274873e-13[39m
+18      Linear |R| = [32m7.321506e-14[39m
+19      Linear |R| = [32m4.263585e-14[39m
+20      Linear |R| = [32m1.789390e-14[39m
+21      Linear |R| = [32m1.044816e-14[39m
+22      Linear |R| = [32m4.727658e-15[39m
+23      Linear |R| = [32m2.360991e-15[39m
+24      Linear |R| = [32m1.083760e-15[39m
+2  Nonlinear |R| = [32m1.097346e-15[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 4
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |   4.957726e+01 |   9.132196e-01 |
+|   1.250000e-02 |   1.000000e+00 |   5.069099e+01 |   9.339189e-01 |
+|   2.500000e-02 |   1.019541e+00 |   5.215191e+01 |   9.610597e-01 |
+|   3.750000e-02 |   1.051073e+00 |   5.387098e+01 |   9.929909e-01 |
+|   5.000000e-02 |   1.085793e+00 |   5.573110e+01 |   1.027542e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step  5, time = 0.0625
+                dt = 0.0125
+0  Nonlinear |R| = [32m6.470957e-06[39m
+0       Linear |R| = [32m6.470957e-06[39m
+1       Linear |R| = [32m5.341479e-06[39m
+2       Linear |R| = [32m4.157252e-06[39m
+3       Linear |R| = [33m4.012558e-06[39m
+4       Linear |R| = [32m3.503267e-06[39m
+5       Linear |R| = [33m3.492253e-06[39m
+6       Linear |R| = [33m3.325622e-06[39m
+7       Linear |R| = [33m3.301066e-06[39m
+8       Linear |R| = [32m3.098957e-06[39m
+9       Linear |R| = [33m3.003615e-06[39m
+10      Linear |R| = [32m2.270166e-06[39m
+11      Linear |R| = [32m1.822383e-06[39m
+12      Linear |R| = [32m8.622044e-07[39m
+13      Linear |R| = [32m5.454209e-07[39m
+14      Linear |R| = [32m2.215826e-07[39m
+15      Linear |R| = [32m1.183412e-07[39m
+16      Linear |R| = [32m4.543005e-08[39m
+17      Linear |R| = [32m2.076048e-08[39m
+18      Linear |R| = [32m9.567009e-09[39m
+19      Linear |R| = [32m3.515744e-09[39m
+20      Linear |R| = [32m2.349055e-09[39m
+21      Linear |R| = [32m1.253003e-09[39m
+22      Linear |R| = [32m1.162440e-09[39m
+23      Linear |R| = [32m5.298342e-10[39m
+24      Linear |R| = [32m2.312350e-10[39m
+25      Linear |R| = [32m8.396340e-11[39m
+26      Linear |R| = [32m3.844814e-11[39m
+1  Nonlinear |R| = [32m1.805514e-10[39m
+0       Linear |R| = [32m1.805514e-10[39m
+1       Linear |R| = [32m1.986839e-11[39m
+2       Linear |R| = [32m1.088580e-11[39m
+3       Linear |R| = [32m4.172147e-12[39m
+4       Linear |R| = [32m2.400150e-12[39m
+5       Linear |R| = [32m1.454217e-12[39m
+6       Linear |R| = [32m8.862815e-13[39m
+7       Linear |R| = [32m7.305498e-13[39m
+8       Linear |R| = [32m4.113008e-13[39m
+9       Linear |R| = [32m2.296953e-13[39m
+10      Linear |R| = [32m1.568377e-13[39m
+11      Linear |R| = [32m1.385100e-13[39m
+12      Linear |R| = [33m1.317816e-13[39m
+13      Linear |R| = [32m1.243445e-13[39m
+14      Linear |R| = [32m1.173553e-13[39m
+15      Linear |R| = [33m1.132513e-13[39m
+16      Linear |R| = [32m1.058606e-13[39m
+17      Linear |R| = [32m9.604086e-14[39m
+18      Linear |R| = [32m6.924248e-14[39m
+19      Linear |R| = [32m4.524231e-14[39m
+20      Linear |R| = [32m2.041686e-14[39m
+21      Linear |R| = [32m1.190772e-14[39m
+22      Linear |R| = [32m5.395758e-15[39m
+23      Linear |R| = [32m2.676895e-15[39m
+24      Linear |R| = [32m1.221102e-15[39m
+2  Nonlinear |R| = [32m1.234371e-15[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 5
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |   4.957726e+01 |   9.132196e-01 |
+|   1.250000e-02 |   1.000000e+00 |   5.069099e+01 |   9.339189e-01 |
+|   2.500000e-02 |   1.019541e+00 |   5.215191e+01 |   9.610597e-01 |
+|   3.750000e-02 |   1.051073e+00 |   5.387098e+01 |   9.929909e-01 |
+|   5.000000e-02 |   1.085793e+00 |   5.573110e+01 |   1.027542e+00 |
+|   6.250000e-02 |   1.123170e+00 |   5.773526e+01 |   1.064768e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step  6, time = 0.075
+                dt = 0.0125
+0  Nonlinear |R| = [32m6.744113e-06[39m
+0       Linear |R| = [32m6.744113e-06[39m
+1       Linear |R| = [32m5.576082e-06[39m
+2       Linear |R| = [32m4.359893e-06[39m
+3       Linear |R| = [33m4.211704e-06[39m
+4       Linear |R| = [32m3.690286e-06[39m
+5       Linear |R| = [33m3.678760e-06[39m
+6       Linear |R| = [33m3.508856e-06[39m
+7       Linear |R| = [33m3.483447e-06[39m
+8       Linear |R| = [32m3.273254e-06[39m
+9       Linear |R| = [33m3.175255e-06[39m
+10      Linear |R| = [32m2.408648e-06[39m
+11      Linear |R| = [32m1.939696e-06[39m
+12      Linear |R| = [32m9.225110e-07[39m
+13      Linear |R| = [32m5.821894e-07[39m
+14      Linear |R| = [32m2.365405e-07[39m
+15      Linear |R| = [32m1.263165e-07[39m
+16      Linear |R| = [32m4.851688e-08[39m
+17      Linear |R| = [32m2.224845e-08[39m
+18      Linear |R| = [32m1.028551e-08[39m
+19      Linear |R| = [32m3.804621e-09[39m
+20      Linear |R| = [32m2.572736e-09[39m
+21      Linear |R| = [32m1.388316e-09[39m
+22      Linear |R| = [32m1.285423e-09[39m
+23      Linear |R| = [32m5.772017e-10[39m
+24      Linear |R| = [32m2.484256e-10[39m
+25      Linear |R| = [32m8.997880e-11[39m
+26      Linear |R| = [32m4.131441e-11[39m
+1  Nonlinear |R| = [32m2.057032e-10[39m
+0       Linear |R| = [32m2.057032e-10[39m
+1       Linear |R| = [32m2.119748e-11[39m
+2       Linear |R| = [32m1.147081e-11[39m
+3       Linear |R| = [32m4.491087e-12[39m
+4       Linear |R| = [32m2.557723e-12[39m
+5       Linear |R| = [32m1.576150e-12[39m
+6       Linear |R| = [32m9.529468e-13[39m
+7       Linear |R| = [32m8.092917e-13[39m
+8       Linear |R| = [32m4.696435e-13[39m
+9       Linear |R| = [32m3.238080e-13[39m
+10      Linear |R| = [32m2.595872e-13[39m
+11      Linear |R| = [33m2.472589e-13[39m
+12      Linear |R| = [33m2.392252e-13[39m
+13      Linear |R| = [33m2.289081e-13[39m
+14      Linear |R| = [32m2.118951e-13[39m
+15      Linear |R| = [33m2.014488e-13[39m
+16      Linear |R| = [32m1.768455e-13[39m
+17      Linear |R| = [32m1.467231e-13[39m
+18      Linear |R| = [32m8.604272e-14[39m
+19      Linear |R| = [32m5.107966e-14[39m
+20      Linear |R| = [32m2.151317e-14[39m
+21      Linear |R| = [32m1.255687e-14[39m
+22      Linear |R| = [32m5.668013e-15[39m
+23      Linear |R| = [32m2.907051e-15[39m
+24      Linear |R| = [32m1.345290e-15[39m
+2  Nonlinear |R| = [32m1.359561e-15[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 6
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |   4.957726e+01 |   9.132196e-01 |
+|   1.250000e-02 |   1.000000e+00 |   5.069099e+01 |   9.339189e-01 |
+|   2.500000e-02 |   1.019541e+00 |   5.215191e+01 |   9.610597e-01 |
+|   3.750000e-02 |   1.051073e+00 |   5.387098e+01 |   9.929909e-01 |
+|   5.000000e-02 |   1.085793e+00 |   5.573110e+01 |   1.027542e+00 |
+|   6.250000e-02 |   1.123170e+00 |   5.773526e+01 |   1.064768e+00 |
+|   7.500000e-02 |   1.163418e+00 |   5.989902e+01 |   1.104958e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step  7, time = 0.0875
+                dt = 0.0125
+0  Nonlinear |R| = [32m7.041062e-06[39m
+0       Linear |R| = [32m7.041062e-06[39m
+1       Linear |R| = [32m5.831552e-06[39m
+2       Linear |R| = [32m4.582266e-06[39m
+3       Linear |R| = [33m4.430618e-06[39m
+4       Linear |R| = [32m3.895229e-06[39m
+5       Linear |R| = [33m3.883227e-06[39m
+6       Linear |R| = [33m3.708731e-06[39m
+7       Linear |R| = [33m3.681812e-06[39m
+8       Linear |R| = [32m3.464326e-06[39m
+9       Linear |R| = [33m3.361994e-06[39m
+10      Linear |R| = [32m2.562053e-06[39m
+11      Linear |R| = [32m2.068932e-06[39m
+12      Linear |R| = [32m9.895298e-07[39m
+13      Linear |R| = [32m6.236162e-07[39m
+14      Linear |R| = [32m2.531363e-07[39m
+15      Linear |R| = [32m1.351809e-07[39m
+16      Linear |R| = [32m5.196726e-08[39m
+17      Linear |R| = [32m2.386141e-08[39m
+18      Linear |R| = [32m1.104373e-08[39m
+19      Linear |R| = [32m4.082829e-09[39m
+20      Linear |R| = [32m2.764761e-09[39m
+21      Linear |R| = [32m1.493760e-09[39m
+22      Linear |R| = [32m1.382961e-09[39m
+23      Linear |R| = [32m6.199209e-10[39m
+24      Linear |R| = [32m2.662439e-10[39m
+25      Linear |R| = [32m9.631852e-11[39m
+26      Linear |R| = [32m4.420188e-11[39m
+1  Nonlinear |R| = [32m2.305407e-10[39m
+0       Linear |R| = [32m2.305407e-10[39m
+1       Linear |R| = [32m2.281018e-11[39m
+2       Linear |R| = [32m1.236190e-11[39m
+3       Linear |R| = [32m4.813664e-12[39m
+4       Linear |R| = [32m2.725523e-12[39m
+5       Linear |R| = [32m1.679271e-12[39m
+6       Linear |R| = [32m1.000040e-12[39m
+7       Linear |R| = [32m8.618589e-13[39m
+8       Linear |R| = [32m5.038371e-13[39m
+9       Linear |R| = [32m3.669359e-13[39m
+10      Linear |R| = [32m3.003881e-13[39m
+11      Linear |R| = [33m2.898295e-13[39m
+12      Linear |R| = [33m2.790407e-13[39m
+13      Linear |R| = [33m2.691835e-13[39m
+14      Linear |R| = [32m2.451389e-13[39m
+15      Linear |R| = [32m2.325341e-13[39m
+16      Linear |R| = [32m2.003837e-13[39m
+17      Linear |R| = [32m1.645046e-13[39m
+18      Linear |R| = [32m9.552122e-14[39m
+19      Linear |R| = [32m5.763526e-14[39m
+20      Linear |R| = [32m2.437197e-14[39m
+21      Linear |R| = [32m1.424735e-14[39m
+22      Linear |R| = [32m6.388188e-15[39m
+23      Linear |R| = [32m3.227354e-15[39m
+24      Linear |R| = [32m1.473742e-15[39m
+2  Nonlinear |R| = [32m1.487637e-15[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 7
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |   4.957726e+01 |   9.132196e-01 |
+|   1.250000e-02 |   1.000000e+00 |   5.069099e+01 |   9.339189e-01 |
+|   2.500000e-02 |   1.019541e+00 |   5.215191e+01 |   9.610597e-01 |
+|   3.750000e-02 |   1.051073e+00 |   5.387098e+01 |   9.929909e-01 |
+|   5.000000e-02 |   1.085793e+00 |   5.573110e+01 |   1.027542e+00 |
+|   6.250000e-02 |   1.123170e+00 |   5.773526e+01 |   1.064768e+00 |
+|   7.500000e-02 |   1.163418e+00 |   5.989902e+01 |   1.104958e+00 |
+|   8.750000e-02 |   1.206861e+00 |   6.224164e+01 |   1.148470e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step  8, time = 0.1
+                dt = 0.0125
+0  Nonlinear |R| = [32m7.365073e-06[39m
+0       Linear |R| = [32m7.365073e-06[39m
+1       Linear |R| = [32m6.110738e-06[39m
+2       Linear |R| = [32m4.826398e-06[39m
+3       Linear |R| = [33m4.671093e-06[39m
+4       Linear |R| = [32m4.120953e-06[39m
+5       Linear |R| = [33m4.108416e-06[39m
+6       Linear |R| = [33m3.929013e-06[39m
+7       Linear |R| = [33m3.900385e-06[39m
+8       Linear |R| = [32m3.674879e-06[39m
+9       Linear |R| = [33m3.567723e-06[39m
+10      Linear |R| = [32m2.731330e-06[39m
+11      Linear |R| = [32m2.211885e-06[39m
+12      Linear |R| = [32m1.064167e-06[39m
+13      Linear |R| = [32m6.696327e-07[39m
+14      Linear |R| = [32m2.715178e-07[39m
+15      Linear |R| = [32m1.449937e-07[39m
+16      Linear |R| = [32m5.578743e-08[39m
+17      Linear |R| = [32m2.565170e-08[39m
+18      Linear |R| = [32m1.188670e-08[39m
+19      Linear |R| = [32m4.392140e-09[39m
+20      Linear |R| = [32m2.978660e-09[39m
+21      Linear |R| = [32m1.611423e-09[39m
+22      Linear |R| = [32m1.491773e-09[39m
+23      Linear |R| = [32m6.674380e-10[39m
+24      Linear |R| = [32m2.859984e-10[39m
+25      Linear |R| = [32m1.033316e-10[39m
+26      Linear |R| = [32m4.738818e-11[39m
+1  Nonlinear |R| = [32m2.647760e-10[39m
+0       Linear |R| = [32m2.647760e-10[39m
+1       Linear |R| = [32m2.452904e-11[39m
+2       Linear |R| = [32m1.339573e-11[39m
+3       Linear |R| = [32m5.190638e-12[39m
+4       Linear |R| = [32m2.981532e-12[39m
+5       Linear |R| = [32m1.815177e-12[39m
+6       Linear |R| = [32m1.077908e-12[39m
+7       Linear |R| = [32m8.948165e-13[39m
+8       Linear |R| = [32m5.108364e-13[39m
+9       Linear |R| = [32m2.910508e-13[39m
+10      Linear |R| = [32m1.985880e-13[39m
+11      Linear |R| = [32m1.773336e-13[39m
+12      Linear |R| = [33m1.687544e-13[39m
+13      Linear |R| = [33m1.606619e-13[39m
+14      Linear |R| = [32m1.513078e-13[39m
+15      Linear |R| = [33m1.467498e-13[39m
+16      Linear |R| = [32m1.372342e-13[39m
+17      Linear |R| = [32m1.258565e-13[39m
+18      Linear |R| = [32m9.115072e-14[39m
+19      Linear |R| = [32m6.099737e-14[39m
+20      Linear |R| = [32m2.771541e-14[39m
+21      Linear |R| = [32m1.616100e-14[39m
+22      Linear |R| = [32m7.318883e-15[39m
+23      Linear |R| = [32m3.593703e-15[39m
+24      Linear |R| = [32m1.671397e-15[39m
+2  Nonlinear |R| = [32m1.685229e-15[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 8
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |   4.957726e+01 |   9.132196e-01 |
+|   1.250000e-02 |   1.000000e+00 |   5.069099e+01 |   9.339189e-01 |
+|   2.500000e-02 |   1.019541e+00 |   5.215191e+01 |   9.610597e-01 |
+|   3.750000e-02 |   1.051073e+00 |   5.387098e+01 |   9.929909e-01 |
+|   5.000000e-02 |   1.085793e+00 |   5.573110e+01 |   1.027542e+00 |
+|   6.250000e-02 |   1.123170e+00 |   5.773526e+01 |   1.064768e+00 |
+|   7.500000e-02 |   1.163418e+00 |   5.989902e+01 |   1.104958e+00 |
+|   8.750000e-02 |   1.206861e+00 |   6.224164e+01 |   1.148470e+00 |
+|   1.000000e-01 |   1.253885e+00 |   6.478570e+01 |   1.195724e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step  9, time = 0.1125
+                dt = 0.0125
+0  Nonlinear |R| = [32m7.719936e-06[39m
+0       Linear |R| = [32m7.719936e-06[39m
+1       Linear |R| = [32m6.417003e-06[39m
+2       Linear |R| = [32m5.095484e-06[39m
+3       Linear |R| = [33m4.936305e-06[39m
+4       Linear |R| = [32m4.370576e-06[39m
+5       Linear |R| = [33m4.357433e-06[39m
+6       Linear |R| = [33m4.172771e-06[39m
+7       Linear |R| = [33m4.142202e-06[39m
+8       Linear |R| = [32m3.907829e-06[39m
+9       Linear |R| = [33m3.795271e-06[39m
+10      Linear |R| = [32m2.918831e-06[39m
+11      Linear |R| = [32m2.370614e-06[39m
+12      Linear |R| = [32m1.147624e-06[39m
+13      Linear |R| = [32m7.209417e-07[39m
+14      Linear |R| = [32m2.919470e-07[39m
+15      Linear |R| = [32m1.558925e-07[39m
+16      Linear |R| = [32m6.003042e-08[39m
+17      Linear |R| = [32m2.764566e-08[39m
+18      Linear |R| = [32m1.282726e-08[39m
+19      Linear |R| = [32m4.737325e-09[39m
+20      Linear |R| = [32m3.217847e-09[39m
+21      Linear |R| = [32m1.743244e-09[39m
+22      Linear |R| = [32m1.613640e-09[39m
+23      Linear |R| = [32m7.204898e-10[39m
+24      Linear |R| = [32m3.079759e-10[39m
+25      Linear |R| = [32m1.111150e-10[39m
+26      Linear |R| = [32m5.091445e-11[39m
+1  Nonlinear |R| = [32m2.922623e-10[39m
+0       Linear |R| = [32m2.922623e-10[39m
+1       Linear |R| = [32m2.636697e-11[39m
+2       Linear |R| = [32m1.420350e-11[39m
+3       Linear |R| = [32m5.600154e-12[39m
+4       Linear |R| = [32m3.141200e-12[39m
+5       Linear |R| = [32m1.936627e-12[39m
+6       Linear |R| = [32m1.129330e-12[39m
+7       Linear |R| = [32m9.542856e-13[39m
+8       Linear |R| = [32m5.634501e-13[39m
+9       Linear |R| = [32m3.615665e-13[39m
+10      Linear |R| = [32m2.751951e-13[39m
+11      Linear |R| = [32m2.588742e-13[39m
+12      Linear |R| = [33m2.484625e-13[39m
+13      Linear |R| = [33m2.399908e-13[39m
+14      Linear |R| = [32m2.226924e-13[39m
+15      Linear |R| = [33m2.150602e-13[39m
+16      Linear |R| = [32m1.938088e-13[39m
+17      Linear |R| = [32m1.705008e-13[39m
+18      Linear |R| = [32m1.118815e-13[39m
+19      Linear |R| = [32m7.387822e-14[39m
+20      Linear |R| = [32m3.268718e-14[39m
+21      Linear |R| = [32m1.912335e-14[39m
+22      Linear |R| = [32m8.477199e-15[39m
+23      Linear |R| = [32m4.122113e-15[39m
+24      Linear |R| = [32m1.847778e-15[39m
+2  Nonlinear |R| = [32m1.860819e-15[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 9
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |   4.957726e+01 |   9.132196e-01 |
+|   1.250000e-02 |   1.000000e+00 |   5.069099e+01 |   9.339189e-01 |
+|   2.500000e-02 |   1.019541e+00 |   5.215191e+01 |   9.610597e-01 |
+|   3.750000e-02 |   1.051073e+00 |   5.387098e+01 |   9.929909e-01 |
+|   5.000000e-02 |   1.085793e+00 |   5.573110e+01 |   1.027542e+00 |
+|   6.250000e-02 |   1.123170e+00 |   5.773526e+01 |   1.064768e+00 |
+|   7.500000e-02 |   1.163418e+00 |   5.989902e+01 |   1.104958e+00 |
+|   8.750000e-02 |   1.206861e+00 |   6.224164e+01 |   1.148470e+00 |
+|   1.000000e-01 |   1.253885e+00 |   6.478570e+01 |   1.195724e+00 |
+|   1.125000e-01 |   1.304943e+00 |   6.755768e+01 |   1.247211e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 10, time = 0.125
+                dt = 0.0125
+0  Nonlinear |R| = [32m8.110147e-06[39m
+0       Linear |R| = [32m8.110147e-06[39m
+1       Linear |R| = [32m6.754355e-06[39m
+2       Linear |R| = [32m5.393345e-06[39m
+3       Linear |R| = [33m5.230053e-06[39m
+4       Linear |R| = [32m4.647830e-06[39m
+5       Linear |R| = [33m4.633998e-06[39m
+6       Linear |R| = [33m4.443681e-06[39m
+7       Linear |R| = [33m4.410894e-06[39m
+8       Linear |R| = [32m4.166665e-06[39m
+9       Linear |R| = [33m4.048025e-06[39m
+10      Linear |R| = [32m3.127368e-06[39m
+11      Linear |R| = [32m2.547580e-06[39m
+12      Linear |R| = [32m1.241352e-06[39m
+13      Linear |R| = [32m7.783847e-07[39m
+14      Linear |R| = [32m3.147357e-07[39m
+15      Linear |R| = [32m1.680405e-07[39m
+16      Linear |R| = [32m6.475876e-08[39m
+17      Linear |R| = [32m2.987460e-08[39m
+18      Linear |R| = [32m1.388074e-08[39m
+19      Linear |R| = [32m5.124112e-09[39m
+20      Linear |R| = [32m3.486452e-09[39m
+21      Linear |R| = [32m1.891576e-09[39m
+22      Linear |R| = [32m1.750723e-09[39m
+23      Linear |R| = [32m7.799616e-10[39m
+24      Linear |R| = [32m3.325187e-10[39m
+25      Linear |R| = [32m1.197833e-10[39m
+26      Linear |R| = [32m5.482899e-11[39m
+1  Nonlinear |R| = [32m3.280203e-10[39m
+0       Linear |R| = [32m3.280203e-10[39m
+1       Linear |R| = [32m2.858969e-11[39m
+2       Linear |R| = [32m1.559468e-11[39m
+3       Linear |R| = [32m6.054642e-12[39m
+4       Linear |R| = [32m3.477512e-12[39m
+5       Linear |R| = [32m2.107306e-12[39m
+6       Linear |R| = [32m1.258728e-12[39m
+7       Linear |R| = [32m1.038136e-12[39m
+8       Linear |R| = [32m5.945074e-13[39m
+9       Linear |R| = [32m3.476369e-13[39m
+10      Linear |R| = [32m2.412765e-13[39m
+11      Linear |R| = [32m2.177930e-13[39m
+12      Linear |R| = [32m2.068040e-13[39m
+13      Linear |R| = [33m1.977610e-13[39m
+14      Linear |R| = [32m1.861291e-13[39m
+15      Linear |R| = [33m1.807906e-13[39m
+16      Linear |R| = [32m1.690232e-13[39m
+17      Linear |R| = [32m1.555866e-13[39m
+18      Linear |R| = [32m1.147960e-13[39m
+19      Linear |R| = [32m7.809113e-14[39m
+20      Linear |R| = [32m3.635451e-14[39m
+21      Linear |R| = [32m2.101480e-14[39m
+22      Linear |R| = [32m9.588131e-15[39m
+23      Linear |R| = [32m4.631101e-15[39m
+24      Linear |R| = [32m2.087476e-15[39m
+2  Nonlinear |R| = [32m2.101130e-15[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 10
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |   4.957726e+01 |   9.132196e-01 |
+|   1.250000e-02 |   1.000000e+00 |   5.069099e+01 |   9.339189e-01 |
+|   2.500000e-02 |   1.019541e+00 |   5.215191e+01 |   9.610597e-01 |
+|   3.750000e-02 |   1.051073e+00 |   5.387098e+01 |   9.929909e-01 |
+|   5.000000e-02 |   1.085793e+00 |   5.573110e+01 |   1.027542e+00 |
+|   6.250000e-02 |   1.123170e+00 |   5.773526e+01 |   1.064768e+00 |
+|   7.500000e-02 |   1.163418e+00 |   5.989902e+01 |   1.104958e+00 |
+|   8.750000e-02 |   1.206861e+00 |   6.224164e+01 |   1.148470e+00 |
+|   1.000000e-01 |   1.253885e+00 |   6.478570e+01 |   1.195724e+00 |
+|   1.125000e-01 |   1.304943e+00 |   6.755768e+01 |   1.247211e+00 |
+|   1.250000e-01 |   1.360560e+00 |   7.058885e+01 |   1.303513e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 11, time = 0.1375
+                dt = 0.0125
+0  Nonlinear |R| = [32m8.541101e-06[39m
+0       Linear |R| = [32m8.541101e-06[39m
+1       Linear |R| = [32m7.127609e-06[39m
+2       Linear |R| = [32m5.724582e-06[39m
+3       Linear |R| = [33m5.556915e-06[39m
+4       Linear |R| = [32m4.957220e-06[39m
+5       Linear |R| = [33m4.942599e-06[39m
+6       Linear |R| = [33m4.746182e-06[39m
+7       Linear |R| = [33m4.710846e-06[39m
+8       Linear |R| = [32m4.455598e-06[39m
+9       Linear |R| = [33m4.330066e-06[39m
+10      Linear |R| = [32m3.360325e-06[39m
+11      Linear |R| = [32m2.745750e-06[39m
+12      Linear |R| = [32m1.347109e-06[39m
+13      Linear |R| = [32m8.429767e-07[39m
+14      Linear |R| = [32m3.402563e-07[39m
+15      Linear |R| = [32m1.816318e-07[39m
+16      Linear |R| = [32m7.004639e-08[39m
+17      Linear |R| = [32m3.237583e-08[39m
+18      Linear |R| = [32m1.506552e-08[39m
+19      Linear |R| = [32m5.559398e-09[39m
+20      Linear |R| = [32m3.789448e-09[39m
+21      Linear |R| = [32m2.059257e-09[39m
+22      Linear |R| = [32m1.905625e-09[39m
+23      Linear |R| = [32m8.469183e-10[39m
+24      Linear |R| = [32m3.600368e-10[39m
+25      Linear |R| = [32m1.294733e-10[39m
+26      Linear |R| = [32m5.918862e-11[39m
+1  Nonlinear |R| = [32m3.724006e-10[39m
+0       Linear |R| = [32m3.724006e-10[39m
+1       Linear |R| = [32m3.079030e-11[39m
+2       Linear |R| = [32m1.674698e-11[39m
+3       Linear |R| = [32m6.479816e-12[39m
+4       Linear |R| = [32m3.699384e-12[39m
+5       Linear |R| = [32m2.247012e-12[39m
+6       Linear |R| = [32m1.331277e-12[39m
+7       Linear |R| = [32m1.105242e-12[39m
+8       Linear |R| = [32m6.462645e-13[39m
+9       Linear |R| = [32m3.642237e-13[39m
+10      Linear |R| = [32m2.493150e-13[39m
+11      Linear |R| = [32m2.254642e-13[39m
+12      Linear |R| = [32m2.128641e-13[39m
+13      Linear |R| = [33m2.059604e-13[39m
+14      Linear |R| = [32m1.916848e-13[39m
+15      Linear |R| = [33m1.869399e-13[39m
+16      Linear |R| = [32m1.730880e-13[39m
+17      Linear |R| = [32m1.609510e-13[39m
+18      Linear |R| = [32m1.198843e-13[39m
+19      Linear |R| = [32m8.502875e-14[39m
+20      Linear |R| = [32m3.994490e-14[39m
+21      Linear |R| = [32m2.333054e-14[39m
+22      Linear |R| = [32m1.043455e-14[39m
+23      Linear |R| = [32m5.083583e-15[39m
+24      Linear |R| = [32m2.279723e-15[39m
+2  Nonlinear |R| = [32m2.292262e-15[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 11
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |   4.957726e+01 |   9.132196e-01 |
+|   1.250000e-02 |   1.000000e+00 |   5.069099e+01 |   9.339189e-01 |
+|   2.500000e-02 |   1.019541e+00 |   5.215191e+01 |   9.610597e-01 |
+|   3.750000e-02 |   1.051073e+00 |   5.387098e+01 |   9.929909e-01 |
+|   5.000000e-02 |   1.085793e+00 |   5.573110e+01 |   1.027542e+00 |
+|   6.250000e-02 |   1.123170e+00 |   5.773526e+01 |   1.064768e+00 |
+|   7.500000e-02 |   1.163418e+00 |   5.989902e+01 |   1.104958e+00 |
+|   8.750000e-02 |   1.206861e+00 |   6.224164e+01 |   1.148470e+00 |
+|   1.000000e-01 |   1.253885e+00 |   6.478570e+01 |   1.195724e+00 |
+|   1.125000e-01 |   1.304943e+00 |   6.755768e+01 |   1.247211e+00 |
+|   1.250000e-01 |   1.360560e+00 |   7.058885e+01 |   1.303513e+00 |
+|   1.375000e-01 |   1.421361e+00 |   7.391631e+01 |   1.365318e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 12, time = 0.15
+                dt = 0.0125
+0  Nonlinear |R| = [32m9.019309e-06[39m
+0       Linear |R| = [32m9.019309e-06[39m
+1       Linear |R| = [32m7.542587e-06[39m
+2       Linear |R| = [32m6.094784e-06[39m
+3       Linear |R| = [33m5.922451e-06[39m
+4       Linear |R| = [32m5.304228e-06[39m
+5       Linear |R| = [33m5.288699e-06[39m
+6       Linear |R| = [33m5.085676e-06[39m
+7       Linear |R| = [33m5.047391e-06[39m
+8       Linear |R| = [32m4.779747e-06[39m
+9       Linear |R| = [33m4.646353e-06[39m
+10      Linear |R| = [32m3.621810e-06[39m
+11      Linear |R| = [32m2.968727e-06[39m
+12      Linear |R| = [32m1.467043e-06[39m
+13      Linear |R| = [32m9.159506e-07[39m
+14      Linear |R| = [32m3.689566e-07[39m
+15      Linear |R| = [32m1.968988e-07[39m
+16      Linear |R| = [32m7.598109e-08[39m
+17      Linear |R| = [32m3.519414e-08[39m
+18      Linear |R| = [32m1.640377e-08[39m
+19      Linear |R| = [32m6.051571e-09[39m
+20      Linear |R| = [32m4.132914e-09[39m
+21      Linear |R| = [32m2.249768e-09[39m
+22      Linear |R| = [32m2.081535e-09[39m
+23      Linear |R| = [32m9.226553e-10[39m
+24      Linear |R| = [32m3.910249e-10[39m
+25      Linear |R| = [32m1.403485e-10[39m
+26      Linear |R| = [32m6.406041e-11[39m
+1  Nonlinear |R| = [32m4.119134e-10[39m
+0       Linear |R| = [32m4.119134e-10[39m
+1       Linear |R| = [32m3.361488e-11[39m
+2       Linear |R| = [32m1.830566e-11[39m
+3       Linear |R| = [32m7.176720e-12[39m
+4       Linear |R| = [32m4.084144e-12[39m
+5       Linear |R| = [32m2.504151e-12[39m
+6       Linear |R| = [32m1.477934e-12[39m
+7       Linear |R| = [32m1.212643e-12[39m
+8       Linear |R| = [32m7.024831e-13[39m
+9       Linear |R| = [32m3.747969e-13[39m
+10      Linear |R| = [32m2.351851e-13[39m
+11      Linear |R| = [32m2.021800e-13[39m
+12      Linear |R| = [32m1.881012e-13[39m
+13      Linear |R| = [33m1.798511e-13[39m
+14      Linear |R| = [32m1.677134e-13[39m
+15      Linear |R| = [33m1.641152e-13[39m
+16      Linear |R| = [32m1.551998e-13[39m
+17      Linear |R| = [33m1.487655e-13[39m
+18      Linear |R| = [32m1.194441e-13[39m
+19      Linear |R| = [32m8.698214e-14[39m
+20      Linear |R| = [32m4.174427e-14[39m
+21      Linear |R| = [32m2.496142e-14[39m
+22      Linear |R| = [32m1.095917e-14[39m
+23      Linear |R| = [32m5.768524e-15[39m
+24      Linear |R| = [32m2.574607e-15[39m
+2  Nonlinear |R| = [32m2.584655e-15[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 12
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |   4.957726e+01 |   9.132196e-01 |
+|   1.250000e-02 |   1.000000e+00 |   5.069099e+01 |   9.339189e-01 |
+|   2.500000e-02 |   1.019541e+00 |   5.215191e+01 |   9.610597e-01 |
+|   3.750000e-02 |   1.051073e+00 |   5.387098e+01 |   9.929909e-01 |
+|   5.000000e-02 |   1.085793e+00 |   5.573110e+01 |   1.027542e+00 |
+|   6.250000e-02 |   1.123170e+00 |   5.773526e+01 |   1.064768e+00 |
+|   7.500000e-02 |   1.163418e+00 |   5.989902e+01 |   1.104958e+00 |
+|   8.750000e-02 |   1.206861e+00 |   6.224164e+01 |   1.148470e+00 |
+|   1.000000e-01 |   1.253885e+00 |   6.478570e+01 |   1.195724e+00 |
+|   1.125000e-01 |   1.304943e+00 |   6.755768e+01 |   1.247211e+00 |
+|   1.250000e-01 |   1.360560e+00 |   7.058885e+01 |   1.303513e+00 |
+|   1.375000e-01 |   1.421361e+00 |   7.391631e+01 |   1.365318e+00 |
+|   1.500000e-01 |   1.488083e+00 |   7.758441e+01 |   1.433449e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 13, time = 0.1625
+                dt = 0.0125
+0  Nonlinear |R| = [32m9.552702e-06[39m
+0       Linear |R| = [32m9.552702e-06[39m
+1       Linear |R| = [32m8.006398e-06[39m
+2       Linear |R| = [32m6.510792e-06[39m
+3       Linear |R| = [33m6.333470e-06[39m
+4       Linear |R| = [32m5.695574e-06[39m
+5       Linear |R| = [33m5.678994e-06[39m
+6       Linear |R| = [33m5.468791e-06[39m
+7       Linear |R| = [33m5.427071e-06[39m
+8       Linear |R| = [32m5.145385e-06[39m
+9       Linear |R| = [33m5.002960e-06[39m
+10      Linear |R| = [32m3.916842e-06[39m
+11      Linear |R| = [32m3.220919e-06[39m
+12      Linear |R| = [32m1.603805e-06[39m
+13      Linear |R| = [32m9.988142e-07[39m
+14      Linear |R| = [32m4.013784e-07[39m
+15      Linear |R| = [32m2.141211e-07[39m
+16      Linear |R| = [32m8.266741e-08[39m
+17      Linear |R| = [32m3.838347e-08[39m
+18      Linear |R| = [32m1.792237e-08[39m
+19      Linear |R| = [32m6.610888e-09[39m
+20      Linear |R| = [32m4.524304e-09[39m
+21      Linear |R| = [32m2.467386e-09[39m
+22      Linear |R| = [32m2.282365e-09[39m
+23      Linear |R| = [32m1.008754e-09[39m
+24      Linear |R| = [32m4.260843e-10[39m
+25      Linear |R| = [32m1.526059e-10[39m
+26      Linear |R| = [32m6.952377e-11[39m
+1  Nonlinear |R| = [32m4.629769e-10[39m
+0       Linear |R| = [32m4.629769e-10[39m
+1       Linear |R| = [32m3.622944e-11[39m
+2       Linear |R| = [32m1.962172e-11[39m
+3       Linear |R| = [32m7.724434e-12[39m
+4       Linear |R| = [32m4.373278e-12[39m
+5       Linear |R| = [32m2.715957e-12[39m
+6       Linear |R| = [32m1.572608e-12[39m
+7       Linear |R| = [32m1.347499e-12[39m
+8       Linear |R| = [32m7.977748e-13[39m
+9       Linear |R| = [32m5.774386e-13[39m
+10      Linear |R| = [32m4.660159e-13[39m
+11      Linear |R| = [33m4.493704e-13[39m
+12      Linear |R| = [33m4.289154e-13[39m
+13      Linear |R| = [33m4.189218e-13[39m
+14      Linear |R| = [32m3.841352e-13[39m
+15      Linear |R| = [33m3.738163e-13[39m
+16      Linear |R| = [32m3.338176e-13[39m
+17      Linear |R| = [32m2.918114e-13[39m
+18      Linear |R| = [32m1.854255e-13[39m
+19      Linear |R| = [32m1.229080e-13[39m
+20      Linear |R| = [32m5.449646e-14[39m
+21      Linear |R| = [32m3.153494e-14[39m
+22      Linear |R| = [32m1.374294e-14[39m
+23      Linear |R| = [32m6.732161e-15[39m
+24      Linear |R| = [32m2.956420e-15[39m
+2  Nonlinear |R| = [32m2.965788e-15[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 13
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |   4.957726e+01 |   9.132196e-01 |
+|   1.250000e-02 |   1.000000e+00 |   5.069099e+01 |   9.339189e-01 |
+|   2.500000e-02 |   1.019541e+00 |   5.215191e+01 |   9.610597e-01 |
+|   3.750000e-02 |   1.051073e+00 |   5.387098e+01 |   9.929909e-01 |
+|   5.000000e-02 |   1.085793e+00 |   5.573110e+01 |   1.027542e+00 |
+|   6.250000e-02 |   1.123170e+00 |   5.773526e+01 |   1.064768e+00 |
+|   7.500000e-02 |   1.163418e+00 |   5.989902e+01 |   1.104958e+00 |
+|   8.750000e-02 |   1.206861e+00 |   6.224164e+01 |   1.148470e+00 |
+|   1.000000e-01 |   1.253885e+00 |   6.478570e+01 |   1.195724e+00 |
+|   1.125000e-01 |   1.304943e+00 |   6.755768e+01 |   1.247211e+00 |
+|   1.250000e-01 |   1.360560e+00 |   7.058885e+01 |   1.303513e+00 |
+|   1.375000e-01 |   1.421361e+00 |   7.391631e+01 |   1.365318e+00 |
+|   1.500000e-01 |   1.488083e+00 |   7.758441e+01 |   1.433449e+00 |
+|   1.625000e-01 |   1.561609e+00 |   8.164658e+01 |   1.508901e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 14, time = 0.175
+                dt = 0.0125
+0  Nonlinear |R| = [32m1.015102e-05[39m
+0       Linear |R| = [32m1.015102e-05[39m
+1       Linear |R| = [32m8.527788e-06[39m
+2       Linear |R| = [32m6.981051e-06[39m
+3       Linear |R| = [33m6.798381e-06[39m
+4       Linear |R| = [32m6.139574e-06[39m
+5       Linear |R| = [33m6.121769e-06[39m
+6       Linear |R| = [33m5.903725e-06[39m
+7       Linear |R| = [33m5.857977e-06[39m
+8       Linear |R| = [32m5.560270e-06[39m
+9       Linear |R| = [33m5.407388e-06[39m
+10      Linear |R| = [32m4.251610e-06[39m
+11      Linear |R| = [32m3.507764e-06[39m
+12      Linear |R| = [32m1.760691e-06[39m
+13      Linear |R| = [32m1.093431e-06[39m
+14      Linear |R| = [32m4.381825e-07[39m
+15      Linear |R| = [32m2.336371e-07[39m
+16      Linear |R| = [32m9.023026e-08[39m
+17      Linear |R| = [32m4.200919e-08[39m
+18      Linear |R| = [32m1.965422e-08[39m
+19      Linear |R| = [32m7.250033e-09[39m
+20      Linear |R| = [32m4.972910e-09[39m
+21      Linear |R| = [32m2.717464e-09[39m
+22      Linear |R| = [32m2.513002e-09[39m
+23      Linear |R| = [32m1.107176e-09[39m
+24      Linear |R| = [32m4.659516e-10[39m
+25      Linear |R| = [32m1.664843e-10[39m
+26      Linear |R| = [32m7.567320e-11[39m
+1  Nonlinear |R| = [32m5.261710e-10[39m
+0       Linear |R| = [32m5.261710e-10[39m
+1       Linear |R| = [32m3.956802e-11[39m
+2       Linear |R| = [32m2.111019e-11[39m
+3       Linear |R| = [32m8.368924e-12[39m
+4       Linear |R| = [32m4.759030e-12[39m
+5       Linear |R| = [32m2.943036e-12[39m
+6       Linear |R| = [32m1.724753e-12[39m
+7       Linear |R| = [32m1.388514e-12[39m
+8       Linear |R| = [32m8.372697e-13[39m
+9       Linear |R| = [32m3.933631e-13[39m
+10      Linear |R| = [32m2.190250e-13[39m
+11      Linear |R| = [32m1.608216e-13[39m
+12      Linear |R| = [32m1.398076e-13[39m
+13      Linear |R| = [32m1.253689e-13[39m
+14      Linear |R| = [32m1.131950e-13[39m
+15      Linear |R| = [33m1.104777e-13[39m
+16      Linear |R| = [33m1.059106e-13[39m
+17      Linear |R| = [33m1.045434e-13[39m
+18      Linear |R| = [32m9.728790e-14[39m
+19      Linear |R| = [32m8.823962e-14[39m
+20      Linear |R| = [32m5.738733e-14[39m
+21      Linear |R| = [32m3.617747e-14[39m
+22      Linear |R| = [32m1.682307e-14[39m
+23      Linear |R| = [32m7.738534e-15[39m
+24      Linear |R| = [32m3.372447e-15[39m
+2  Nonlinear |R| = [32m3.381561e-15[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 14
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |   4.957726e+01 |   9.132196e-01 |
+|   1.250000e-02 |   1.000000e+00 |   5.069099e+01 |   9.339189e-01 |
+|   2.500000e-02 |   1.019541e+00 |   5.215191e+01 |   9.610597e-01 |
+|   3.750000e-02 |   1.051073e+00 |   5.387098e+01 |   9.929909e-01 |
+|   5.000000e-02 |   1.085793e+00 |   5.573110e+01 |   1.027542e+00 |
+|   6.250000e-02 |   1.123170e+00 |   5.773526e+01 |   1.064768e+00 |
+|   7.500000e-02 |   1.163418e+00 |   5.989902e+01 |   1.104958e+00 |
+|   8.750000e-02 |   1.206861e+00 |   6.224164e+01 |   1.148470e+00 |
+|   1.000000e-01 |   1.253885e+00 |   6.478570e+01 |   1.195724e+00 |
+|   1.125000e-01 |   1.304943e+00 |   6.755768e+01 |   1.247211e+00 |
+|   1.250000e-01 |   1.360560e+00 |   7.058885e+01 |   1.303513e+00 |
+|   1.375000e-01 |   1.421361e+00 |   7.391631e+01 |   1.365318e+00 |
+|   1.500000e-01 |   1.488083e+00 |   7.758441e+01 |   1.433449e+00 |
+|   1.625000e-01 |   1.561609e+00 |   8.164658e+01 |   1.508901e+00 |
+|   1.750000e-01 |   1.642998e+00 |   8.616773e+01 |   1.592878e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 15, time = 0.1875
+                dt = 0.0125
+0  Nonlinear |R| = [32m1.082636e-05[39m
+0       Linear |R| = [32m1.082636e-05[39m
+1       Linear |R| = [32m9.117627e-06[39m
+2       Linear |R| = [32m7.516091e-06[39m
+3       Linear |R| = [33m7.327669e-06[39m
+4       Linear |R| = [32m6.646611e-06[39m
+5       Linear |R| = [33m6.627370e-06[39m
+6       Linear |R| = [33m6.400722e-06[39m
+7       Linear |R| = [33m6.350212e-06[39m
+8       Linear |R| = [33m6.034080e-06[39m
+9       Linear |R| = [33m5.868985e-06[39m
+10      Linear |R| = [32m4.633811e-06[39m
+11      Linear |R| = [32m3.836036e-06[39m
+12      Linear |R| = [32m1.941839e-06[39m
+13      Linear |R| = [32m1.202117e-06[39m
+14      Linear |R| = [32m4.801795e-07[39m
+15      Linear |R| = [32m2.558585e-07[39m
+16      Linear |R| = [32m9.881914e-08[39m
+17      Linear |R| = [32m4.615083e-08[39m
+18      Linear |R| = [32m2.163967e-08[39m
+19      Linear |R| = [32m7.984786e-09[39m
+20      Linear |R| = [32m5.490320e-09[39m
+21      Linear |R| = [32m3.006691e-09[39m
+22      Linear |R| = [32m2.779543e-09[39m
+23      Linear |R| = [32m1.220354e-09[39m
+24      Linear |R| = [32m5.115371e-10[39m
+25      Linear |R| = [32m1.822756e-10[39m
+26      Linear |R| = [32m8.262119e-11[39m
+1  Nonlinear |R| = [32m6.025579e-10[39m
+0       Linear |R| = [32m6.025579e-10[39m
+1       Linear |R| = [32m4.350722e-11[39m
+2       Linear |R| = [32m2.316455e-11[39m
+3       Linear |R| = [32m9.258683e-12[39m
+4       Linear |R| = [32m5.295010e-12[39m
+5       Linear |R| = [32m3.303012e-12[39m
+6       Linear |R| = [32m1.943705e-12[39m
+7       Linear |R| = [32m1.602312e-12[39m
+8       Linear |R| = [32m9.594990e-13[39m
+9       Linear |R| = [32m5.809942e-13[39m
+10      Linear |R| = [32m4.256919e-13[39m
+11      Linear |R| = [32m4.005768e-13[39m
+12      Linear |R| = [32m3.725565e-13[39m
+13      Linear |R| = [33m3.678170e-13[39m
+14      Linear |R| = [32m3.365370e-13[39m
+15      Linear |R| = [33m3.317622e-13[39m
+16      Linear |R| = [32m3.055961e-13[39m
+17      Linear |R| = [32m2.853616e-13[39m
+18      Linear |R| = [32m2.115377e-13[39m
+19      Linear |R| = [32m1.541170e-13[39m
+20      Linear |R| = [32m7.392397e-14[39m
+21      Linear |R| = [32m4.195736e-14[39m
+22      Linear |R| = [32m1.921781e-14[39m
+23      Linear |R| = [32m8.799508e-15[39m
+24      Linear |R| = [32m4.118228e-15[39m
+2  Nonlinear |R| = [32m4.126009e-15[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 15
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   1.250000e-02 |   1.000000e+00 |   5.069099e+01 |   9.339189e-01 |
+|   2.500000e-02 |   1.019541e+00 |   5.215191e+01 |   9.610597e-01 |
+|   3.750000e-02 |   1.051073e+00 |   5.387098e+01 |   9.929909e-01 |
+|   5.000000e-02 |   1.085793e+00 |   5.573110e+01 |   1.027542e+00 |
+|   6.250000e-02 |   1.123170e+00 |   5.773526e+01 |   1.064768e+00 |
+|   7.500000e-02 |   1.163418e+00 |   5.989902e+01 |   1.104958e+00 |
+|   8.750000e-02 |   1.206861e+00 |   6.224164e+01 |   1.148470e+00 |
+|   1.000000e-01 |   1.253885e+00 |   6.478570e+01 |   1.195724e+00 |
+|   1.125000e-01 |   1.304943e+00 |   6.755768e+01 |   1.247211e+00 |
+|   1.250000e-01 |   1.360560e+00 |   7.058885e+01 |   1.303513e+00 |
+|   1.375000e-01 |   1.421361e+00 |   7.391631e+01 |   1.365318e+00 |
+|   1.500000e-01 |   1.488083e+00 |   7.758441e+01 |   1.433449e+00 |
+|   1.625000e-01 |   1.561609e+00 |   8.164658e+01 |   1.508901e+00 |
+|   1.750000e-01 |   1.642998e+00 |   8.616773e+01 |   1.592878e+00 |
+|   1.875000e-01 |   1.733538e+00 |   9.122734e+01 |   1.686857e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 16, time = 0.2
+                dt = 0.0125
+0  Nonlinear |R| = [32m1.159385e-05[39m
+0       Linear |R| = [32m1.159385e-05[39m
+1       Linear |R| = [32m9.789564e-06[39m
+2       Linear |R| = [32m8.129167e-06[39m
+3       Linear |R| = [33m7.934535e-06[39m
+4       Linear |R| = [32m7.229781e-06[39m
+5       Linear |R| = [33m7.208840e-06[39m
+6       Linear |R| = [33m6.972702e-06[39m
+7       Linear |R| = [33m6.916517e-06[39m
+8       Linear |R| = [33m6.579012e-06[39m
+9       Linear |R| = [33m6.399519e-06[39m
+10      Linear |R| = [32m5.073117e-06[39m
+11      Linear |R| = [32m4.214251e-06[39m
+12      Linear |R| = [32m2.152499e-06[39m
+13      Linear |R| = [32m1.327785e-06[39m
+14      Linear |R| = [32m5.283738e-07[39m
+15      Linear |R| = [32m2.812893e-07[39m
+16      Linear |R| = [32m1.086132e-07[39m
+17      Linear |R| = [32m5.090555e-08[39m
+18      Linear |R| = [32m2.392865e-08[39m
+19      Linear |R| = [32m8.834993e-09[39m
+20      Linear |R| = [32m6.091197e-09[39m
+21      Linear |R| = [32m3.343555e-09[39m
+22      Linear |R| = [32m3.089706e-09[39m
+23      Linear |R| = [32m1.351352e-09[39m
+24      Linear |R| = [32m5.639759e-10[39m
+25      Linear |R| = [32m2.003389e-10[39m
+26      Linear |R| = [32m9.050219e-11[39m
+1  Nonlinear |R| = [32m6.893693e-10[39m
+0       Linear |R| = [32m6.893693e-10[39m
+1       Linear |R| = [32m4.814889e-11[39m
+2       Linear |R| = [32m2.577920e-11[39m
+3       Linear |R| = [32m1.047239e-11[39m
+4       Linear |R| = [32m5.735252e-12[39m
+5       Linear |R| = [32m3.588053e-12[39m
+6       Linear |R| = [32m1.946158e-12[39m
+7       Linear |R| = [32m1.625222e-12[39m
+8       Linear |R| = [32m9.775339e-13[39m
+9       Linear |R| = [32m5.199839e-13[39m
+10      Linear |R| = [32m3.253215e-13[39m
+11      Linear |R| = [32m2.721333e-13[39m
+12      Linear |R| = [32m2.477726e-13[39m
+13      Linear |R| = [33m2.363585e-13[39m
+14      Linear |R| = [32m2.179750e-13[39m
+15      Linear |R| = [33m2.152178e-13[39m
+16      Linear |R| = [33m2.047803e-13[39m
+17      Linear |R| = [33m2.002347e-13[39m
+18      Linear |R| = [32m1.760772e-13[39m
+19      Linear |R| = [32m1.522799e-13[39m
+20      Linear |R| = [32m8.790651e-14[39m
+21      Linear |R| = [32m5.203784e-14[39m
+22      Linear |R| = [32m2.298120e-14[39m
+23      Linear |R| = [32m1.067014e-14[39m
+24      Linear |R| = [32m4.591120e-15[39m
+2  Nonlinear |R| = [32m4.598253e-15[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 16
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   2.500000e-02 |   1.019541e+00 |   5.215191e+01 |   9.610597e-01 |
+|   3.750000e-02 |   1.051073e+00 |   5.387098e+01 |   9.929909e-01 |
+|   5.000000e-02 |   1.085793e+00 |   5.573110e+01 |   1.027542e+00 |
+|   6.250000e-02 |   1.123170e+00 |   5.773526e+01 |   1.064768e+00 |
+|   7.500000e-02 |   1.163418e+00 |   5.989902e+01 |   1.104958e+00 |
+|   8.750000e-02 |   1.206861e+00 |   6.224164e+01 |   1.148470e+00 |
+|   1.000000e-01 |   1.253885e+00 |   6.478570e+01 |   1.195724e+00 |
+|   1.125000e-01 |   1.304943e+00 |   6.755768e+01 |   1.247211e+00 |
+|   1.250000e-01 |   1.360560e+00 |   7.058885e+01 |   1.303513e+00 |
+|   1.375000e-01 |   1.421361e+00 |   7.391631e+01 |   1.365318e+00 |
+|   1.500000e-01 |   1.488083e+00 |   7.758441e+01 |   1.433449e+00 |
+|   1.625000e-01 |   1.561609e+00 |   8.164658e+01 |   1.508901e+00 |
+|   1.750000e-01 |   1.642998e+00 |   8.616773e+01 |   1.592878e+00 |
+|   1.875000e-01 |   1.733538e+00 |   9.122734e+01 |   1.686857e+00 |
+|   2.000000e-01 |   1.834801e+00 |   9.692377e+01 |   1.792664e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 17, time = 0.2125
+                dt = 0.0125
+0  Nonlinear |R| = [32m3.892711e-06[39m
+0       Linear |R| = [32m3.892711e-06[39m
+1       Linear |R| = [32m3.580167e-06[39m
+2       Linear |R| = [33m3.453562e-06[39m
+3       Linear |R| = [33m3.452688e-06[39m
+4       Linear |R| = [33m3.387453e-06[39m
+5       Linear |R| = [33m3.368308e-06[39m
+6       Linear |R| = [33m3.283462e-06[39m
+7       Linear |R| = [32m2.859518e-06[39m
+8       Linear |R| = [32m2.408474e-06[39m
+9       Linear |R| = [32m1.683170e-06[39m
+10      Linear |R| = [32m1.179576e-06[39m
+11      Linear |R| = [32m6.998503e-07[39m
+12      Linear |R| = [32m3.625647e-07[39m
+13      Linear |R| = [32m2.021944e-07[39m
+14      Linear |R| = [32m1.154641e-07[39m
+15      Linear |R| = [32m4.742233e-08[39m
+16      Linear |R| = [32m2.396350e-08[39m
+17      Linear |R| = [32m9.126560e-09[39m
+18      Linear |R| = [32m4.493880e-09[39m
+19      Linear |R| = [32m1.321718e-09[39m
+20      Linear |R| = [32m9.177204e-10[39m
+21      Linear |R| = [32m5.510585e-10[39m
+22      Linear |R| = [32m4.956590e-10[39m
+23      Linear |R| = [32m2.027735e-10[39m
+24      Linear |R| = [32m9.851712e-11[39m
+25      Linear |R| = [32m3.527749e-11[39m
+1  Nonlinear |R| = [32m3.832635e-10[39m
+0       Linear |R| = [32m3.832635e-10[39m
+1       Linear |R| = [32m2.714195e-11[39m
+2       Linear |R| = [32m1.364145e-11[39m
+3       Linear |R| = [32m6.675673e-12[39m
+4       Linear |R| = [32m2.984854e-12[39m
+5       Linear |R| = [32m2.432127e-12[39m
+6       Linear |R| = [32m1.464838e-12[39m
+7       Linear |R| = [32m1.205722e-12[39m
+8       Linear |R| = [32m7.052652e-13[39m
+9       Linear |R| = [32m5.335245e-13[39m
+10      Linear |R| = [32m4.648399e-13[39m
+11      Linear |R| = [33m4.634311e-13[39m
+12      Linear |R| = [32m4.373752e-13[39m
+13      Linear |R| = [33m4.373097e-13[39m
+14      Linear |R| = [32m4.023536e-13[39m
+15      Linear |R| = [33m3.951017e-13[39m
+16      Linear |R| = [32m3.163170e-13[39m
+17      Linear |R| = [32m2.553939e-13[39m
+18      Linear |R| = [32m1.735065e-13[39m
+19      Linear |R| = [32m1.008664e-13[39m
+20      Linear |R| = [32m6.144748e-14[39m
+21      Linear |R| = [32m3.508044e-14[39m
+22      Linear |R| = [32m1.426520e-14[39m
+23      Linear |R| = [32m4.510449e-15[39m
+24      Linear |R| = [32m1.767850e-15[39m
+2  Nonlinear |R| = [32m1.787259e-15[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 17
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   3.750000e-02 |   1.051073e+00 |   5.387098e+01 |   9.929909e-01 |
+|   5.000000e-02 |   1.085793e+00 |   5.573110e+01 |   1.027542e+00 |
+|   6.250000e-02 |   1.123170e+00 |   5.773526e+01 |   1.064768e+00 |
+|   7.500000e-02 |   1.163418e+00 |   5.989902e+01 |   1.104958e+00 |
+|   8.750000e-02 |   1.206861e+00 |   6.224164e+01 |   1.148470e+00 |
+|   1.000000e-01 |   1.253885e+00 |   6.478570e+01 |   1.195724e+00 |
+|   1.125000e-01 |   1.304943e+00 |   6.755768e+01 |   1.247211e+00 |
+|   1.250000e-01 |   1.360560e+00 |   7.058885e+01 |   1.303513e+00 |
+|   1.375000e-01 |   1.421361e+00 |   7.391631e+01 |   1.365318e+00 |
+|   1.500000e-01 |   1.488083e+00 |   7.758441e+01 |   1.433449e+00 |
+|   1.625000e-01 |   1.561609e+00 |   8.164658e+01 |   1.508901e+00 |
+|   1.750000e-01 |   1.642998e+00 |   8.616773e+01 |   1.592878e+00 |
+|   1.875000e-01 |   1.733538e+00 |   9.122734e+01 |   1.686857e+00 |
+|   2.000000e-01 |   1.834801e+00 |   9.692377e+01 |   1.792664e+00 |
+|   2.125000e-01 |   1.948731e+00 |   9.951927e+01 |   1.840829e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 18, time = 0.225
+                dt = 0.0125
+0  Nonlinear |R| = [32m1.873879e-06[39m
+0       Linear |R| = [32m1.873879e-06[39m
+1       Linear |R| = [32m1.249233e-06[39m
+2       Linear |R| = [32m1.126881e-06[39m
+3       Linear |R| = [33m1.114119e-06[39m
+4       Linear |R| = [33m1.088468e-06[39m
+5       Linear |R| = [33m1.078142e-06[39m
+6       Linear |R| = [33m1.066033e-06[39m
+7       Linear |R| = [32m9.896236e-07[39m
+8       Linear |R| = [32m9.027879e-07[39m
+9       Linear |R| = [32m7.185688e-07[39m
+10      Linear |R| = [32m5.571382e-07[39m
+11      Linear |R| = [32m3.213237e-07[39m
+12      Linear |R| = [32m1.836368e-07[39m
+13      Linear |R| = [32m9.500611e-08[39m
+14      Linear |R| = [32m5.826199e-08[39m
+15      Linear |R| = [32m2.185835e-08[39m
+16      Linear |R| = [32m1.199213e-08[39m
+17      Linear |R| = [32m4.487025e-09[39m
+18      Linear |R| = [32m2.179952e-09[39m
+19      Linear |R| = [32m6.106052e-10[39m
+20      Linear |R| = [32m3.578578e-10[39m
+21      Linear |R| = [32m2.181898e-10[39m
+22      Linear |R| = [32m1.886382e-10[39m
+23      Linear |R| = [32m9.134475e-11[39m
+24      Linear |R| = [32m4.383481e-11[39m
+25      Linear |R| = [32m1.712212e-11[39m
+1  Nonlinear |R| = [32m1.390365e-10[39m
+0       Linear |R| = [32m1.390365e-10[39m
+1       Linear |R| = [32m1.352769e-11[39m
+2       Linear |R| = [32m6.775782e-12[39m
+3       Linear |R| = [32m3.486715e-12[39m
+4       Linear |R| = [32m1.684392e-12[39m
+5       Linear |R| = [32m1.418961e-12[39m
+6       Linear |R| = [32m9.257983e-13[39m
+7       Linear |R| = [32m7.637576e-13[39m
+8       Linear |R| = [32m5.175609e-13[39m
+9       Linear |R| = [32m4.759368e-13[39m
+10      Linear |R| = [32m4.377824e-13[39m
+11      Linear |R| = [33m4.377145e-13[39m
+12      Linear |R| = [32m4.107836e-13[39m
+13      Linear |R| = [33m4.095087e-13[39m
+14      Linear |R| = [32m3.591695e-13[39m
+15      Linear |R| = [32m3.340681e-13[39m
+16      Linear |R| = [32m2.486408e-13[39m
+17      Linear |R| = [32m1.705012e-13[39m
+18      Linear |R| = [32m1.093240e-13[39m
+19      Linear |R| = [32m6.189017e-14[39m
+20      Linear |R| = [32m3.953863e-14[39m
+21      Linear |R| = [32m1.724933e-14[39m
+22      Linear |R| = [32m6.999344e-15[39m
+23      Linear |R| = [32m2.070900e-15[39m
+24      Linear |R| = [32m8.424417e-16[39m
+2  Nonlinear |R| = [32m8.885224e-16[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 18
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   5.000000e-02 |   1.085793e+00 |   5.573110e+01 |   1.027542e+00 |
+|   6.250000e-02 |   1.123170e+00 |   5.773526e+01 |   1.064768e+00 |
+|   7.500000e-02 |   1.163418e+00 |   5.989902e+01 |   1.104958e+00 |
+|   8.750000e-02 |   1.206861e+00 |   6.224164e+01 |   1.148470e+00 |
+|   1.000000e-01 |   1.253885e+00 |   6.478570e+01 |   1.195724e+00 |
+|   1.125000e-01 |   1.304943e+00 |   6.755768e+01 |   1.247211e+00 |
+|   1.250000e-01 |   1.360560e+00 |   7.058885e+01 |   1.303513e+00 |
+|   1.375000e-01 |   1.421361e+00 |   7.391631e+01 |   1.365318e+00 |
+|   1.500000e-01 |   1.488083e+00 |   7.758441e+01 |   1.433449e+00 |
+|   1.625000e-01 |   1.561609e+00 |   8.164658e+01 |   1.508901e+00 |
+|   1.750000e-01 |   1.642998e+00 |   8.616773e+01 |   1.592878e+00 |
+|   1.875000e-01 |   1.733538e+00 |   9.122734e+01 |   1.686857e+00 |
+|   2.000000e-01 |   1.834801e+00 |   9.692377e+01 |   1.792664e+00 |
+|   2.125000e-01 |   1.948731e+00 |   9.951927e+01 |   1.840829e+00 |
+|   2.250000e-01 |   2.019610e+00 |   1.011568e+02 |   1.871215e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 19, time = 0.2375
+                dt = 0.0125
+0  Nonlinear |R| = [32m5.883181e-07[39m
+0       Linear |R| = [32m5.883181e-07[39m
+1       Linear |R| = [32m4.570259e-07[39m
+2       Linear |R| = [32m4.258292e-07[39m
+3       Linear |R| = [33m4.237899e-07[39m
+4       Linear |R| = [33m4.150872e-07[39m
+5       Linear |R| = [33m4.119646e-07[39m
+6       Linear |R| = [33m4.062540e-07[39m
+7       Linear |R| = [32m3.697156e-07[39m
+8       Linear |R| = [32m3.314924e-07[39m
+9       Linear |R| = [32m2.525775e-07[39m
+10      Linear |R| = [32m1.889241e-07[39m
+11      Linear |R| = [32m1.089317e-07[39m
+12      Linear |R| = [32m5.982886e-08[39m
+13      Linear |R| = [32m3.127486e-08[39m
+14      Linear |R| = [32m1.876289e-08[39m
+15      Linear |R| = [32m7.139629e-09[39m
+16      Linear |R| = [32m3.833478e-09[39m
+17      Linear |R| = [32m1.442852e-09[39m
+18      Linear |R| = [32m7.039092e-10[39m
+19      Linear |R| = [32m1.990485e-10[39m
+20      Linear |R| = [32m1.236010e-10[39m
+21      Linear |R| = [32m7.457248e-11[39m
+22      Linear |R| = [32m6.576146e-11[39m
+23      Linear |R| = [32m3.020970e-11[39m
+24      Linear |R| = [32m1.467457e-11[39m
+25      Linear |R| = [32m5.535314e-12[39m
+1  Nonlinear |R| = [32m5.910293e-11[39m
+0       Linear |R| = [32m5.910293e-11[39m
+1       Linear |R| = [32m4.344046e-12[39m
+2       Linear |R| = [32m2.199801e-12[39m
+3       Linear |R| = [32m1.111066e-12[39m
+4       Linear |R| = [32m5.144485e-13[39m
+5       Linear |R| = [32m4.349608e-13[39m
+6       Linear |R| = [32m2.734004e-13[39m
+7       Linear |R| = [32m2.298941e-13[39m
+8       Linear |R| = [32m1.505505e-13[39m
+9       Linear |R| = [32m1.353240e-13[39m
+10      Linear |R| = [32m1.233753e-13[39m
+11      Linear |R| = [33m1.233743e-13[39m
+12      Linear |R| = [32m1.159273e-13[39m
+13      Linear |R| = [33m1.156419e-13[39m
+14      Linear |R| = [32m1.034480e-13[39m
+15      Linear |R| = [32m9.714632e-14[39m
+16      Linear |R| = [32m7.373759e-14[39m
+17      Linear |R| = [32m5.159238e-14[39m
+18      Linear |R| = [32m3.343779e-14[39m
+19      Linear |R| = [32m1.843159e-14[39m
+20      Linear |R| = [32m1.142564e-14[39m
+21      Linear |R| = [32m5.641707e-15[39m
+22      Linear |R| = [32m2.339931e-15[39m
+23      Linear |R| = [32m6.974781e-16[39m
+24      Linear |R| = [32m2.812530e-16[39m
+2  Nonlinear |R| = [32m4.074492e-16[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 19
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   6.250000e-02 |   1.123170e+00 |   5.773526e+01 |   1.064768e+00 |
+|   7.500000e-02 |   1.163418e+00 |   5.989902e+01 |   1.104958e+00 |
+|   8.750000e-02 |   1.206861e+00 |   6.224164e+01 |   1.148470e+00 |
+|   1.000000e-01 |   1.253885e+00 |   6.478570e+01 |   1.195724e+00 |
+|   1.125000e-01 |   1.304943e+00 |   6.755768e+01 |   1.247211e+00 |
+|   1.250000e-01 |   1.360560e+00 |   7.058885e+01 |   1.303513e+00 |
+|   1.375000e-01 |   1.421361e+00 |   7.391631e+01 |   1.365318e+00 |
+|   1.500000e-01 |   1.488083e+00 |   7.758441e+01 |   1.433449e+00 |
+|   1.625000e-01 |   1.561609e+00 |   8.164658e+01 |   1.508901e+00 |
+|   1.750000e-01 |   1.642998e+00 |   8.616773e+01 |   1.592878e+00 |
+|   1.875000e-01 |   1.733538e+00 |   9.122734e+01 |   1.686857e+00 |
+|   2.000000e-01 |   1.834801e+00 |   9.692377e+01 |   1.792664e+00 |
+|   2.125000e-01 |   1.948731e+00 |   9.951927e+01 |   1.840829e+00 |
+|   2.250000e-01 |   2.019610e+00 |   1.011568e+02 |   1.871215e+00 |
+|   2.375000e-01 |   2.042138e+00 |   1.017172e+02 |   1.881608e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 20, time = 0.25
+                dt = 0.0125
+0  Nonlinear |R| = [32m2.390842e-07[39m
+0       Linear |R| = [32m2.390842e-07[39m
+1       Linear |R| = [33m2.274353e-07[39m
+2       Linear |R| = [33m2.203509e-07[39m
+3       Linear |R| = [33m2.203435e-07[39m
+4       Linear |R| = [33m2.157348e-07[39m
+5       Linear |R| = [33m2.149613e-07[39m
+6       Linear |R| = [33m2.089395e-07[39m
+7       Linear |R| = [32m1.808641e-07[39m
+8       Linear |R| = [32m1.548923e-07[39m
+9       Linear |R| = [32m1.048083e-07[39m
+10      Linear |R| = [32m7.466638e-08[39m
+11      Linear |R| = [32m4.305824e-08[39m
+12      Linear |R| = [32m2.232852e-08[39m
+13      Linear |R| = [32m1.203869e-08[39m
+14      Linear |R| = [32m6.936401e-09[39m
+15      Linear |R| = [32m2.779229e-09[39m
+16      Linear |R| = [32m1.410275e-09[39m
+17      Linear |R| = [32m5.394019e-10[39m
+18      Linear |R| = [32m2.635995e-10[39m
+19      Linear |R| = [32m7.672146e-11[39m
+20      Linear |R| = [32m5.435749e-11[39m
+21      Linear |R| = [32m3.259918e-11[39m
+22      Linear |R| = [32m2.965425e-11[39m
+23      Linear |R| = [32m1.174298e-11[39m
+24      Linear |R| = [32m5.820663e-12[39m
+25      Linear |R| = [32m2.057947e-12[39m
+1  Nonlinear |R| = [32m2.581724e-11[39m
+0       Linear |R| = [32m2.581724e-11[39m
+1       Linear |R| = [32m1.632169e-12[39m
+2       Linear |R| = [32m8.037024e-13[39m
+3       Linear |R| = [32m4.132273e-13[39m
+4       Linear |R| = [32m1.772086e-13[39m
+5       Linear |R| = [32m1.521585e-13[39m
+6       Linear |R| = [32m8.966794e-14[39m
+7       Linear |R| = [32m7.822201e-14[39m
+8       Linear |R| = [32m4.867391e-14[39m
+9       Linear |R| = [32m4.242254e-14[39m
+10      Linear |R| = [32m3.735893e-14[39m
+11      Linear |R| = [33m3.735650e-14[39m
+12      Linear |R| = [32m3.540350e-14[39m
+13      Linear |R| = [33m3.523656e-14[39m
+14      Linear |R| = [32m3.263379e-14[39m
+15      Linear |R| = [32m3.040304e-14[39m
+16      Linear |R| = [32m2.314875e-14[39m
+17      Linear |R| = [32m1.632681e-14[39m
+18      Linear |R| = [32m1.048382e-14[39m
+19      Linear |R| = [32m5.734772e-15[39m
+20      Linear |R| = [32m3.650486e-15[39m
+21      Linear |R| = [32m2.030041e-15[39m
+22      Linear |R| = [32m8.440865e-16[39m
+23      Linear |R| = [32m2.654202e-16[39m
+24      Linear |R| = [32m1.093711e-16[39m
+2  Nonlinear |R| = [32m3.168179e-16[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 20
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   7.500000e-02 |   1.163418e+00 |   5.989902e+01 |   1.104958e+00 |
+|   8.750000e-02 |   1.206861e+00 |   6.224164e+01 |   1.148470e+00 |
+|   1.000000e-01 |   1.253885e+00 |   6.478570e+01 |   1.195724e+00 |
+|   1.125000e-01 |   1.304943e+00 |   6.755768e+01 |   1.247211e+00 |
+|   1.250000e-01 |   1.360560e+00 |   7.058885e+01 |   1.303513e+00 |
+|   1.375000e-01 |   1.421361e+00 |   7.391631e+01 |   1.365318e+00 |
+|   1.500000e-01 |   1.488083e+00 |   7.758441e+01 |   1.433449e+00 |
+|   1.625000e-01 |   1.561609e+00 |   8.164658e+01 |   1.508901e+00 |
+|   1.750000e-01 |   1.642998e+00 |   8.616773e+01 |   1.592878e+00 |
+|   1.875000e-01 |   1.733538e+00 |   9.122734e+01 |   1.686857e+00 |
+|   2.000000e-01 |   1.834801e+00 |   9.692377e+01 |   1.792664e+00 |
+|   2.125000e-01 |   1.948731e+00 |   9.951927e+01 |   1.840829e+00 |
+|   2.250000e-01 |   2.019610e+00 |   1.011568e+02 |   1.871215e+00 |
+|   2.375000e-01 |   2.042138e+00 |   1.017172e+02 |   1.881608e+00 |
+|   2.500000e-01 |   2.050328e+00 |   1.019582e+02 |   1.886075e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 21, time = 0.2625
+                dt = 0.0125
+0  Nonlinear |R| = [32m1.679865e-07[39m
+0       Linear |R| = [32m1.679865e-07[39m
+1       Linear |R| = [33m1.679604e-07[39m
+2       Linear |R| = [33m1.651963e-07[39m
+3       Linear |R| = [33m1.632356e-07[39m
+4       Linear |R| = [33m1.574470e-07[39m
+5       Linear |R| = [33m1.574385e-07[39m
+6       Linear |R| = [32m1.440860e-07[39m
+7       Linear |R| = [32m1.235585e-07[39m
+8       Linear |R| = [32m9.531898e-08[39m
+9       Linear |R| = [32m5.256333e-08[39m
+10      Linear |R| = [32m3.978174e-08[39m
+11      Linear |R| = [32m1.890791e-08[39m
+12      Linear |R| = [32m1.108933e-08[39m
+13      Linear |R| = [32m6.003951e-09[39m
+14      Linear |R| = [32m3.443528e-09[39m
+15      Linear |R| = [32m1.513023e-09[39m
+16      Linear |R| = [32m7.056569e-10[39m
+17      Linear |R| = [32m2.825522e-10[39m
+18      Linear |R| = [32m1.325901e-10[39m
+19      Linear |R| = [32m4.557028e-11[39m
+20      Linear |R| = [32m3.190652e-11[39m
+21      Linear |R| = [32m2.228051e-11[39m
+22      Linear |R| = [32m1.684469e-11[39m
+23      Linear |R| = [32m5.819622e-12[39m
+24      Linear |R| = [32m2.414397e-12[39m
+25      Linear |R| = [32m9.802716e-13[39m
+1  Nonlinear |R| = [32m1.972009e-11[39m
+0       Linear |R| = [32m1.972009e-11[39m
+1       Linear |R| = [32m7.871536e-13[39m
+2       Linear |R| = [32m4.006381e-13[39m
+3       Linear |R| = [32m2.418264e-13[39m
+4       Linear |R| = [32m9.817871e-14[39m
+5       Linear |R| = [32m8.893814e-14[39m
+6       Linear |R| = [32m5.263346e-14[39m
+7       Linear |R| = [32m4.331371e-14[39m
+8       Linear |R| = [32m2.907326e-14[39m
+9       Linear |R| = [32m2.593639e-14[39m
+10      Linear |R| = [32m2.459819e-14[39m
+11      Linear |R| = [33m2.457284e-14[39m
+12      Linear |R| = [32m2.240150e-14[39m
+13      Linear |R| = [33m2.214195e-14[39m
+14      Linear |R| = [32m1.745034e-14[39m
+15      Linear |R| = [32m1.107201e-14[39m
+16      Linear |R| = [32m6.796575e-15[39m
+17      Linear |R| = [32m3.554343e-15[39m
+18      Linear |R| = [32m2.816025e-15[39m
+19      Linear |R| = [32m1.183809e-15[39m
+20      Linear |R| = [32m7.432058e-16[39m
+21      Linear |R| = [32m4.766787e-16[39m
+22      Linear |R| = [32m2.702565e-16[39m
+23      Linear |R| = [32m1.087565e-16[39m
+2  Nonlinear |R| = [32m3.168748e-16[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 21
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   8.750000e-02 |   1.206861e+00 |   6.224164e+01 |   1.148470e+00 |
+|   1.000000e-01 |   1.253885e+00 |   6.478570e+01 |   1.195724e+00 |
+|   1.125000e-01 |   1.304943e+00 |   6.755768e+01 |   1.247211e+00 |
+|   1.250000e-01 |   1.360560e+00 |   7.058885e+01 |   1.303513e+00 |
+|   1.375000e-01 |   1.421361e+00 |   7.391631e+01 |   1.365318e+00 |
+|   1.500000e-01 |   1.488083e+00 |   7.758441e+01 |   1.433449e+00 |
+|   1.625000e-01 |   1.561609e+00 |   8.164658e+01 |   1.508901e+00 |
+|   1.750000e-01 |   1.642998e+00 |   8.616773e+01 |   1.592878e+00 |
+|   1.875000e-01 |   1.733538e+00 |   9.122734e+01 |   1.686857e+00 |
+|   2.000000e-01 |   1.834801e+00 |   9.692377e+01 |   1.792664e+00 |
+|   2.125000e-01 |   1.948731e+00 |   9.951927e+01 |   1.840829e+00 |
+|   2.250000e-01 |   2.019610e+00 |   1.011568e+02 |   1.871215e+00 |
+|   2.375000e-01 |   2.042138e+00 |   1.017172e+02 |   1.881608e+00 |
+|   2.500000e-01 |   2.050328e+00 |   1.019582e+02 |   1.886075e+00 |
+|   2.625000e-01 |   2.054263e+00 |   1.021045e+02 |   1.888783e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 22, time = 0.275
+                dt = 0.0125
+0  Nonlinear |R| = [32m1.569766e-07[39m
+0       Linear |R| = [32m1.569766e-07[39m
+1       Linear |R| = [33m1.564160e-07[39m
+2       Linear |R| = [33m1.541306e-07[39m
+3       Linear |R| = [33m1.512425e-07[39m
+4       Linear |R| = [32m1.421477e-07[39m
+5       Linear |R| = [33m1.420320e-07[39m
+6       Linear |R| = [32m1.183508e-07[39m
+7       Linear |R| = [32m1.071078e-07[39m
+8       Linear |R| = [32m6.859501e-08[39m
+9       Linear |R| = [32m4.804812e-08[39m
+10      Linear |R| = [32m2.859918e-08[39m
+11      Linear |R| = [32m1.625523e-08[39m
+12      Linear |R| = [32m7.921653e-09[39m
+13      Linear |R| = [32m4.369541e-09[39m
+14      Linear |R| = [32m2.420088e-09[39m
+15      Linear |R| = [32m1.095504e-09[39m
+16      Linear |R| = [32m5.072920e-10[39m
+17      Linear |R| = [32m2.039988e-10[39m
+18      Linear |R| = [32m9.476696e-11[39m
+19      Linear |R| = [32m3.836096e-11[39m
+20      Linear |R| = [32m2.377182e-11[39m
+21      Linear |R| = [32m1.926920e-11[39m
+22      Linear |R| = [32m1.162968e-11[39m
+23      Linear |R| = [32m4.836733e-12[39m
+24      Linear |R| = [32m2.071858e-12[39m
+25      Linear |R| = [32m7.248029e-13[39m
+1  Nonlinear |R| = [32m1.990446e-11[39m
+0       Linear |R| = [32m1.990446e-11[39m
+1       Linear |R| = [32m6.304233e-13[39m
+2       Linear |R| = [32m2.815087e-13[39m
+3       Linear |R| = [32m1.686966e-13[39m
+4       Linear |R| = [32m4.843727e-14[39m
+5       Linear |R| = [32m3.047496e-14[39m
+6       Linear |R| = [32m9.947512e-15[39m
+7       Linear |R| = [32m5.526392e-15[39m
+8       Linear |R| = [32m3.825697e-15[39m
+9       Linear |R| = [32m2.772744e-15[39m
+10      Linear |R| = [32m2.376512e-15[39m
+11      Linear |R| = [32m2.009657e-15[39m
+12      Linear |R| = [33m1.988244e-15[39m
+13      Linear |R| = [32m1.877594e-15[39m
+14      Linear |R| = [33m1.858805e-15[39m
+15      Linear |R| = [33m1.772814e-15[39m
+16      Linear |R| = [32m1.630982e-15[39m
+17      Linear |R| = [32m1.404655e-15[39m
+18      Linear |R| = [32m1.093704e-15[39m
+19      Linear |R| = [32m6.201846e-16[39m
+20      Linear |R| = [32m3.105250e-16[39m
+21      Linear |R| = [32m2.373072e-16[39m
+22      Linear |R| = [32m1.634008e-16[39m
+2  Nonlinear |R| = [32m3.466261e-16[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 22
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   1.000000e-01 |   1.253885e+00 |   6.478570e+01 |   1.195724e+00 |
+|   1.125000e-01 |   1.304943e+00 |   6.755768e+01 |   1.247211e+00 |
+|   1.250000e-01 |   1.360560e+00 |   7.058885e+01 |   1.303513e+00 |
+|   1.375000e-01 |   1.421361e+00 |   7.391631e+01 |   1.365318e+00 |
+|   1.500000e-01 |   1.488083e+00 |   7.758441e+01 |   1.433449e+00 |
+|   1.625000e-01 |   1.561609e+00 |   8.164658e+01 |   1.508901e+00 |
+|   1.750000e-01 |   1.642998e+00 |   8.616773e+01 |   1.592878e+00 |
+|   1.875000e-01 |   1.733538e+00 |   9.122734e+01 |   1.686857e+00 |
+|   2.000000e-01 |   1.834801e+00 |   9.692377e+01 |   1.792664e+00 |
+|   2.125000e-01 |   1.948731e+00 |   9.951927e+01 |   1.840829e+00 |
+|   2.250000e-01 |   2.019610e+00 |   1.011568e+02 |   1.871215e+00 |
+|   2.375000e-01 |   2.042138e+00 |   1.017172e+02 |   1.881608e+00 |
+|   2.500000e-01 |   2.050328e+00 |   1.019582e+02 |   1.886075e+00 |
+|   2.625000e-01 |   2.054263e+00 |   1.021045e+02 |   1.888783e+00 |
+|   2.750000e-01 |   2.056936e+00 |   1.022227e+02 |   1.890971e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 23, time = 0.2875
+                dt = 0.0125
+0  Nonlinear |R| = [32m1.550873e-07[39m
+0       Linear |R| = [32m1.550873e-07[39m
+1       Linear |R| = [33m1.519739e-07[39m
+2       Linear |R| = [33m1.502254e-07[39m
+3       Linear |R| = [33m1.495117e-07[39m
+4       Linear |R| = [32m1.392691e-07[39m
+5       Linear |R| = [33m1.392397e-07[39m
+6       Linear |R| = [32m1.095483e-07[39m
+7       Linear |R| = [32m1.000624e-07[39m
+8       Linear |R| = [32m5.968687e-08[39m
+9       Linear |R| = [32m4.616980e-08[39m
+10      Linear |R| = [32m2.467112e-08[39m
+11      Linear |R| = [32m1.629757e-08[39m
+12      Linear |R| = [32m6.919558e-09[39m
+13      Linear |R| = [32m4.112634e-09[39m
+14      Linear |R| = [32m2.119527e-09[39m
+15      Linear |R| = [32m1.030663e-09[39m
+16      Linear |R| = [32m4.465620e-10[39m
+17      Linear |R| = [32m1.843577e-10[39m
+18      Linear |R| = [32m8.377708e-11[39m
+19      Linear |R| = [32m3.639049e-11[39m
+20      Linear |R| = [32m2.152250e-11[39m
+21      Linear |R| = [32m1.785413e-11[39m
+22      Linear |R| = [32m1.085934e-11[39m
+23      Linear |R| = [32m4.375254e-12[39m
+24      Linear |R| = [32m1.911611e-12[39m
+25      Linear |R| = [32m6.387515e-13[39m
+1  Nonlinear |R| = [32m2.037131e-11[39m
+0       Linear |R| = [32m2.037131e-11[39m
+1       Linear |R| = [32m5.675913e-13[39m
+2       Linear |R| = [32m2.460139e-13[39m
+3       Linear |R| = [32m1.551264e-13[39m
+4       Linear |R| = [32m4.625452e-14[39m
+5       Linear |R| = [32m2.862793e-14[39m
+6       Linear |R| = [32m1.336787e-14[39m
+7       Linear |R| = [32m8.602618e-15[39m
+8       Linear |R| = [32m6.830209e-15[39m
+9       Linear |R| = [32m4.840821e-15[39m
+10      Linear |R| = [32m4.352029e-15[39m
+11      Linear |R| = [32m3.948509e-15[39m
+12      Linear |R| = [33m3.947157e-15[39m
+13      Linear |R| = [32m3.722614e-15[39m
+14      Linear |R| = [33m3.714393e-15[39m
+15      Linear |R| = [32m3.444255e-15[39m
+16      Linear |R| = [33m3.318183e-15[39m
+17      Linear |R| = [32m2.649602e-15[39m
+18      Linear |R| = [32m2.262739e-15[39m
+19      Linear |R| = [32m1.577841e-15[39m
+20      Linear |R| = [32m1.102403e-15[39m
+21      Linear |R| = [32m7.377302e-16[39m
+22      Linear |R| = [32m3.356963e-16[39m
+23      Linear |R| = [32m9.811089e-17[39m
+2  Nonlinear |R| = [32m3.160261e-16[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 23
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   1.125000e-01 |   1.304943e+00 |   6.755768e+01 |   1.247211e+00 |
+|   1.250000e-01 |   1.360560e+00 |   7.058885e+01 |   1.303513e+00 |
+|   1.375000e-01 |   1.421361e+00 |   7.391631e+01 |   1.365318e+00 |
+|   1.500000e-01 |   1.488083e+00 |   7.758441e+01 |   1.433449e+00 |
+|   1.625000e-01 |   1.561609e+00 |   8.164658e+01 |   1.508901e+00 |
+|   1.750000e-01 |   1.642998e+00 |   8.616773e+01 |   1.592878e+00 |
+|   1.875000e-01 |   1.733538e+00 |   9.122734e+01 |   1.686857e+00 |
+|   2.000000e-01 |   1.834801e+00 |   9.692377e+01 |   1.792664e+00 |
+|   2.125000e-01 |   1.948731e+00 |   9.951927e+01 |   1.840829e+00 |
+|   2.250000e-01 |   2.019610e+00 |   1.011568e+02 |   1.871215e+00 |
+|   2.375000e-01 |   2.042138e+00 |   1.017172e+02 |   1.881608e+00 |
+|   2.500000e-01 |   2.050328e+00 |   1.019582e+02 |   1.886075e+00 |
+|   2.625000e-01 |   2.054263e+00 |   1.021045e+02 |   1.888783e+00 |
+|   2.750000e-01 |   2.056936e+00 |   1.022227e+02 |   1.890971e+00 |
+|   2.875000e-01 |   2.059237e+00 |   1.023327e+02 |   1.893006e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 24, time = 0.3
+                dt = 0.0125
+0  Nonlinear |R| = [32m1.547593e-07[39m
+0       Linear |R| = [32m1.547593e-07[39m
+1       Linear |R| = [33m1.500526e-07[39m
+2       Linear |R| = [33m1.485703e-07[39m
+3       Linear |R| = [33m1.484881e-07[39m
+4       Linear |R| = [32m1.386220e-07[39m
+5       Linear |R| = [33m1.386002e-07[39m
+6       Linear |R| = [32m1.069311e-07[39m
+7       Linear |R| = [32m9.711965e-08[39m
+8       Linear |R| = [32m5.714291e-08[39m
+9       Linear |R| = [32m4.477274e-08[39m
+10      Linear |R| = [32m2.357755e-08[39m
+11      Linear |R| = [32m1.589901e-08[39m
+12      Linear |R| = [32m6.627887e-09[39m
+13      Linear |R| = [32m3.992785e-09[39m
+14      Linear |R| = [32m2.032019e-09[39m
+15      Linear |R| = [32m1.003614e-09[39m
+16      Linear |R| = [32m4.289159e-10[39m
+17      Linear |R| = [32m1.782798e-10[39m
+18      Linear |R| = [32m8.060044e-11[39m
+19      Linear |R| = [32m3.576854e-11[39m
+20      Linear |R| = [32m2.091100e-11[39m
+21      Linear |R| = [32m1.740767e-11[39m
+22      Linear |R| = [32m1.064539e-11[39m
+23      Linear |R| = [32m4.229187e-12[39m
+24      Linear |R| = [32m1.854141e-12[39m
+25      Linear |R| = [32m6.134150e-13[39m
+1  Nonlinear |R| = [32m2.031879e-11[39m
+0       Linear |R| = [32m2.031879e-11[39m
+1       Linear |R| = [32m5.512751e-13[39m
+2       Linear |R| = [32m2.262065e-13[39m
+3       Linear |R| = [32m1.497190e-13[39m
+4       Linear |R| = [32m4.542687e-14[39m
+5       Linear |R| = [32m2.833242e-14[39m
+6       Linear |R| = [32m1.392304e-14[39m
+7       Linear |R| = [32m1.052876e-14[39m
+8       Linear |R| = [32m8.900189e-15[39m
+9       Linear |R| = [32m7.772375e-15[39m
+10      Linear |R| = [32m7.016631e-15[39m
+11      Linear |R| = [33m6.990323e-15[39m
+12      Linear |R| = [32m6.593598e-15[39m
+13      Linear |R| = [33m6.577072e-15[39m
+14      Linear |R| = [32m5.895655e-15[39m
+15      Linear |R| = [33m5.616772e-15[39m
+16      Linear |R| = [32m4.672418e-15[39m
+17      Linear |R| = [32m3.776615e-15[39m
+18      Linear |R| = [32m2.784045e-15[39m
+19      Linear |R| = [32m1.878678e-15[39m
+20      Linear |R| = [32m1.177868e-15[39m
+21      Linear |R| = [32m7.659004e-16[39m
+22      Linear |R| = [32m3.401004e-16[39m
+23      Linear |R| = [32m1.012887e-16[39m
+2  Nonlinear |R| = [32m3.196049e-16[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 24
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   1.250000e-01 |   1.360560e+00 |   7.058885e+01 |   1.303513e+00 |
+|   1.375000e-01 |   1.421361e+00 |   7.391631e+01 |   1.365318e+00 |
+|   1.500000e-01 |   1.488083e+00 |   7.758441e+01 |   1.433449e+00 |
+|   1.625000e-01 |   1.561609e+00 |   8.164658e+01 |   1.508901e+00 |
+|   1.750000e-01 |   1.642998e+00 |   8.616773e+01 |   1.592878e+00 |
+|   1.875000e-01 |   1.733538e+00 |   9.122734e+01 |   1.686857e+00 |
+|   2.000000e-01 |   1.834801e+00 |   9.692377e+01 |   1.792664e+00 |
+|   2.125000e-01 |   1.948731e+00 |   9.951927e+01 |   1.840829e+00 |
+|   2.250000e-01 |   2.019610e+00 |   1.011568e+02 |   1.871215e+00 |
+|   2.375000e-01 |   2.042138e+00 |   1.017172e+02 |   1.881608e+00 |
+|   2.500000e-01 |   2.050328e+00 |   1.019582e+02 |   1.886075e+00 |
+|   2.625000e-01 |   2.054263e+00 |   1.021045e+02 |   1.888783e+00 |
+|   2.750000e-01 |   2.056936e+00 |   1.022227e+02 |   1.890971e+00 |
+|   2.875000e-01 |   2.059237e+00 |   1.023327e+02 |   1.893006e+00 |
+|   3.000000e-01 |   2.061428e+00 |   1.024404e+02 |   1.894997e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 25, time = 0.3125
+                dt = 0.0125
+0  Nonlinear |R| = [32m1.547857e-07[39m
+0       Linear |R| = [32m1.547857e-07[39m
+1       Linear |R| = [33m1.495060e-07[39m
+2       Linear |R| = [33m1.481099e-07[39m
+3       Linear |R| = [33m1.481022e-07[39m
+4       Linear |R| = [32m1.384886e-07[39m
+5       Linear |R| = [33m1.383983e-07[39m
+6       Linear |R| = [32m1.062228e-07[39m
+7       Linear |R| = [32m9.609846e-08[39m
+8       Linear |R| = [32m5.644124e-08[39m
+9       Linear |R| = [32m4.428133e-08[39m
+10      Linear |R| = [32m2.327653e-08[39m
+11      Linear |R| = [32m1.576579e-08[39m
+12      Linear |R| = [32m6.546316e-09[39m
+13      Linear |R| = [32m3.958000e-09[39m
+14      Linear |R| = [32m2.007515e-09[39m
+15      Linear |R| = [32m9.959487e-10[39m
+16      Linear |R| = [32m4.239888e-10[39m
+17      Linear |R| = [32m1.765889e-10[39m
+18      Linear |R| = [32m7.971707e-11[39m
+19      Linear |R| = [32m3.560419e-11[39m
+20      Linear |R| = [32m2.074746e-11[39m
+21      Linear |R| = [32m1.728499e-11[39m
+22      Linear |R| = [32m1.058874e-11[39m
+23      Linear |R| = [32m4.188335e-12[39m
+24      Linear |R| = [32m1.837753e-12[39m
+25      Linear |R| = [32m6.063458e-13[39m
+1  Nonlinear |R| = [32m2.041164e-11[39m
+0       Linear |R| = [32m2.041164e-11[39m
+1       Linear |R| = [32m5.393094e-13[39m
+2       Linear |R| = [32m2.272051e-13[39m
+3       Linear |R| = [32m1.466161e-13[39m
+4       Linear |R| = [32m4.603968e-14[39m
+5       Linear |R| = [32m2.785282e-14[39m
+6       Linear |R| = [32m1.456702e-14[39m
+7       Linear |R| = [32m1.014765e-14[39m
+8       Linear |R| = [32m8.158700e-15[39m
+9       Linear |R| = [32m6.299707e-15[39m
+10      Linear |R| = [32m4.902823e-15[39m
+11      Linear |R| = [33m4.848120e-15[39m
+12      Linear |R| = [32m4.373853e-15[39m
+13      Linear |R| = [33m4.373733e-15[39m
+14      Linear |R| = [32m4.097572e-15[39m
+15      Linear |R| = [33m4.070514e-15[39m
+16      Linear |R| = [32m3.750663e-15[39m
+17      Linear |R| = [32m3.339997e-15[39m
+18      Linear |R| = [32m2.586652e-15[39m
+19      Linear |R| = [32m1.771122e-15[39m
+20      Linear |R| = [32m1.128169e-15[39m
+21      Linear |R| = [32m7.267867e-16[39m
+22      Linear |R| = [32m3.282874e-16[39m
+23      Linear |R| = [32m9.989454e-17[39m
+2  Nonlinear |R| = [32m3.254579e-16[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 25
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   1.375000e-01 |   1.421361e+00 |   7.391631e+01 |   1.365318e+00 |
+|   1.500000e-01 |   1.488083e+00 |   7.758441e+01 |   1.433449e+00 |
+|   1.625000e-01 |   1.561609e+00 |   8.164658e+01 |   1.508901e+00 |
+|   1.750000e-01 |   1.642998e+00 |   8.616773e+01 |   1.592878e+00 |
+|   1.875000e-01 |   1.733538e+00 |   9.122734e+01 |   1.686857e+00 |
+|   2.000000e-01 |   1.834801e+00 |   9.692377e+01 |   1.792664e+00 |
+|   2.125000e-01 |   1.948731e+00 |   9.951927e+01 |   1.840829e+00 |
+|   2.250000e-01 |   2.019610e+00 |   1.011568e+02 |   1.871215e+00 |
+|   2.375000e-01 |   2.042138e+00 |   1.017172e+02 |   1.881608e+00 |
+|   2.500000e-01 |   2.050328e+00 |   1.019582e+02 |   1.886075e+00 |
+|   2.625000e-01 |   2.054263e+00 |   1.021045e+02 |   1.888783e+00 |
+|   2.750000e-01 |   2.056936e+00 |   1.022227e+02 |   1.890971e+00 |
+|   2.875000e-01 |   2.059237e+00 |   1.023327e+02 |   1.893006e+00 |
+|   3.000000e-01 |   2.061428e+00 |   1.024404e+02 |   1.894997e+00 |
+|   3.125000e-01 |   2.063589e+00 |   1.025474e+02 |   1.896977e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 26, time = 0.325
+                dt = 0.0125
+0  Nonlinear |R| = [32m1.549076e-07[39m
+0       Linear |R| = [32m1.549076e-07[39m
+1       Linear |R| = [33m1.494452e-07[39m
+2       Linear |R| = [33m1.480742e-07[39m
+3       Linear |R| = [33m1.480736e-07[39m
+4       Linear |R| = [32m1.385435e-07[39m
+5       Linear |R| = [33m1.384192e-07[39m
+6       Linear |R| = [32m1.060915e-07[39m
+7       Linear |R| = [32m9.583953e-08[39m
+8       Linear |R| = [32m5.628033e-08[39m
+9       Linear |R| = [32m4.415891e-08[39m
+10      Linear |R| = [32m2.320682e-08[39m
+11      Linear |R| = [32m1.573588e-08[39m
+12      Linear |R| = [32m6.526976e-09[39m
+13      Linear |R| = [32m3.950407e-09[39m
+14      Linear |R| = [32m2.001688e-09[39m
+15      Linear |R| = [32m9.943746e-10[39m
+16      Linear |R| = [32m4.228329e-10[39m
+17      Linear |R| = [32m1.762144e-10[39m
+18      Linear |R| = [32m7.951243e-11[39m
+19      Linear |R| = [32m3.558004e-11[39m
+20      Linear |R| = [32m2.071372e-11[39m
+21      Linear |R| = [32m1.726046e-11[39m
+22      Linear |R| = [32m1.057929e-11[39m
+23      Linear |R| = [32m4.179245e-12[39m
+24      Linear |R| = [32m1.834171e-12[39m
+25      Linear |R| = [32m6.047021e-13[39m
+1  Nonlinear |R| = [32m2.065271e-11[39m
+0       Linear |R| = [32m2.065271e-11[39m
+1       Linear |R| = [32m5.490666e-13[39m
+2       Linear |R| = [32m2.279523e-13[39m
+3       Linear |R| = [32m1.516056e-13[39m
+4       Linear |R| = [32m4.580000e-14[39m
+5       Linear |R| = [32m3.076181e-14[39m
+6       Linear |R| = [32m1.838045e-14[39m
+7       Linear |R| = [32m1.654992e-14[39m
+8       Linear |R| = [32m1.563553e-14[39m
+9       Linear |R| = [33m1.501578e-14[39m
+10      Linear |R| = [33m1.470337e-14[39m
+11      Linear |R| = [33m1.444728e-14[39m
+12      Linear |R| = [33m1.409588e-14[39m
+13      Linear |R| = [32m1.243435e-14[39m
+14      Linear |R| = [32m1.130729e-14[39m
+15      Linear |R| = [32m7.694037e-15[39m
+16      Linear |R| = [32m5.681611e-15[39m
+17      Linear |R| = [32m3.214307e-15[39m
+18      Linear |R| = [32m2.253777e-15[39m
+19      Linear |R| = [32m1.370384e-15[39m
+20      Linear |R| = [32m9.196204e-16[39m
+21      Linear |R| = [32m6.651285e-16[39m
+22      Linear |R| = [32m3.060108e-16[39m
+23      Linear |R| = [32m9.394366e-17[39m
+2  Nonlinear |R| = [32m3.226195e-16[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 26
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   1.500000e-01 |   1.488083e+00 |   7.758441e+01 |   1.433449e+00 |
+|   1.625000e-01 |   1.561609e+00 |   8.164658e+01 |   1.508901e+00 |
+|   1.750000e-01 |   1.642998e+00 |   8.616773e+01 |   1.592878e+00 |
+|   1.875000e-01 |   1.733538e+00 |   9.122734e+01 |   1.686857e+00 |
+|   2.000000e-01 |   1.834801e+00 |   9.692377e+01 |   1.792664e+00 |
+|   2.125000e-01 |   1.948731e+00 |   9.951927e+01 |   1.840829e+00 |
+|   2.250000e-01 |   2.019610e+00 |   1.011568e+02 |   1.871215e+00 |
+|   2.375000e-01 |   2.042138e+00 |   1.017172e+02 |   1.881608e+00 |
+|   2.500000e-01 |   2.050328e+00 |   1.019582e+02 |   1.886075e+00 |
+|   2.625000e-01 |   2.054263e+00 |   1.021045e+02 |   1.888783e+00 |
+|   2.750000e-01 |   2.056936e+00 |   1.022227e+02 |   1.890971e+00 |
+|   2.875000e-01 |   2.059237e+00 |   1.023327e+02 |   1.893006e+00 |
+|   3.000000e-01 |   2.061428e+00 |   1.024404e+02 |   1.894997e+00 |
+|   3.125000e-01 |   2.063589e+00 |   1.025474e+02 |   1.896977e+00 |
+|   3.250000e-01 |   2.065742e+00 |   1.026543e+02 |   1.898954e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 27, time = 0.3375
+                dt = 0.0125
+0  Nonlinear |R| = [32m1.550572e-07[39m
+0       Linear |R| = [32m1.550572e-07[39m
+1       Linear |R| = [33m1.495359e-07[39m
+2       Linear |R| = [33m1.481714e-07[39m
+3       Linear |R| = [33m1.481714e-07[39m
+4       Linear |R| = [32m1.386609e-07[39m
+5       Linear |R| = [33m1.385248e-07[39m
+6       Linear |R| = [32m1.061332e-07[39m
+7       Linear |R| = [32m9.583381e-08[39m
+8       Linear |R| = [32m5.627945e-08[39m
+9       Linear |R| = [32m4.415773e-08[39m
+10      Linear |R| = [32m2.320546e-08[39m
+11      Linear |R| = [32m1.573886e-08[39m
+12      Linear |R| = [32m6.526100e-09[39m
+13      Linear |R| = [32m3.951039e-09[39m
+14      Linear |R| = [32m2.001403e-09[39m
+15      Linear |R| = [32m9.946347e-10[39m
+16      Linear |R| = [32m4.227963e-10[39m
+17      Linear |R| = [32m1.762317e-10[39m
+18      Linear |R| = [32m7.950897e-11[39m
+19      Linear |R| = [32m3.559757e-11[39m
+20      Linear |R| = [32m2.071797e-11[39m
+21      Linear |R| = [32m1.726499e-11[39m
+22      Linear |R| = [32m1.058380e-11[39m
+23      Linear |R| = [32m4.179617e-12[39m
+24      Linear |R| = [32m1.834439e-12[39m
+25      Linear |R| = [32m6.046691e-13[39m
+1  Nonlinear |R| = [32m2.090315e-11[39m
+0       Linear |R| = [32m2.090315e-11[39m
+1       Linear |R| = [32m5.579790e-13[39m
+2       Linear |R| = [32m2.318073e-13[39m
+3       Linear |R| = [32m1.537013e-13[39m
+4       Linear |R| = [32m4.386598e-14[39m
+5       Linear |R| = [32m2.712840e-14[39m
+6       Linear |R| = [32m1.150583e-14[39m
+7       Linear |R| = [32m8.629472e-15[39m
+8       Linear |R| = [32m7.063154e-15[39m
+9       Linear |R| = [32m6.419919e-15[39m
+10      Linear |R| = [32m5.567378e-15[39m
+11      Linear |R| = [33m5.566920e-15[39m
+12      Linear |R| = [32m5.198053e-15[39m
+13      Linear |R| = [33m5.197904e-15[39m
+14      Linear |R| = [32m4.810243e-15[39m
+15      Linear |R| = [32m4.459699e-15[39m
+16      Linear |R| = [32m3.499552e-15[39m
+17      Linear |R| = [32m2.345453e-15[39m
+18      Linear |R| = [32m1.554224e-15[39m
+19      Linear |R| = [32m8.758969e-16[39m
+20      Linear |R| = [32m5.411164e-16[39m
+21      Linear |R| = [32m4.465232e-16[39m
+22      Linear |R| = [32m2.496186e-16[39m
+23      Linear |R| = [32m9.501256e-17[39m
+2  Nonlinear |R| = [32m3.170861e-16[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 27
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   1.625000e-01 |   1.561609e+00 |   8.164658e+01 |   1.508901e+00 |
+|   1.750000e-01 |   1.642998e+00 |   8.616773e+01 |   1.592878e+00 |
+|   1.875000e-01 |   1.733538e+00 |   9.122734e+01 |   1.686857e+00 |
+|   2.000000e-01 |   1.834801e+00 |   9.692377e+01 |   1.792664e+00 |
+|   2.125000e-01 |   1.948731e+00 |   9.951927e+01 |   1.840829e+00 |
+|   2.250000e-01 |   2.019610e+00 |   1.011568e+02 |   1.871215e+00 |
+|   2.375000e-01 |   2.042138e+00 |   1.017172e+02 |   1.881608e+00 |
+|   2.500000e-01 |   2.050328e+00 |   1.019582e+02 |   1.886075e+00 |
+|   2.625000e-01 |   2.054263e+00 |   1.021045e+02 |   1.888783e+00 |
+|   2.750000e-01 |   2.056936e+00 |   1.022227e+02 |   1.890971e+00 |
+|   2.875000e-01 |   2.059237e+00 |   1.023327e+02 |   1.893006e+00 |
+|   3.000000e-01 |   2.061428e+00 |   1.024404e+02 |   1.894997e+00 |
+|   3.125000e-01 |   2.063589e+00 |   1.025474e+02 |   1.896977e+00 |
+|   3.250000e-01 |   2.065742e+00 |   1.026543e+02 |   1.898954e+00 |
+|   3.375000e-01 |   2.067894e+00 |   1.027612e+02 |   1.900933e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 28, time = 0.35
+                dt = 0.0125
+0  Nonlinear |R| = [32m1.552151e-07[39m
+0       Linear |R| = [32m1.552151e-07[39m
+1       Linear |R| = [33m1.496722e-07[39m
+2       Linear |R| = [33m1.483087e-07[39m
+3       Linear |R| = [33m1.483087e-07[39m
+4       Linear |R| = [32m1.387975e-07[39m
+5       Linear |R| = [33m1.386577e-07[39m
+6       Linear |R| = [32m1.062265e-07[39m
+7       Linear |R| = [32m9.590609e-08[39m
+8       Linear |R| = [32m5.632608e-08[39m
+9       Linear |R| = [32m4.419372e-08[39m
+10      Linear |R| = [32m2.322438e-08[39m
+11      Linear |R| = [32m1.575182e-08[39m
+12      Linear |R| = [32m6.530710e-09[39m
+13      Linear |R| = [32m3.954129e-09[39m
+14      Linear |R| = [32m2.002765e-09[39m
+15      Linear |R| = [32m9.954424e-10[39m
+16      Linear |R| = [32m4.230922e-10[39m
+17      Linear |R| = [32m1.763653e-10[39m
+18      Linear |R| = [32m7.956520e-11[39m
+19      Linear |R| = [32m3.562736e-11[39m
+20      Linear |R| = [32m2.073333e-11[39m
+21      Linear |R| = [32m1.727803e-11[39m
+22      Linear |R| = [32m1.059243e-11[39m
+23      Linear |R| = [32m4.182802e-12[39m
+24      Linear |R| = [32m1.835853e-12[39m
+25      Linear |R| = [32m6.051148e-13[39m
+1  Nonlinear |R| = [32m2.080613e-11[39m
+0       Linear |R| = [32m2.080613e-11[39m
+1       Linear |R| = [32m5.656015e-13[39m
+2       Linear |R| = [32m2.324315e-13[39m
+3       Linear |R| = [32m1.596139e-13[39m
+4       Linear |R| = [32m4.946911e-14[39m
+5       Linear |R| = [32m3.137478e-14[39m
+6       Linear |R| = [32m2.045574e-14[39m
+7       Linear |R| = [32m1.629325e-14[39m
+8       Linear |R| = [33m1.567567e-14[39m
+9       Linear |R| = [32m1.408160e-14[39m
+10      Linear |R| = [33m1.404308e-14[39m
+11      Linear |R| = [32m1.322662e-14[39m
+12      Linear |R| = [33m1.319112e-14[39m
+13      Linear |R| = [32m1.205191e-14[39m
+14      Linear |R| = [33m1.151606e-14[39m
+15      Linear |R| = [32m9.706770e-15[39m
+16      Linear |R| = [32m8.271439e-15[39m
+17      Linear |R| = [32m5.784448e-15[39m
+18      Linear |R| = [32m3.954456e-15[39m
+19      Linear |R| = [32m2.262246e-15[39m
+20      Linear |R| = [32m1.369931e-15[39m
+21      Linear |R| = [32m8.138972e-16[39m
+22      Linear |R| = [32m3.492954e-16[39m
+23      Linear |R| = [32m1.024129e-16[39m
+2  Nonlinear |R| = [32m3.289159e-16[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 28
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   1.750000e-01 |   1.642998e+00 |   8.616773e+01 |   1.592878e+00 |
+|   1.875000e-01 |   1.733538e+00 |   9.122734e+01 |   1.686857e+00 |
+|   2.000000e-01 |   1.834801e+00 |   9.692377e+01 |   1.792664e+00 |
+|   2.125000e-01 |   1.948731e+00 |   9.951927e+01 |   1.840829e+00 |
+|   2.250000e-01 |   2.019610e+00 |   1.011568e+02 |   1.871215e+00 |
+|   2.375000e-01 |   2.042138e+00 |   1.017172e+02 |   1.881608e+00 |
+|   2.500000e-01 |   2.050328e+00 |   1.019582e+02 |   1.886075e+00 |
+|   2.625000e-01 |   2.054263e+00 |   1.021045e+02 |   1.888783e+00 |
+|   2.750000e-01 |   2.056936e+00 |   1.022227e+02 |   1.890971e+00 |
+|   2.875000e-01 |   2.059237e+00 |   1.023327e+02 |   1.893006e+00 |
+|   3.000000e-01 |   2.061428e+00 |   1.024404e+02 |   1.894997e+00 |
+|   3.125000e-01 |   2.063589e+00 |   1.025474e+02 |   1.896977e+00 |
+|   3.250000e-01 |   2.065742e+00 |   1.026543e+02 |   1.898954e+00 |
+|   3.375000e-01 |   2.067894e+00 |   1.027612e+02 |   1.900933e+00 |
+|   3.500000e-01 |   2.070048e+00 |   1.028682e+02 |   1.902913e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 29, time = 0.3625
+                dt = 0.0125
+0  Nonlinear |R| = [32m1.553754e-07[39m
+0       Linear |R| = [32m1.553754e-07[39m
+1       Linear |R| = [33m1.498223e-07[39m
+2       Linear |R| = [33m1.484581e-07[39m
+3       Linear |R| = [33m1.484581e-07[39m
+4       Linear |R| = [32m1.389401e-07[39m
+5       Linear |R| = [33m1.387990e-07[39m
+6       Linear |R| = [32m1.063351e-07[39m
+7       Linear |R| = [32m9.600184e-08[39m
+8       Linear |R| = [32m5.638685e-08[39m
+9       Linear |R| = [32m4.424087e-08[39m
+10      Linear |R| = [32m2.324934e-08[39m
+11      Linear |R| = [32m1.576777e-08[39m
+12      Linear |R| = [32m6.536951e-09[39m
+13      Linear |R| = [32m3.957953e-09[39m
+14      Linear |R| = [32m2.004617e-09[39m
+15      Linear |R| = [32m9.964134e-10[39m
+16      Linear |R| = [32m4.234872e-10[39m
+17      Linear |R| = [32m1.765337e-10[39m
+18      Linear |R| = [32m7.963934e-11[39m
+19      Linear |R| = [32m3.566112e-11[39m
+20      Linear |R| = [32m2.075226e-11[39m
+21      Linear |R| = [32m1.729384e-11[39m
+22      Linear |R| = [32m1.060237e-11[39m
+23      Linear |R| = [32m4.186831e-12[39m
+24      Linear |R| = [32m1.837611e-12[39m
+25      Linear |R| = [32m6.057031e-13[39m
+1  Nonlinear |R| = [32m2.090304e-11[39m
+0       Linear |R| = [32m2.090304e-11[39m
+1       Linear |R| = [32m5.526880e-13[39m
+2       Linear |R| = [32m2.327845e-13[39m
+3       Linear |R| = [32m1.558868e-13[39m
+4       Linear |R| = [32m4.634499e-14[39m
+5       Linear |R| = [32m2.956964e-14[39m
+6       Linear |R| = [32m1.724873e-14[39m
+7       Linear |R| = [32m1.328859e-14[39m
+8       Linear |R| = [32m1.226969e-14[39m
+9       Linear |R| = [32m1.070805e-14[39m
+10      Linear |R| = [33m1.055966e-14[39m
+11      Linear |R| = [32m9.928775e-15[39m
+12      Linear |R| = [33m9.921210e-15[39m
+13      Linear |R| = [32m8.968422e-15[39m
+14      Linear |R| = [33m8.762078e-15[39m
+15      Linear |R| = [32m7.547662e-15[39m
+16      Linear |R| = [32m6.701966e-15[39m
+17      Linear |R| = [32m4.967064e-15[39m
+18      Linear |R| = [32m3.640956e-15[39m
+19      Linear |R| = [32m2.152760e-15[39m
+20      Linear |R| = [32m1.327172e-15[39m
+21      Linear |R| = [32m7.643679e-16[39m
+22      Linear |R| = [32m3.352952e-16[39m
+23      Linear |R| = [32m9.695626e-17[39m
+2  Nonlinear |R| = [32m3.273389e-16[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 29
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   1.875000e-01 |   1.733538e+00 |   9.122734e+01 |   1.686857e+00 |
+|   2.000000e-01 |   1.834801e+00 |   9.692377e+01 |   1.792664e+00 |
+|   2.125000e-01 |   1.948731e+00 |   9.951927e+01 |   1.840829e+00 |
+|   2.250000e-01 |   2.019610e+00 |   1.011568e+02 |   1.871215e+00 |
+|   2.375000e-01 |   2.042138e+00 |   1.017172e+02 |   1.881608e+00 |
+|   2.500000e-01 |   2.050328e+00 |   1.019582e+02 |   1.886075e+00 |
+|   2.625000e-01 |   2.054263e+00 |   1.021045e+02 |   1.888783e+00 |
+|   2.750000e-01 |   2.056936e+00 |   1.022227e+02 |   1.890971e+00 |
+|   2.875000e-01 |   2.059237e+00 |   1.023327e+02 |   1.893006e+00 |
+|   3.000000e-01 |   2.061428e+00 |   1.024404e+02 |   1.894997e+00 |
+|   3.125000e-01 |   2.063589e+00 |   1.025474e+02 |   1.896977e+00 |
+|   3.250000e-01 |   2.065742e+00 |   1.026543e+02 |   1.898954e+00 |
+|   3.375000e-01 |   2.067894e+00 |   1.027612e+02 |   1.900933e+00 |
+|   3.500000e-01 |   2.070048e+00 |   1.028682e+02 |   1.902913e+00 |
+|   3.625000e-01 |   2.072204e+00 |   1.029754e+02 |   1.904894e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 30, time = 0.375
+                dt = 0.0125
+0  Nonlinear |R| = [32m1.555367e-07[39m
+0       Linear |R| = [32m1.555367e-07[39m
+1       Linear |R| = [33m1.499766e-07[39m
+2       Linear |R| = [33m1.486113e-07[39m
+3       Linear |R| = [33m1.486113e-07[39m
+4       Linear |R| = [32m1.390845e-07[39m
+5       Linear |R| = [33m1.389430e-07[39m
+6       Linear |R| = [32m1.064485e-07[39m
+7       Linear |R| = [32m9.610466e-08[39m
+8       Linear |R| = [32m5.645186e-08[39m
+9       Linear |R| = [32m4.429139e-08[39m
+10      Linear |R| = [32m2.327610e-08[39m
+11      Linear |R| = [32m1.578462e-08[39m
+12      Linear |R| = [32m6.543682e-09[39m
+13      Linear |R| = [32m3.961997e-09[39m
+14      Linear |R| = [32m2.006615e-09[39m
+15      Linear |R| = [32m9.974337e-10[39m
+16      Linear |R| = [32m4.239119e-10[39m
+17      Linear |R| = [32m1.767126e-10[39m
+18      Linear |R| = [32m7.971880e-11[39m
+19      Linear |R| = [32m3.569597e-11[39m
+20      Linear |R| = [32m2.077216e-11[39m
+21      Linear |R| = [32m1.731039e-11[39m
+22      Linear |R| = [32m1.061268e-11[39m
+23      Linear |R| = [32m4.191110e-12[39m
+24      Linear |R| = [32m1.839472e-12[39m
+25      Linear |R| = [32m6.063340e-13[39m
+1  Nonlinear |R| = [32m2.108904e-11[39m
+0       Linear |R| = [32m2.108904e-11[39m
+1       Linear |R| = [32m5.488020e-13[39m
+2       Linear |R| = [32m2.287063e-13[39m
+3       Linear |R| = [32m1.483022e-13[39m
+4       Linear |R| = [32m4.235460e-14[39m
+5       Linear |R| = [32m2.614746e-14[39m
+6       Linear |R| = [32m1.135271e-14[39m
+7       Linear |R| = [32m7.613721e-15[39m
+8       Linear |R| = [32m6.074199e-15[39m
+9       Linear |R| = [32m4.638411e-15[39m
+10      Linear |R| = [32m3.249873e-15[39m
+11      Linear |R| = [33m3.178852e-15[39m
+12      Linear |R| = [32m2.802782e-15[39m
+13      Linear |R| = [33m2.795903e-15[39m
+14      Linear |R| = [32m2.646872e-15[39m
+15      Linear |R| = [33m2.618303e-15[39m
+16      Linear |R| = [33m2.489657e-15[39m
+17      Linear |R| = [32m2.330587e-15[39m
+18      Linear |R| = [32m1.977870e-15[39m
+19      Linear |R| = [32m1.365460e-15[39m
+20      Linear |R| = [32m9.149848e-16[39m
+21      Linear |R| = [32m6.104982e-16[39m
+22      Linear |R| = [32m3.109208e-16[39m
+23      Linear |R| = [32m9.488384e-17[39m
+2  Nonlinear |R| = [32m3.309771e-16[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 30
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   2.000000e-01 |   1.834801e+00 |   9.692377e+01 |   1.792664e+00 |
+|   2.125000e-01 |   1.948731e+00 |   9.951927e+01 |   1.840829e+00 |
+|   2.250000e-01 |   2.019610e+00 |   1.011568e+02 |   1.871215e+00 |
+|   2.375000e-01 |   2.042138e+00 |   1.017172e+02 |   1.881608e+00 |
+|   2.500000e-01 |   2.050328e+00 |   1.019582e+02 |   1.886075e+00 |
+|   2.625000e-01 |   2.054263e+00 |   1.021045e+02 |   1.888783e+00 |
+|   2.750000e-01 |   2.056936e+00 |   1.022227e+02 |   1.890971e+00 |
+|   2.875000e-01 |   2.059237e+00 |   1.023327e+02 |   1.893006e+00 |
+|   3.000000e-01 |   2.061428e+00 |   1.024404e+02 |   1.894997e+00 |
+|   3.125000e-01 |   2.063589e+00 |   1.025474e+02 |   1.896977e+00 |
+|   3.250000e-01 |   2.065742e+00 |   1.026543e+02 |   1.898954e+00 |
+|   3.375000e-01 |   2.067894e+00 |   1.027612e+02 |   1.900933e+00 |
+|   3.500000e-01 |   2.070048e+00 |   1.028682e+02 |   1.902913e+00 |
+|   3.625000e-01 |   2.072204e+00 |   1.029754e+02 |   1.904894e+00 |
+|   3.750000e-01 |   2.074362e+00 |   1.030826e+02 |   1.906878e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 31, time = 0.3875
+                dt = 0.0125
+0  Nonlinear |R| = [32m1.556984e-07[39m
+0       Linear |R| = [32m1.556984e-07[39m
+1       Linear |R| = [33m1.501323e-07[39m
+2       Linear |R| = [33m1.487656e-07[39m
+3       Linear |R| = [33m1.487656e-07[39m
+4       Linear |R| = [32m1.392295e-07[39m
+5       Linear |R| = [33m1.390878e-07[39m
+6       Linear |R| = [32m1.065633e-07[39m
+7       Linear |R| = [32m9.620966e-08[39m
+8       Linear |R| = [32m5.651817e-08[39m
+9       Linear |R| = [32m4.434293e-08[39m
+10      Linear |R| = [32m2.330342e-08[39m
+11      Linear |R| = [32m1.580174e-08[39m
+12      Linear |R| = [32m6.550563e-09[39m
+13      Linear |R| = [32m3.966110e-09[39m
+14      Linear |R| = [32m2.008660e-09[39m
+15      Linear |R| = [32m9.984693e-10[39m
+16      Linear |R| = [32m4.243458e-10[39m
+17      Linear |R| = [32m1.768947e-10[39m
+18      Linear |R| = [32m7.979985e-11[39m
+19      Linear |R| = [32m3.573105e-11[39m
+20      Linear |R| = [32m2.079227e-11[39m
+21      Linear |R| = [32m1.732710e-11[39m
+22      Linear |R| = [32m1.062307e-11[39m
+23      Linear |R| = [32m4.195466e-12[39m
+24      Linear |R| = [32m1.841364e-12[39m
+25      Linear |R| = [32m6.069781e-13[39m
+1  Nonlinear |R| = [32m2.141926e-11[39m
+0       Linear |R| = [32m2.141926e-11[39m
+1       Linear |R| = [32m5.544346e-13[39m
+2       Linear |R| = [32m2.351314e-13[39m
+3       Linear |R| = [32m1.533963e-13[39m
+4       Linear |R| = [32m4.882659e-14[39m
+5       Linear |R| = [32m2.893117e-14[39m
+6       Linear |R| = [32m1.566057e-14[39m
+7       Linear |R| = [32m1.029427e-14[39m
+8       Linear |R| = [32m7.548652e-15[39m
+9       Linear |R| = [32m4.501933e-15[39m
+10      Linear |R| = [32m2.304351e-15[39m
+11      Linear |R| = [32m1.693149e-15[39m
+12      Linear |R| = [32m1.384818e-15[39m
+13      Linear |R| = [32m1.194964e-15[39m
+14      Linear |R| = [32m1.121608e-15[39m
+15      Linear |R| = [33m1.095922e-15[39m
+16      Linear |R| = [33m1.071473e-15[39m
+17      Linear |R| = [33m1.066273e-15[39m
+18      Linear |R| = [33m1.036070e-15[39m
+19      Linear |R| = [33m9.993230e-16[39m
+20      Linear |R| = [32m8.514688e-16[39m
+21      Linear |R| = [32m6.603493e-16[39m
+22      Linear |R| = [32m3.294647e-16[39m
+23      Linear |R| = [32m9.771232e-17[39m
+2  Nonlinear |R| = [32m3.340423e-16[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 31
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   2.125000e-01 |   1.948731e+00 |   9.951927e+01 |   1.840829e+00 |
+|   2.250000e-01 |   2.019610e+00 |   1.011568e+02 |   1.871215e+00 |
+|   2.375000e-01 |   2.042138e+00 |   1.017172e+02 |   1.881608e+00 |
+|   2.500000e-01 |   2.050328e+00 |   1.019582e+02 |   1.886075e+00 |
+|   2.625000e-01 |   2.054263e+00 |   1.021045e+02 |   1.888783e+00 |
+|   2.750000e-01 |   2.056936e+00 |   1.022227e+02 |   1.890971e+00 |
+|   2.875000e-01 |   2.059237e+00 |   1.023327e+02 |   1.893006e+00 |
+|   3.000000e-01 |   2.061428e+00 |   1.024404e+02 |   1.894997e+00 |
+|   3.125000e-01 |   2.063589e+00 |   1.025474e+02 |   1.896977e+00 |
+|   3.250000e-01 |   2.065742e+00 |   1.026543e+02 |   1.898954e+00 |
+|   3.375000e-01 |   2.067894e+00 |   1.027612e+02 |   1.900933e+00 |
+|   3.500000e-01 |   2.070048e+00 |   1.028682e+02 |   1.902913e+00 |
+|   3.625000e-01 |   2.072204e+00 |   1.029754e+02 |   1.904894e+00 |
+|   3.750000e-01 |   2.074362e+00 |   1.030826e+02 |   1.906878e+00 |
+|   3.875000e-01 |   2.076522e+00 |   1.031900e+02 |   1.908865e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 32, time = 0.4
+                dt = 0.0125
+0  Nonlinear |R| = [32m1.558602e-07[39m
+0       Linear |R| = [32m1.558602e-07[39m
+1       Linear |R| = [33m1.502885e-07[39m
+2       Linear |R| = [33m1.489204e-07[39m
+3       Linear |R| = [33m1.489204e-07[39m
+4       Linear |R| = [32m1.393749e-07[39m
+5       Linear |R| = [33m1.392330e-07[39m
+6       Linear |R| = [32m1.066786e-07[39m
+7       Linear |R| = [32m9.631537e-08[39m
+8       Linear |R| = [32m5.658491e-08[39m
+9       Linear |R| = [32m4.439482e-08[39m
+10      Linear |R| = [32m2.333092e-08[39m
+11      Linear |R| = [32m1.581896e-08[39m
+12      Linear |R| = [32m6.557494e-09[39m
+13      Linear |R| = [32m3.970246e-09[39m
+14      Linear |R| = [32m2.010719e-09[39m
+15      Linear |R| = [32m9.995104e-10[39m
+16      Linear |R| = [32m4.247827e-10[39m
+17      Linear |R| = [32m1.770779e-10[39m
+18      Linear |R| = [32m7.988155e-11[39m
+19      Linear |R| = [32m3.576647e-11[39m
+20      Linear |R| = [32m2.081266e-11[39m
+21      Linear |R| = [32m1.734404e-11[39m
+22      Linear |R| = [32m1.063357e-11[39m
+23      Linear |R| = [32m4.199852e-12[39m
+24      Linear |R| = [32m1.843268e-12[39m
+25      Linear |R| = [32m6.076267e-13[39m
+1  Nonlinear |R| = [32m2.104530e-11[39m
+0       Linear |R| = [32m2.104530e-11[39m
+1       Linear |R| = [32m5.534851e-13[39m
+2       Linear |R| = [32m2.356674e-13[39m
+3       Linear |R| = [32m1.534613e-13[39m
+4       Linear |R| = [32m4.677210e-14[39m
+5       Linear |R| = [32m2.866915e-14[39m
+6       Linear |R| = [32m1.611658e-14[39m
+7       Linear |R| = [32m1.118301e-14[39m
+8       Linear |R| = [32m9.780540e-15[39m
+9       Linear |R| = [32m7.517720e-15[39m
+10      Linear |R| = [32m7.075870e-15[39m
+11      Linear |R| = [32m6.563710e-15[39m
+12      Linear |R| = [33m6.541713e-15[39m
+13      Linear |R| = [32m6.012147e-15[39m
+14      Linear |R| = [33m5.964924e-15[39m
+15      Linear |R| = [32m5.468208e-15[39m
+16      Linear |R| = [32m5.166173e-15[39m
+17      Linear |R| = [32m4.171591e-15[39m
+18      Linear |R| = [32m3.201600e-15[39m
+19      Linear |R| = [32m1.923705e-15[39m
+20      Linear |R| = [32m1.250167e-15[39m
+21      Linear |R| = [32m7.371181e-16[39m
+22      Linear |R| = [32m3.436509e-16[39m
+23      Linear |R| = [32m9.924431e-17[39m
+2  Nonlinear |R| = [32m3.261982e-16[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 32
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   2.250000e-01 |   2.019610e+00 |   1.011568e+02 |   1.871215e+00 |
+|   2.375000e-01 |   2.042138e+00 |   1.017172e+02 |   1.881608e+00 |
+|   2.500000e-01 |   2.050328e+00 |   1.019582e+02 |   1.886075e+00 |
+|   2.625000e-01 |   2.054263e+00 |   1.021045e+02 |   1.888783e+00 |
+|   2.750000e-01 |   2.056936e+00 |   1.022227e+02 |   1.890971e+00 |
+|   2.875000e-01 |   2.059237e+00 |   1.023327e+02 |   1.893006e+00 |
+|   3.000000e-01 |   2.061428e+00 |   1.024404e+02 |   1.894997e+00 |
+|   3.125000e-01 |   2.063589e+00 |   1.025474e+02 |   1.896977e+00 |
+|   3.250000e-01 |   2.065742e+00 |   1.026543e+02 |   1.898954e+00 |
+|   3.375000e-01 |   2.067894e+00 |   1.027612e+02 |   1.900933e+00 |
+|   3.500000e-01 |   2.070048e+00 |   1.028682e+02 |   1.902913e+00 |
+|   3.625000e-01 |   2.072204e+00 |   1.029754e+02 |   1.904894e+00 |
+|   3.750000e-01 |   2.074362e+00 |   1.030826e+02 |   1.906878e+00 |
+|   3.875000e-01 |   2.076522e+00 |   1.031900e+02 |   1.908865e+00 |
+|   4.000000e-01 |   2.078684e+00 |   1.032975e+02 |   1.910853e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 33, time = 0.4125
+                dt = 0.0125
+0  Nonlinear |R| = [32m1.560223e-07[39m
+0       Linear |R| = [32m1.560223e-07[39m
+1       Linear |R| = [33m1.504449e-07[39m
+2       Linear |R| = [33m1.490754e-07[39m
+3       Linear |R| = [33m1.490754e-07[39m
+4       Linear |R| = [32m1.395204e-07[39m
+5       Linear |R| = [33m1.393784e-07[39m
+6       Linear |R| = [32m1.067941e-07[39m
+7       Linear |R| = [32m9.642138e-08[39m
+8       Linear |R| = [32m5.665183e-08[39m
+9       Linear |R| = [32m4.444684e-08[39m
+10      Linear |R| = [32m2.335849e-08[39m
+11      Linear |R| = [32m1.583622e-08[39m
+12      Linear |R| = [32m6.564444e-09[39m
+13      Linear |R| = [32m3.974392e-09[39m
+14      Linear |R| = [32m2.012784e-09[39m
+15      Linear |R| = [32m1.000554e-09[39m
+16      Linear |R| = [32m4.252209e-10[39m
+17      Linear |R| = [32m1.772617e-10[39m
+18      Linear |R| = [32m7.996352e-11[39m
+19      Linear |R| = [32m3.580207e-11[39m
+20      Linear |R| = [32m2.083320e-11[39m
+21      Linear |R| = [32m1.736109e-11[39m
+22      Linear |R| = [32m1.064412e-11[39m
+23      Linear |R| = [32m4.204250e-12[39m
+24      Linear |R| = [32m1.845178e-12[39m
+25      Linear |R| = [32m6.082770e-13[39m
+1  Nonlinear |R| = [32m2.118666e-11[39m
+0       Linear |R| = [32m2.118666e-11[39m
+1       Linear |R| = [32m5.533194e-13[39m
+2       Linear |R| = [32m2.347215e-13[39m
+3       Linear |R| = [32m1.530683e-13[39m
+4       Linear |R| = [32m4.307151e-14[39m
+5       Linear |R| = [32m2.879311e-14[39m
+6       Linear |R| = [32m1.540392e-14[39m
+7       Linear |R| = [32m1.326882e-14[39m
+8       Linear |R| = [32m1.250818e-14[39m
+9       Linear |R| = [32m1.186275e-14[39m
+10      Linear |R| = [33m1.166076e-14[39m
+11      Linear |R| = [33m1.131013e-14[39m
+12      Linear |R| = [33m1.122255e-14[39m
+13      Linear |R| = [32m9.985411e-15[39m
+14      Linear |R| = [33m9.678089e-15[39m
+15      Linear |R| = [32m7.306860e-15[39m
+16      Linear |R| = [32m6.217083e-15[39m
+17      Linear |R| = [32m3.898032e-15[39m
+18      Linear |R| = [32m2.780888e-15[39m
+19      Linear |R| = [32m1.639235e-15[39m
+20      Linear |R| = [32m1.083251e-15[39m
+21      Linear |R| = [32m7.146218e-16[39m
+22      Linear |R| = [32m3.177864e-16[39m
+23      Linear |R| = [32m9.180450e-17[39m
+2  Nonlinear |R| = [32m3.291702e-16[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 33
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   2.375000e-01 |   2.042138e+00 |   1.017172e+02 |   1.881608e+00 |
+|   2.500000e-01 |   2.050328e+00 |   1.019582e+02 |   1.886075e+00 |
+|   2.625000e-01 |   2.054263e+00 |   1.021045e+02 |   1.888783e+00 |
+|   2.750000e-01 |   2.056936e+00 |   1.022227e+02 |   1.890971e+00 |
+|   2.875000e-01 |   2.059237e+00 |   1.023327e+02 |   1.893006e+00 |
+|   3.000000e-01 |   2.061428e+00 |   1.024404e+02 |   1.894997e+00 |
+|   3.125000e-01 |   2.063589e+00 |   1.025474e+02 |   1.896977e+00 |
+|   3.250000e-01 |   2.065742e+00 |   1.026543e+02 |   1.898954e+00 |
+|   3.375000e-01 |   2.067894e+00 |   1.027612e+02 |   1.900933e+00 |
+|   3.500000e-01 |   2.070048e+00 |   1.028682e+02 |   1.902913e+00 |
+|   3.625000e-01 |   2.072204e+00 |   1.029754e+02 |   1.904894e+00 |
+|   3.750000e-01 |   2.074362e+00 |   1.030826e+02 |   1.906878e+00 |
+|   3.875000e-01 |   2.076522e+00 |   1.031900e+02 |   1.908865e+00 |
+|   4.000000e-01 |   2.078684e+00 |   1.032975e+02 |   1.910853e+00 |
+|   4.125000e-01 |   2.080849e+00 |   1.034051e+02 |   1.912843e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 34, time = 0.425
+                dt = 0.0125
+0  Nonlinear |R| = [32m1.561845e-07[39m
+0       Linear |R| = [32m1.561845e-07[39m
+1       Linear |R| = [33m1.506016e-07[39m
+2       Linear |R| = [33m1.492307e-07[39m
+3       Linear |R| = [33m1.492307e-07[39m
+4       Linear |R| = [32m1.396662e-07[39m
+5       Linear |R| = [33m1.395240e-07[39m
+6       Linear |R| = [32m1.069098e-07[39m
+7       Linear |R| = [32m9.652753e-08[39m
+8       Linear |R| = [32m5.671883e-08[39m
+9       Linear |R| = [32m4.449893e-08[39m
+10      Linear |R| = [32m2.338610e-08[39m
+11      Linear |R| = [32m1.585350e-08[39m
+12      Linear |R| = [32m6.571404e-09[39m
+13      Linear |R| = [32m3.978544e-09[39m
+14      Linear |R| = [32m2.014852e-09[39m
+15      Linear |R| = [32m1.001599e-09[39m
+16      Linear |R| = [32m4.256597e-10[39m
+17      Linear |R| = [32m1.774456e-10[39m
+18      Linear |R| = [32m8.004548e-11[39m
+19      Linear |R| = [32m3.583743e-11[39m
+20      Linear |R| = [32m2.085353e-11[39m
+21      Linear |R| = [32m1.737797e-11[39m
+22      Linear |R| = [32m1.065460e-11[39m
+23      Linear |R| = [32m4.208650e-12[39m
+24      Linear |R| = [32m1.847088e-12[39m
+25      Linear |R| = [32m6.089281e-13[39m
+1  Nonlinear |R| = [32m2.162892e-11[39m
+0       Linear |R| = [32m2.162892e-11[39m
+1       Linear |R| = [32m5.536302e-13[39m
+2       Linear |R| = [32m2.252030e-13[39m
+3       Linear |R| = [32m1.489841e-13[39m
+4       Linear |R| = [32m4.437525e-14[39m
+5       Linear |R| = [32m2.751628e-14[39m
+6       Linear |R| = [32m1.310968e-14[39m
+7       Linear |R| = [32m8.395418e-15[39m
+8       Linear |R| = [32m6.881277e-15[39m
+9       Linear |R| = [32m4.754179e-15[39m
+10      Linear |R| = [32m4.034231e-15[39m
+11      Linear |R| = [32m3.704477e-15[39m
+12      Linear |R| = [33m3.663870e-15[39m
+13      Linear |R| = [32m3.379571e-15[39m
+14      Linear |R| = [33m3.368872e-15[39m
+15      Linear |R| = [32m3.122666e-15[39m
+16      Linear |R| = [33m3.084099e-15[39m
+17      Linear |R| = [32m2.668673e-15[39m
+18      Linear |R| = [32m2.367465e-15[39m
+19      Linear |R| = [32m1.611053e-15[39m
+20      Linear |R| = [32m1.156293e-15[39m
+21      Linear |R| = [32m7.163792e-16[39m
+22      Linear |R| = [32m3.379760e-16[39m
+23      Linear |R| = [32m9.978922e-17[39m
+2  Nonlinear |R| = [32m3.319233e-16[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 34
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   2.500000e-01 |   2.050328e+00 |   1.019582e+02 |   1.886075e+00 |
+|   2.625000e-01 |   2.054263e+00 |   1.021045e+02 |   1.888783e+00 |
+|   2.750000e-01 |   2.056936e+00 |   1.022227e+02 |   1.890971e+00 |
+|   2.875000e-01 |   2.059237e+00 |   1.023327e+02 |   1.893006e+00 |
+|   3.000000e-01 |   2.061428e+00 |   1.024404e+02 |   1.894997e+00 |
+|   3.125000e-01 |   2.063589e+00 |   1.025474e+02 |   1.896977e+00 |
+|   3.250000e-01 |   2.065742e+00 |   1.026543e+02 |   1.898954e+00 |
+|   3.375000e-01 |   2.067894e+00 |   1.027612e+02 |   1.900933e+00 |
+|   3.500000e-01 |   2.070048e+00 |   1.028682e+02 |   1.902913e+00 |
+|   3.625000e-01 |   2.072204e+00 |   1.029754e+02 |   1.904894e+00 |
+|   3.750000e-01 |   2.074362e+00 |   1.030826e+02 |   1.906878e+00 |
+|   3.875000e-01 |   2.076522e+00 |   1.031900e+02 |   1.908865e+00 |
+|   4.000000e-01 |   2.078684e+00 |   1.032975e+02 |   1.910853e+00 |
+|   4.125000e-01 |   2.080849e+00 |   1.034051e+02 |   1.912843e+00 |
+|   4.250000e-01 |   2.083016e+00 |   1.035127e+02 |   1.914835e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 35, time = 0.4375
+                dt = 0.0125
+0  Nonlinear |R| = [32m1.563469e-07[39m
+0       Linear |R| = [32m1.563469e-07[39m
+1       Linear |R| = [33m1.507584e-07[39m
+2       Linear |R| = [33m1.493861e-07[39m
+3       Linear |R| = [33m1.493861e-07[39m
+4       Linear |R| = [32m1.398120e-07[39m
+5       Linear |R| = [33m1.396697e-07[39m
+6       Linear |R| = [32m1.070257e-07[39m
+7       Linear |R| = [32m9.663381e-08[39m
+8       Linear |R| = [32m5.678592e-08[39m
+9       Linear |R| = [32m4.455107e-08[39m
+10      Linear |R| = [32m2.341374e-08[39m
+11      Linear |R| = [32m1.587080e-08[39m
+12      Linear |R| = [32m6.578372e-09[39m
+13      Linear |R| = [32m3.982700e-09[39m
+14      Linear |R| = [32m2.016923e-09[39m
+15      Linear |R| = [32m1.002645e-09[39m
+16      Linear |R| = [32m4.260990e-10[39m
+17      Linear |R| = [32m1.776298e-10[39m
+18      Linear |R| = [32m8.012761e-11[39m
+19      Linear |R| = [32m3.587296e-11[39m
+20      Linear |R| = [32m2.087398e-11[39m
+21      Linear |R| = [32m1.739496e-11[39m
+22      Linear |R| = [32m1.066513e-11[39m
+23      Linear |R| = [32m4.213058e-12[39m
+24      Linear |R| = [32m1.849002e-12[39m
+25      Linear |R| = [32m6.095802e-13[39m
+1  Nonlinear |R| = [32m2.095033e-11[39m
+0       Linear |R| = [32m2.095033e-11[39m
+1       Linear |R| = [32m5.594432e-13[39m
+2       Linear |R| = [32m2.366342e-13[39m
+3       Linear |R| = [32m1.566066e-13[39m
+4       Linear |R| = [32m4.613479e-14[39m
+5       Linear |R| = [32m2.798727e-14[39m
+6       Linear |R| = [32m1.438423e-14[39m
+7       Linear |R| = [32m9.841556e-15[39m
+8       Linear |R| = [32m8.875946e-15[39m
+9       Linear |R| = [32m7.066840e-15[39m
+10      Linear |R| = [33m6.869576e-15[39m
+11      Linear |R| = [32m6.368385e-15[39m
+12      Linear |R| = [33m6.353524e-15[39m
+13      Linear |R| = [32m5.926556e-15[39m
+14      Linear |R| = [33m5.807207e-15[39m
+15      Linear |R| = [32m5.318437e-15[39m
+16      Linear |R| = [32m4.953758e-15[39m
+17      Linear |R| = [32m4.050112e-15[39m
+18      Linear |R| = [32m3.122485e-15[39m
+19      Linear |R| = [32m1.885396e-15[39m
+20      Linear |R| = [32m1.199600e-15[39m
+21      Linear |R| = [32m7.369289e-16[39m
+22      Linear |R| = [32m3.447759e-16[39m
+23      Linear |R| = [32m1.020732e-16[39m
+2  Nonlinear |R| = [32m3.372975e-16[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 35
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   2.625000e-01 |   2.054263e+00 |   1.021045e+02 |   1.888783e+00 |
+|   2.750000e-01 |   2.056936e+00 |   1.022227e+02 |   1.890971e+00 |
+|   2.875000e-01 |   2.059237e+00 |   1.023327e+02 |   1.893006e+00 |
+|   3.000000e-01 |   2.061428e+00 |   1.024404e+02 |   1.894997e+00 |
+|   3.125000e-01 |   2.063589e+00 |   1.025474e+02 |   1.896977e+00 |
+|   3.250000e-01 |   2.065742e+00 |   1.026543e+02 |   1.898954e+00 |
+|   3.375000e-01 |   2.067894e+00 |   1.027612e+02 |   1.900933e+00 |
+|   3.500000e-01 |   2.070048e+00 |   1.028682e+02 |   1.902913e+00 |
+|   3.625000e-01 |   2.072204e+00 |   1.029754e+02 |   1.904894e+00 |
+|   3.750000e-01 |   2.074362e+00 |   1.030826e+02 |   1.906878e+00 |
+|   3.875000e-01 |   2.076522e+00 |   1.031900e+02 |   1.908865e+00 |
+|   4.000000e-01 |   2.078684e+00 |   1.032975e+02 |   1.910853e+00 |
+|   4.125000e-01 |   2.080849e+00 |   1.034051e+02 |   1.912843e+00 |
+|   4.250000e-01 |   2.083016e+00 |   1.035127e+02 |   1.914835e+00 |
+|   4.375000e-01 |   2.085185e+00 |   1.036206e+02 |   1.916829e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 36, time = 0.45
+                dt = 0.0125
+0  Nonlinear |R| = [32m1.565095e-07[39m
+0       Linear |R| = [32m1.565095e-07[39m
+1       Linear |R| = [33m1.509153e-07[39m
+2       Linear |R| = [33m1.495417e-07[39m
+3       Linear |R| = [33m1.495417e-07[39m
+4       Linear |R| = [32m1.399581e-07[39m
+5       Linear |R| = [33m1.398156e-07[39m
+6       Linear |R| = [32m1.071416e-07[39m
+7       Linear |R| = [32m9.674020e-08[39m
+8       Linear |R| = [32m5.685306e-08[39m
+9       Linear |R| = [32m4.460327e-08[39m
+10      Linear |R| = [32m2.344140e-08[39m
+11      Linear |R| = [32m1.588812e-08[39m
+12      Linear |R| = [32m6.585347e-09[39m
+13      Linear |R| = [32m3.986861e-09[39m
+14      Linear |R| = [32m2.018996e-09[39m
+15      Linear |R| = [32m1.003692e-09[39m
+16      Linear |R| = [32m4.265388e-10[39m
+17      Linear |R| = [32m1.778142e-10[39m
+18      Linear |R| = [32m8.020986e-11[39m
+19      Linear |R| = [32m3.590860e-11[39m
+20      Linear |R| = [32m2.089453e-11[39m
+21      Linear |R| = [32m1.741202e-11[39m
+22      Linear |R| = [32m1.067570e-11[39m
+23      Linear |R| = [32m4.217471e-12[39m
+24      Linear |R| = [32m1.850918e-12[39m
+25      Linear |R| = [32m6.102330e-13[39m
+1  Nonlinear |R| = [32m2.198626e-11[39m
+0       Linear |R| = [32m2.198626e-11[39m
+1       Linear |R| = [32m5.700620e-13[39m
+2       Linear |R| = [32m2.308234e-13[39m
+3       Linear |R| = [32m1.592432e-13[39m
+4       Linear |R| = [32m4.086511e-14[39m
+5       Linear |R| = [32m2.567445e-14[39m
+6       Linear |R| = [32m9.250939e-15[39m
+7       Linear |R| = [32m6.221848e-15[39m
+8       Linear |R| = [32m4.768257e-15[39m
+9       Linear |R| = [32m3.915114e-15[39m
+10      Linear |R| = [32m3.129830e-15[39m
+11      Linear |R| = [33m3.097999e-15[39m
+12      Linear |R| = [32m2.832072e-15[39m
+13      Linear |R| = [33m2.831602e-15[39m
+14      Linear |R| = [32m2.647771e-15[39m
+15      Linear |R| = [33m2.602767e-15[39m
+16      Linear |R| = [32m2.405517e-15[39m
+17      Linear |R| = [32m2.135042e-15[39m
+18      Linear |R| = [32m1.758234e-15[39m
+19      Linear |R| = [32m1.232040e-15[39m
+20      Linear |R| = [32m8.407700e-16[39m
+21      Linear |R| = [32m6.074579e-16[39m
+22      Linear |R| = [32m2.966393e-16[39m
+23      Linear |R| = [32m9.673755e-17[39m
+2  Nonlinear |R| = [32m3.294700e-16[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 36
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   2.750000e-01 |   2.056936e+00 |   1.022227e+02 |   1.890971e+00 |
+|   2.875000e-01 |   2.059237e+00 |   1.023327e+02 |   1.893006e+00 |
+|   3.000000e-01 |   2.061428e+00 |   1.024404e+02 |   1.894997e+00 |
+|   3.125000e-01 |   2.063589e+00 |   1.025474e+02 |   1.896977e+00 |
+|   3.250000e-01 |   2.065742e+00 |   1.026543e+02 |   1.898954e+00 |
+|   3.375000e-01 |   2.067894e+00 |   1.027612e+02 |   1.900933e+00 |
+|   3.500000e-01 |   2.070048e+00 |   1.028682e+02 |   1.902913e+00 |
+|   3.625000e-01 |   2.072204e+00 |   1.029754e+02 |   1.904894e+00 |
+|   3.750000e-01 |   2.074362e+00 |   1.030826e+02 |   1.906878e+00 |
+|   3.875000e-01 |   2.076522e+00 |   1.031900e+02 |   1.908865e+00 |
+|   4.000000e-01 |   2.078684e+00 |   1.032975e+02 |   1.910853e+00 |
+|   4.125000e-01 |   2.080849e+00 |   1.034051e+02 |   1.912843e+00 |
+|   4.250000e-01 |   2.083016e+00 |   1.035127e+02 |   1.914835e+00 |
+|   4.375000e-01 |   2.085185e+00 |   1.036206e+02 |   1.916829e+00 |
+|   4.500000e-01 |   2.087356e+00 |   1.037285e+02 |   1.918826e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 37, time = 0.4625
+                dt = 0.0125
+0  Nonlinear |R| = [32m1.566723e-07[39m
+0       Linear |R| = [32m1.566723e-07[39m
+1       Linear |R| = [33m1.510725e-07[39m
+2       Linear |R| = [33m1.496974e-07[39m
+3       Linear |R| = [33m1.496974e-07[39m
+4       Linear |R| = [32m1.401042e-07[39m
+5       Linear |R| = [33m1.399617e-07[39m
+6       Linear |R| = [32m1.072577e-07[39m
+7       Linear |R| = [32m9.684670e-08[39m
+8       Linear |R| = [32m5.692026e-08[39m
+9       Linear |R| = [32m4.465551e-08[39m
+10      Linear |R| = [32m2.346908e-08[39m
+11      Linear |R| = [32m1.590545e-08[39m
+12      Linear |R| = [32m6.592329e-09[39m
+13      Linear |R| = [32m3.991025e-09[39m
+14      Linear |R| = [32m2.021071e-09[39m
+15      Linear |R| = [32m1.004740e-09[39m
+16      Linear |R| = [32m4.269791e-10[39m
+17      Linear |R| = [32m1.779987e-10[39m
+18      Linear |R| = [32m8.029214e-11[39m
+19      Linear |R| = [32m3.594417e-11[39m
+20      Linear |R| = [32m2.091500e-11[39m
+21      Linear |R| = [32m1.742901e-11[39m
+22      Linear |R| = [32m1.068624e-11[39m
+23      Linear |R| = [32m4.221887e-12[39m
+24      Linear |R| = [32m1.852835e-12[39m
+25      Linear |R| = [32m6.108863e-13[39m
+1  Nonlinear |R| = [32m2.192718e-11[39m
+0       Linear |R| = [32m2.192718e-11[39m
+1       Linear |R| = [32m5.653121e-13[39m
+2       Linear |R| = [32m2.378306e-13[39m
+3       Linear |R| = [32m1.588633e-13[39m
+4       Linear |R| = [32m4.517287e-14[39m
+5       Linear |R| = [32m2.721000e-14[39m
+6       Linear |R| = [32m1.211947e-14[39m
+7       Linear |R| = [32m7.280156e-15[39m
+8       Linear |R| = [32m5.302333e-15[39m
+9       Linear |R| = [32m3.076346e-15[39m
+10      Linear |R| = [32m1.746771e-15[39m
+11      Linear |R| = [32m1.538746e-15[39m
+12      Linear |R| = [32m1.267717e-15[39m
+13      Linear |R| = [33m1.255351e-15[39m
+14      Linear |R| = [32m1.148725e-15[39m
+15      Linear |R| = [33m1.147539e-15[39m
+16      Linear |R| = [32m1.084930e-15[39m
+17      Linear |R| = [33m1.082186e-15[39m
+18      Linear |R| = [33m1.031139e-15[39m
+19      Linear |R| = [33m9.938530e-16[39m
+20      Linear |R| = [32m8.156542e-16[39m
+21      Linear |R| = [32m6.580038e-16[39m
+22      Linear |R| = [32m3.151350e-16[39m
+23      Linear |R| = [32m9.840618e-17[39m
+2  Nonlinear |R| = [32m3.355120e-16[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 37
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   2.875000e-01 |   2.059237e+00 |   1.023327e+02 |   1.893006e+00 |
+|   3.000000e-01 |   2.061428e+00 |   1.024404e+02 |   1.894997e+00 |
+|   3.125000e-01 |   2.063589e+00 |   1.025474e+02 |   1.896977e+00 |
+|   3.250000e-01 |   2.065742e+00 |   1.026543e+02 |   1.898954e+00 |
+|   3.375000e-01 |   2.067894e+00 |   1.027612e+02 |   1.900933e+00 |
+|   3.500000e-01 |   2.070048e+00 |   1.028682e+02 |   1.902913e+00 |
+|   3.625000e-01 |   2.072204e+00 |   1.029754e+02 |   1.904894e+00 |
+|   3.750000e-01 |   2.074362e+00 |   1.030826e+02 |   1.906878e+00 |
+|   3.875000e-01 |   2.076522e+00 |   1.031900e+02 |   1.908865e+00 |
+|   4.000000e-01 |   2.078684e+00 |   1.032975e+02 |   1.910853e+00 |
+|   4.125000e-01 |   2.080849e+00 |   1.034051e+02 |   1.912843e+00 |
+|   4.250000e-01 |   2.083016e+00 |   1.035127e+02 |   1.914835e+00 |
+|   4.375000e-01 |   2.085185e+00 |   1.036206e+02 |   1.916829e+00 |
+|   4.500000e-01 |   2.087356e+00 |   1.037285e+02 |   1.918826e+00 |
+|   4.625000e-01 |   2.089530e+00 |   1.038365e+02 |   1.920824e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 38, time = 0.475
+                dt = 0.0125
+0  Nonlinear |R| = [32m1.568352e-07[39m
+0       Linear |R| = [32m1.568352e-07[39m
+1       Linear |R| = [33m1.512298e-07[39m
+2       Linear |R| = [33m1.498533e-07[39m
+3       Linear |R| = [33m1.498533e-07[39m
+4       Linear |R| = [32m1.402506e-07[39m
+5       Linear |R| = [33m1.401079e-07[39m
+6       Linear |R| = [32m1.073739e-07[39m
+7       Linear |R| = [32m9.695331e-08[39m
+8       Linear |R| = [32m5.698754e-08[39m
+9       Linear |R| = [32m4.470780e-08[39m
+10      Linear |R| = [32m2.349680e-08[39m
+11      Linear |R| = [32m1.592280e-08[39m
+12      Linear |R| = [32m6.599318e-09[39m
+13      Linear |R| = [32m3.995195e-09[39m
+14      Linear |R| = [32m2.023148e-09[39m
+15      Linear |R| = [32m1.005789e-09[39m
+16      Linear |R| = [32m4.274199e-10[39m
+17      Linear |R| = [32m1.781835e-10[39m
+18      Linear |R| = [32m8.037453e-11[39m
+19      Linear |R| = [32m3.597981e-11[39m
+20      Linear |R| = [32m2.093552e-11[39m
+21      Linear |R| = [32m1.744606e-11[39m
+22      Linear |R| = [32m1.069680e-11[39m
+23      Linear |R| = [32m4.226309e-12[39m
+24      Linear |R| = [32m1.854755e-12[39m
+25      Linear |R| = [32m6.115404e-13[39m
+1  Nonlinear |R| = [32m2.172167e-11[39m
+0       Linear |R| = [32m2.172167e-11[39m
+1       Linear |R| = [32m5.514578e-13[39m
+2       Linear |R| = [32m2.305271e-13[39m
+3       Linear |R| = [32m1.542276e-13[39m
+4       Linear |R| = [32m4.372378e-14[39m
+5       Linear |R| = [32m2.790123e-14[39m
+6       Linear |R| = [32m1.266113e-14[39m
+7       Linear |R| = [32m9.174706e-15[39m
+8       Linear |R| = [32m7.184495e-15[39m
+9       Linear |R| = [32m5.999850e-15[39m
+10      Linear |R| = [32m4.842470e-15[39m
+11      Linear |R| = [33m4.840660e-15[39m
+12      Linear |R| = [32m4.484287e-15[39m
+13      Linear |R| = [33m4.480876e-15[39m
+14      Linear |R| = [32m4.229039e-15[39m
+15      Linear |R| = [33m4.031144e-15[39m
+16      Linear |R| = [32m3.591522e-15[39m
+17      Linear |R| = [32m2.929803e-15[39m
+18      Linear |R| = [32m2.300593e-15[39m
+19      Linear |R| = [32m1.569639e-15[39m
+20      Linear |R| = [32m1.037865e-15[39m
+21      Linear |R| = [32m6.859711e-16[39m
+22      Linear |R| = [32m3.226251e-16[39m
+23      Linear |R| = [32m9.456539e-17[39m
+2  Nonlinear |R| = [32m3.325858e-16[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 38
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   3.000000e-01 |   2.061428e+00 |   1.024404e+02 |   1.894997e+00 |
+|   3.125000e-01 |   2.063589e+00 |   1.025474e+02 |   1.896977e+00 |
+|   3.250000e-01 |   2.065742e+00 |   1.026543e+02 |   1.898954e+00 |
+|   3.375000e-01 |   2.067894e+00 |   1.027612e+02 |   1.900933e+00 |
+|   3.500000e-01 |   2.070048e+00 |   1.028682e+02 |   1.902913e+00 |
+|   3.625000e-01 |   2.072204e+00 |   1.029754e+02 |   1.904894e+00 |
+|   3.750000e-01 |   2.074362e+00 |   1.030826e+02 |   1.906878e+00 |
+|   3.875000e-01 |   2.076522e+00 |   1.031900e+02 |   1.908865e+00 |
+|   4.000000e-01 |   2.078684e+00 |   1.032975e+02 |   1.910853e+00 |
+|   4.125000e-01 |   2.080849e+00 |   1.034051e+02 |   1.912843e+00 |
+|   4.250000e-01 |   2.083016e+00 |   1.035127e+02 |   1.914835e+00 |
+|   4.375000e-01 |   2.085185e+00 |   1.036206e+02 |   1.916829e+00 |
+|   4.500000e-01 |   2.087356e+00 |   1.037285e+02 |   1.918826e+00 |
+|   4.625000e-01 |   2.089530e+00 |   1.038365e+02 |   1.920824e+00 |
+|   4.750000e-01 |   2.091706e+00 |   1.039447e+02 |   1.922825e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 39, time = 0.4875
+                dt = 0.0125
+0  Nonlinear |R| = [32m1.569983e-07[39m
+0       Linear |R| = [32m1.569983e-07[39m
+1       Linear |R| = [33m1.513873e-07[39m
+2       Linear |R| = [33m1.500094e-07[39m
+3       Linear |R| = [33m1.500094e-07[39m
+4       Linear |R| = [32m1.403971e-07[39m
+5       Linear |R| = [33m1.402542e-07[39m
+6       Linear |R| = [32m1.074902e-07[39m
+7       Linear |R| = [32m9.706002e-08[39m
+8       Linear |R| = [32m5.705487e-08[39m
+9       Linear |R| = [32m4.476014e-08[39m
+10      Linear |R| = [32m2.352454e-08[39m
+11      Linear |R| = [32m1.594017e-08[39m
+12      Linear |R| = [32m6.606313e-09[39m
+13      Linear |R| = [32m3.999368e-09[39m
+14      Linear |R| = [32m2.025228e-09[39m
+15      Linear |R| = [32m1.006839e-09[39m
+16      Linear |R| = [32m4.278611e-10[39m
+17      Linear |R| = [32m1.783684e-10[39m
+18      Linear |R| = [32m8.045698e-11[39m
+19      Linear |R| = [32m3.601544e-11[39m
+20      Linear |R| = [32m2.095602e-11[39m
+21      Linear |R| = [32m1.746308e-11[39m
+22      Linear |R| = [32m1.070736e-11[39m
+23      Linear |R| = [32m4.230734e-12[39m
+24      Linear |R| = [32m1.856676e-12[39m
+25      Linear |R| = [32m6.121951e-13[39m
+1  Nonlinear |R| = [32m2.200326e-11[39m
+0       Linear |R| = [32m2.200326e-11[39m
+1       Linear |R| = [32m5.681311e-13[39m
+2       Linear |R| = [32m2.393720e-13[39m
+3       Linear |R| = [32m1.586817e-13[39m
+4       Linear |R| = [32m4.633446e-14[39m
+5       Linear |R| = [32m2.981939e-14[39m
+6       Linear |R| = [32m1.568814e-14[39m
+7       Linear |R| = [32m1.280546e-14[39m
+8       Linear |R| = [32m1.121806e-14[39m
+9       Linear |R| = [32m1.043156e-14[39m
+10      Linear |R| = [32m9.462369e-15[39m
+11      Linear |R| = [33m9.462207e-15[39m
+12      Linear |R| = [32m8.720386e-15[39m
+13      Linear |R| = [33m8.692276e-15[39m
+14      Linear |R| = [32m7.910635e-15[39m
+15      Linear |R| = [32m7.222303e-15[39m
+16      Linear |R| = [32m6.092148e-15[39m
+17      Linear |R| = [32m4.491698e-15[39m
+18      Linear |R| = [32m3.313361e-15[39m
+19      Linear |R| = [32m2.134653e-15[39m
+20      Linear |R| = [32m1.291072e-15[39m
+21      Linear |R| = [32m7.897059e-16[39m
+22      Linear |R| = [32m3.526648e-16[39m
+23      Linear |R| = [32m9.822527e-17[39m
+2  Nonlinear |R| = [32m3.383514e-16[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 39
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   3.125000e-01 |   2.063589e+00 |   1.025474e+02 |   1.896977e+00 |
+|   3.250000e-01 |   2.065742e+00 |   1.026543e+02 |   1.898954e+00 |
+|   3.375000e-01 |   2.067894e+00 |   1.027612e+02 |   1.900933e+00 |
+|   3.500000e-01 |   2.070048e+00 |   1.028682e+02 |   1.902913e+00 |
+|   3.625000e-01 |   2.072204e+00 |   1.029754e+02 |   1.904894e+00 |
+|   3.750000e-01 |   2.074362e+00 |   1.030826e+02 |   1.906878e+00 |
+|   3.875000e-01 |   2.076522e+00 |   1.031900e+02 |   1.908865e+00 |
+|   4.000000e-01 |   2.078684e+00 |   1.032975e+02 |   1.910853e+00 |
+|   4.125000e-01 |   2.080849e+00 |   1.034051e+02 |   1.912843e+00 |
+|   4.250000e-01 |   2.083016e+00 |   1.035127e+02 |   1.914835e+00 |
+|   4.375000e-01 |   2.085185e+00 |   1.036206e+02 |   1.916829e+00 |
+|   4.500000e-01 |   2.087356e+00 |   1.037285e+02 |   1.918826e+00 |
+|   4.625000e-01 |   2.089530e+00 |   1.038365e+02 |   1.920824e+00 |
+|   4.750000e-01 |   2.091706e+00 |   1.039447e+02 |   1.922825e+00 |
+|   4.875000e-01 |   2.093884e+00 |   1.040529e+02 |   1.924827e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 40, time = 0.5
+                dt = 0.0125
+0  Nonlinear |R| = [32m1.571615e-07[39m
+0       Linear |R| = [32m1.571615e-07[39m
+1       Linear |R| = [33m1.515449e-07[39m
+2       Linear |R| = [33m1.501656e-07[39m
+3       Linear |R| = [33m1.501656e-07[39m
+4       Linear |R| = [32m1.405437e-07[39m
+5       Linear |R| = [33m1.404007e-07[39m
+6       Linear |R| = [32m1.076066e-07[39m
+7       Linear |R| = [32m9.716683e-08[39m
+8       Linear |R| = [32m5.712226e-08[39m
+9       Linear |R| = [32m4.481252e-08[39m
+10      Linear |R| = [32m2.355230e-08[39m
+11      Linear |R| = [32m1.595755e-08[39m
+12      Linear |R| = [32m6.613315e-09[39m
+13      Linear |R| = [32m4.003545e-09[39m
+14      Linear |R| = [32m2.027309e-09[39m
+15      Linear |R| = [32m1.007891e-09[39m
+16      Linear |R| = [32m4.283027e-10[39m
+17      Linear |R| = [32m1.785535e-10[39m
+18      Linear |R| = [32m8.053952e-11[39m
+19      Linear |R| = [32m3.605113e-11[39m
+20      Linear |R| = [32m2.097656e-11[39m
+21      Linear |R| = [32m1.748014e-11[39m
+22      Linear |R| = [32m1.071794e-11[39m
+23      Linear |R| = [32m4.235163e-12[39m
+24      Linear |R| = [32m1.858600e-12[39m
+25      Linear |R| = [32m6.128504e-13[39m
+1  Nonlinear |R| = [32m2.245794e-11[39m
+0       Linear |R| = [32m2.245794e-11[39m
+1       Linear |R| = [32m5.582537e-13[39m
+2       Linear |R| = [32m2.407050e-13[39m
+3       Linear |R| = [32m1.549354e-13[39m
+4       Linear |R| = [32m4.618442e-14[39m
+5       Linear |R| = [32m2.679077e-14[39m
+6       Linear |R| = [32m1.292435e-14[39m
+7       Linear |R| = [32m8.594242e-15[39m
+8       Linear |R| = [32m7.338325e-15[39m
+9       Linear |R| = [32m6.075066e-15[39m
+10      Linear |R| = [32m5.387071e-15[39m
+11      Linear |R| = [33m5.155622e-15[39m
+12      Linear |R| = [33m5.085623e-15[39m
+13      Linear |R| = [33m4.997942e-15[39m
+14      Linear |R| = [33m4.874919e-15[39m
+15      Linear |R| = [33m4.739338e-15[39m
+16      Linear |R| = [32m4.263838e-15[39m
+17      Linear |R| = [32m3.761215e-15[39m
+18      Linear |R| = [32m2.821446e-15[39m
+19      Linear |R| = [32m1.870695e-15[39m
+20      Linear |R| = [32m1.159951e-15[39m
+21      Linear |R| = [32m7.210118e-16[39m
+22      Linear |R| = [32m3.272293e-16[39m
+23      Linear |R| = [32m1.009114e-16[39m
+2  Nonlinear |R| = [32m3.381520e-16[39m
+[32m Solve Converged![39m
+# of Diffustion Solves: 40
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | amplitude      | fluxintegral   | power          |
++----------------+----------------+----------------+----------------+
+:                :                :                :                :
+|   3.250000e-01 |   2.065742e+00 |   1.026543e+02 |   1.898954e+00 |
+|   3.375000e-01 |   2.067894e+00 |   1.027612e+02 |   1.900933e+00 |
+|   3.500000e-01 |   2.070048e+00 |   1.028682e+02 |   1.902913e+00 |
+|   3.625000e-01 |   2.072204e+00 |   1.029754e+02 |   1.904894e+00 |
+|   3.750000e-01 |   2.074362e+00 |   1.030826e+02 |   1.906878e+00 |
+|   3.875000e-01 |   2.076522e+00 |   1.031900e+02 |   1.908865e+00 |
+|   4.000000e-01 |   2.078684e+00 |   1.032975e+02 |   1.910853e+00 |
+|   4.125000e-01 |   2.080849e+00 |   1.034051e+02 |   1.912843e+00 |
+|   4.250000e-01 |   2.083016e+00 |   1.035127e+02 |   1.914835e+00 |
+|   4.375000e-01 |   2.085185e+00 |   1.036206e+02 |   1.916829e+00 |
+|   4.500000e-01 |   2.087356e+00 |   1.037285e+02 |   1.918826e+00 |
+|   4.625000e-01 |   2.089530e+00 |   1.038365e+02 |   1.920824e+00 |
+|   4.750000e-01 |   2.091706e+00 |   1.039447e+02 |   1.922825e+00 |
+|   4.875000e-01 |   2.093884e+00 |   1.040529e+02 |   1.924827e+00 |
+|   5.000000e-01 |   2.096065e+00 |   1.041613e+02 |   1.926832e+00 |
++----------------+----------------+----------------+----------------+
+
+
+[36minitial_solve0: [39m
+[36madjoint_solve0: [39m

@@ -1,0 +1,240 @@
+
+************************************************************************************
+
+                                     YakTest       
+
+************************************************************************************
+
+
+
+YAK version:             git commit 9828d9d on 2016-04-14
+
+Framework Information:
+MOOSE version:           git commit 8582609 on 2016-04-15
+PETSc Version:           3.6.3
+Current Time:            Wed Apr 20 02:04:06 2016
+Executable Timestamp:    Fri Apr 15 13:41:31 2016
+
+Parallelism:
+  Num Processors:        6
+  Num Threads:           1
+
+
+ Total 24 values read, 0 function(s) found in material fuel1_blade_in!
+ Total 24 values read, 0 function(s) found in material fuel1_blade_out!
+ Total 24 values read, 0 function(s) found in material fuel2_blade_in!
+ Total 24 values read, 0 function(s) found in material fuel2_blade_out!
+ Total 24 values read, 1 function(s) found in material fuel2_blade_in_r!
+
+Objects counting with Action *diff* :
+      Variables - 2
+   AuxVariables - 3
+        Kernels - 12
+     AuxKernels - 3
+            BCs - 4
+
+
+Running App: main
+Mesh: 
+  Distribution:            serial
+  Mesh Dimension:          2
+  Spatial Dimension:       2
+  Nodes:                   
+    Total:                 124609
+    Local:                 20953
+  Elems:                   
+    Total:                 41261
+    Local:                 6931
+  Num Subdomains:          6
+  Num Partitions:          6
+  Partitioner:             metis
+
+Nonlinear System:
+  Num DOFs:                62658
+  Num Local DOFs:          10628
+  Variables:               { "sflux_g0" "sflux_g1" } 
+  Finite Element Types:    "LAGRANGE" 
+  Approximation Orders:    "FIRST" 
+
+Auxiliary System:
+  Num DOFs:                433664
+  Num Local DOFs:          72282
+  Variables:               { "T" "power" } { "fission_source" "diff_dnp_i0" "diff_dnp_i1" } 
+  Finite Element Types:    "MONOMIAL" "L2_LAGRANGE" 
+  Approximation Orders:    "CONSTANT" "FIRST" 
+
+Execution Information:
+  Executioner:             Transient
+  TimeStepper:             ConstantDT
+  Solver Mode:             Preconditioned JFNK
+  Preconditioner:          hypre boomeramg 
+
+
+
+[36mInitializing MultiApps[39m
+[36minitial_solve0: [39m
+[36minitial_solve0: [39m Total 22 values read, 0 function(s) found in material fuel1_blade_in!
+[36minitial_solve0: [39m Total 22 values read, 0 function(s) found in material fuel1_blade_out!
+[36minitial_solve0: [39m Total 22 values read, 0 function(s) found in material fuel2_blade_in!
+[36minitial_solve0: [39m Total 22 values read, 0 function(s) found in material fuel2_blade_out!
+[36minitial_solve0: [39m Total 22 values read, 1 function(s) found in material fuel2_blade_in_r!
+[36minitial_solve0: [39m
+[36minitial_solve0: [39mObjects counting with Action *diff* :
+[36minitial_solve0: [39m      Variables - 2
+[36minitial_solve0: [39m   AuxVariables - 3
+[36minitial_solve0: [39m        Kernels - 8
+[36minitial_solve0: [39m     AuxKernels - 3
+[36minitial_solve0: [39m            BCs - 2
+[36minitial_solve0: [39m Postprocessors - 2
+[36minitial_solve0: [39m
+[36minitial_solve0: [39m
+[36minitial_solve0: [39mRunning App: initial_solve0
+[36minitial_solve0: [39mParallelism:
+[36minitial_solve0: [39m  Num Processors:          6
+[36minitial_solve0: [39m  Num Threads:             1
+[36minitial_solve0: [39m
+[36minitial_solve0: [39mMesh: 
+[36minitial_solve0: [39m  Distribution:            serial
+[36minitial_solve0: [39m  Mesh Dimension:          2
+[36minitial_solve0: [39m  Spatial Dimension:       2
+[36minitial_solve0: [39m  Nodes:                   
+[36minitial_solve0: [39m    Total:                 124609
+[36minitial_solve0: [39m    Local:                 20953
+[36minitial_solve0: [39m  Elems:                   
+[36minitial_solve0: [39m    Total:                 41261
+[36minitial_solve0: [39m    Local:                 6931
+[36minitial_solve0: [39m  Num Subdomains:          6
+[36minitial_solve0: [39m  Num Partitions:          6
+[36minitial_solve0: [39m  Partitioner:             metis
+[36minitial_solve0: [39m
+[36minitial_solve0: [39mNonlinear System:
+[36minitial_solve0: [39m  Num DOFs:                62658
+[36minitial_solve0: [39m  Num Local DOFs:          10628
+[36minitial_solve0: [39m  Variables:               { "sflux_g0" "sflux_g1" } 
+[36minitial_solve0: [39m  Finite Element Types:    "LAGRANGE" 
+[36minitial_solve0: [39m  Approximation Orders:    "FIRST" 
+[36minitial_solve0: [39m
+[36minitial_solve0: [39mAuxiliary System:
+[36minitial_solve0: [39m  Num DOFs:                433664
+[36minitial_solve0: [39m  Num Local DOFs:          72282
+[36minitial_solve0: [39m  Variables:               { "T" "power" } { "fission_source" "diff_dnp_i0" "diff_dnp_i1" } 
+[36minitial_solve0: [39m  Finite Element Types:    "MONOMIAL" "L2_LAGRANGE" 
+[36minitial_solve0: [39m  Approximation Orders:    "CONSTANT" "FIRST" 
+[36minitial_solve0: [39m
+[36minitial_solve0: [39mExecution Information:
+[36minitial_solve0: [39m  Executioner:             NonlinearEigen
+[36minitial_solve0: [39m  Solver Mode:             Preconditioned JFNK
+[36minitial_solve0: [39m  Preconditioner:          hypre boomeramg 
+[36minitial_solve0: [39m
+[36minitial_solve0: [39m
+[36minitial_solve0: [39m
+[36minitial_solve0: [39m
+[36minitial_solve0: [39m|Bx| = 1.0000000000
+[36minitial_solve0: [39m
+[36minitial_solve0: [39mTime Step  0, time = 0
+[36minitial_solve0: [39m                dt = 1
+[36minitial_solve0: [39m
+[36minitial_solve0: [39mPostprocessor Values:
+[36minitial_solve0: [39m+----------------+----------------+----------------+----------------+-------------------------+---------------------+
+[36minitial_solve0: [39m| time           | avg_power      | avg_temp       | eigenvalue     | fission_source_integral | solution_difference |
+[36minitial_solve0: [39m+----------------+----------------+----------------+----------------+-------------------------+---------------------+
+[36minitial_solve0: [39m|   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |   1.000000e+00 |            1.000000e+00 |        7.564162e-03 |
+[36minitial_solve0: [39m+----------------+----------------+----------------+----------------+-------------------------+---------------------+
+[36minitial_solve0: [39m
+[36minitial_solve0: [39m Free power iteration starts
+[36minitial_solve0: [39m
+[36minitial_solve0: [39m Power iterations starts
+[36minitial_solve0: [39m ________________________________________________________________________________ 
+[36minitial_solve0: [39m Power iteration= 0
+[36minitial_solve0: [39m0  Nonlinear |R| = [32m1.560070e-02[39m
+[36minitial_solve0: [39m0       Linear |R| = [32m1.560070e-02[39m
+[36minitial_solve0: [39m1       Linear |R| = [32m3.416133e-03[39m
+[36minitial_solve0: [39m2       Linear |R| = [32m1.788381e-04[39m
+[36minitial_solve0: [39m3       Linear |R| = [32m4.707694e-06[39m
+[36minitial_solve0: [39m1  Nonlinear |R| = [32m4.707693e-06[39m
+[36minitial_solve0: [39m
+[36minitial_solve0: [39m +================+=====================+
+[36minitial_solve0: [39m | iteration      | eigenvalue          |
+[36minitial_solve0: [39m +================+=====================+
+[36minitial_solve0: [39m |              0 |      9.74175489e-01 |
+[36minitial_solve0: [39m +================+=====================+
+[36minitial_solve0: [39m
+[36minitial_solve0: [39m ________________________________________________________________________________ 
+[36minitial_solve0: [39m Power iteration= 1
+[36minitial_solve0: [39m0  Nonlinear |R| = [32m6.032592e-04[39m
+[36minitial_solve0: [39m0       Linear |R| = [32m6.032592e-04[39m
+[36minitial_solve0: [39m1       Linear |R| = [32m2.618422e-04[39m
+[36minitial_solve0: [39m2       Linear |R| = [32m1.094471e-05[39m
+[36minitial_solve0: [39m3       Linear |R| = [32m2.576522e-07[39m
+[36minitial_solve0: [39m1  Nonlinear |R| = [32m2.576521e-07[39m
+[36minitial_solve0: [39m
+[36minitial_solve0: [39m +================+=====================+
+[36minitial_solve0: [39m | iteration      | eigenvalue          |
+[36minitial_solve0: [39m +================+=====================+
+[36minitial_solve0: [39m |              0 |      9.74175489e-01 |
+[36minitial_solve0: [39m |              1 |      9.79227428e-01 |
+[36minitial_solve0: [39m +================+=====================+
+[36minitial_solve0: [39m
+[36minitial_solve0: [39m ________________________________________________________________________________ 
+[36minitial_solve0: [39m Power iteration= 2
+[36minitial_solve0: [39m0  Nonlinear |R| = [32m3.816320e-04[39m
+[36minitial_solve0: [39m0       Linear |R| = [32m3.816320e-04[39m
+[36minitial_solve0: [39m1       Linear |R| = [32m1.900828e-04[39m
+[36minitial_solve0: [39m2       Linear |R| = [32m8.108316e-06[39m
+[36minitial_solve0: [39m3       Linear |R| = [32m1.765295e-07[39m
+[36minitial_solve0: [39m1  Nonlinear |R| = [32m1.765295e-07[39m
+[36minitial_solve0: [39m
+[36minitial_solve0: [39m +================+=====================+
+[36minitial_solve0: [39m | iteration      | eigenvalue          |
+[36minitial_solve0: [39m +================+=====================+
+[36minitial_solve0: [39m |              0 |      9.74175489e-01 |
+[36minitial_solve0: [39m |              1 |      9.79227428e-01 |
+[36minitial_solve0: [39m |              2 |      9.82738473e-01 |
+[36minitial_solve0: [39m +================+=====================+
+[36minitial_solve0: [39m
+[36minitial_solve0: [39m ________________________________________________________________________________ 
+[36minitial_solve0: [39m Power iteration= 3
+[36minitial_solve0: [39m0  Nonlinear |R| = [32m2.907853e-04[39m
+[36minitial_solve0: [39m0       Linear |R| = [32m2.907853e-04[39m
+[36minitial_solve0: [39m1       Linear |R| = [32m1.509496e-04[39m
+[36minitial_solve0: [39m2       Linear |R| = [32m6.453024e-06[39m
+[36minitial_solve0: [39m3       Linear |R| = [32m1.327879e-07[39m
+[36minitial_solve0: [39m1  Nonlinear |R| = [32m1.327879e-07[39m
+[36minitial_solve0: [39m
+[36minitial_solve0: [39m +================+=====================+
+[36minitial_solve0: [39m | iteration      | eigenvalue          |
+[36minitial_solve0: [39m +================+=====================+
+[36minitial_solve0: [39m |              0 |      9.74175489e-01 |
+[36minitial_solve0: [39m |              1 |      9.79227428e-01 |
+[36minitial_solve0: [39m |              2 |      9.82738473e-01 |
+[36minitial_solve0: [39m |              3 |      9.85186340e-01 |
+[36minitial_solve0: [39m +================+=====================+
+[36minitial_solve0: [39m
+[36minitial_solve0: [39m ________________________________________________________________________________ 
+[36minitial_solve0: [39m Power iteration= 4
+[36minitial_solve0: [39m0  Nonlinear |R| = [32m2.349029e-04[39m
+[36minitial_solve0: [39m0       Linear |R| = [32m2.349029e-04[39m
+[36minitial_solve0: [39m1       Linear |R| = [32m1.248854e-04[39m
+[36minitial_solve0: [39m2       Linear |R| = [32m5.353350e-06[39m
+[36minitial_solve0: [39m3       Linear |R| = [32m1.042059e-07[39m
+[36minitial_solve0: [39m1  Nonlinear |R| = [32m1.042059e-07[39m
+[36minitial_solve0: [39m
+[36minitial_solve0: [39m +================+=====================+
+[36minitial_solve0: [39m | iteration      | eigenvalue          |
+[36minitial_solve0: [39m +================+=====================+
+[36minitial_solve0: [39m |              0 |      9.74175489e-01 |
+[36minitial_solve0: [39m |              1 |      9.79227428e-01 |
+[36minitial_solve0: [39m |              2 |      9.82738473e-01 |
+[36minitial_solve0: [39m |              3 |      9.85186340e-01 |
+[36minitial_solve0: [39m |              4 |      9.86982084e-01 |
+[36minitial_solve0: [39m +================+=====================+
+[36minitial_solve0: [39m
+[36minitial_solve0: [39m ________________________________________________________________________________ 
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 30275 RUNNING AT r5i0n6.ice.inl.gov
+=   EXIT CODE: 1
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================

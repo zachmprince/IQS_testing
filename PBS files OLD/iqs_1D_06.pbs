@@ -1,0 +1,31 @@
+#!/bin/bash
+#PBS -N iqs_1D_06
+#PBS -l select=1:ncpus=6:mpiprocs=1:mem=6GB
+#PBS -l place=scatter:excl
+#PBS -l walltime=30:00:00
+#PBS -joe
+#PBS -ko 
+
+JOB_NUM=${PBS_JOBID%%\.*}
+
+cd $PBS_O_WORKDIR
+
+ln -s $HOME/$PBS_JOBNAME.o$JOB_NUM $PBS_JOBNAME.o$JOB_NUM
+
+NSLOTS=`cat $PBS_NODEFILE | wc -l`
+NSTART=`cat $PBS_NODEFILE | uniq`
+
+source /etc/profile.d/modules.sh
+export MODULEPATH=$MODULEPATH:/apps/projects/moose/modulefiles
+module load moose-dev-gcc
+
+export OMP_NUM_THREADS=1
+export MV2_ENABLE_AFFINITY=0
+
+date
+echo $NSLOTS
+mpiexec -n $NSLOTS ../../yak-opt -i iqs_1D.i Executioner/dt=0.0015625 Outputs/file_base=iqs_1D_06 --n-threads=1 > console_iqs_1D_06.txt
+date
+
+rm $PBS_JOBNAME.o$JOB_NUM
+mv $HOME/$PBS_JOBNAME.o$JOB_NUM $PBS_JOBNAME.o$JOB_NUM
