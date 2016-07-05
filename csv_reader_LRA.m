@@ -1,4 +1,4 @@
-function [varargout] = csv_reader_LRA(filename,eig,time,fig,type,plot_fig)
+function [v,dt] = csv_reader_LRA(filename,eig,time,fig,type,plot_fig)
 
 M = csvread(filename,1,0);
 
@@ -9,30 +9,25 @@ dt = t(3)-t(2);
 T = M(1:end,2);
 switch type
     case 1
-        P = M(1:end,3) / eig;
+        P = M(1:end,3) ;%.* M(1:end,2) / eig;
         fig_name = ['IQS, dt = ' num2str(dt,'%g')];
-        sym = '-';
+        sym = 'rs-'; 
     case 2
         P = M(1:end,3) / eig;
         fig_name = ['IQS P-C, dt = ' num2str(dt,'%g')];
-        sym = 'd-';
-    case 3
-        P = M(1:end,3) / eig;
-        fig_name = ['Brute Force, dt = ' num2str(dt,'%g')];
-        sym = 'o-';
+        sym = 'bd-';
     otherwise
         P = M(1:end,3) / eig;
-        fig_name = 'Baseline';
-        sym = 'k';
+        fig_name = ['Brute Force, dt = ' num2str(dt,'%g')];
+        sym = 'ko-';
 end
 P = [1e-6 ; P];
 T = [300 ; T];
 
 if plot_fig
-    index = 1:1:length(t);
     figure(fig)
     hold on
-    plot(t(index),log10(P(index)),sym)
+    plot(t,log10(P),sym)
 %     plot(t,P)
     xlabel('time (s)'); ylabel('log_{10}(Average Power (W/cm^3))');% title('Power');
     a=get(legend(gca),'String');
@@ -45,7 +40,7 @@ if plot_fig
     hold off
     figure(fig+100)
     hold on
-    plot(t(index),T(index),sym)
+    plot(t,T,sym)
     xlabel('time (s)'); ylabel('Average Temperature (K)'); %title('Temperature');
     a=get(legend(gca),'String');
     if isempty(a)
@@ -101,9 +96,9 @@ for i=1:length(t)
 %         v(2) = T(i);
     end
 end
-% [power_max,index_max]=max(P);
-% time_max = t(index_max)
-% power_max
+[power_max,index_max]=max(P);
+time_max = t(index_max)
+power_max
 
 % tt = [0.4 0.8 1.2 1.4 2.0 3.0];
 % for j=1:length(tt)
@@ -115,14 +110,4 @@ end
 %         end
 %     end
 % end
-
-varargout{1} = v;
-nout = max(nargout,1);
-switch nout
-    case 2
-        varargout{2} = dt;
-    case 3
-        varargout{2} = dt;
-        varargout{3} = length(t);
-end
     

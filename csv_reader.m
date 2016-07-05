@@ -3,44 +3,35 @@ function [varargout] = csv_reader(filename,eig,time,fig,type,plot_fig)
 M = csvread(filename,1,0);
 
 t = M(1:end,1);
+t = [0 ; t];
 dt = t(3)-t(2);
 
 switch type
     case 1
         P = M(1:end,end) .* M(1:end,2) / eig;
         fig_name = ['IQS, dt = ' num2str(dt,'%g')];
-        sym = 's-';
+        sym = 'rs-';        
     case 2
         P = M(1:end,end) / eig;
         fig_name = ['IQS P-C, dt = ' num2str(dt,'%g')];
-        sym = 'd-';
-    case 3
-        P = M(1:end,end) / eig;
-        fig_name = ['Brute Force, dt = ' num2str(dt,'%g')];
-        sym = 'o-';
+        sym = 'bd-';
     otherwise
         P = M(1:end,end) / eig;
-        fig_name = 'baseline';
-        sym = 'k';        
+        fig_name = ['Brute Force, dt = ' num2str(dt,'%g')];
+        sym = 'ko-';
 end
 
-if t(1)>0
-    t = [0 ; t];
-    P = [1.0 ; P];
-else
-    P(1)=1.0;
-end
-
+P = [1.0 ; P];
 
 if plot_fig
     figure(fig)
     hold on
     plot(t,P,sym)
-%     orig = line(t,P,'Color','b');
+%     orig = line(t,P,'Color',sym);
 %     ax = gca;
 %     ax_xlim = ax.XLim;
 %     ax_ylim = ax.YLim;
-    xlabel('time (s)'); ylabel('Relative Power'); %title('Power');
+    xlabel('time'); ylabel('Relative Power'); %title('Power');
     a=get(legend(gca),'String');
     if isempty(a)
         leg = char(fig_name);
@@ -48,6 +39,7 @@ if plot_fig
         leg = char(char(a),fig_name);
     end
     legend(leg,'Location','Best')
+    hold off
     
 %     set(orig,'Visible','off')
 %     ax.XLim
@@ -57,10 +49,9 @@ if plot_fig
 %     for i=1:length(t)/mfac
 %         line(t(1:i*mfac),P(1:i*mfac),'Parent',ax,'Color','b')
 %         mov(i) = getframe(figure(fig));
-%         close all;
+% %         close all;
 %     end
 %     movie2avi(mov, 'TWIGL_power_profile.avi', 'fps',round(length(t)/mfac/10)); 
-hold off
 end
 for i=1:length(t)
     if abs(time-t(i))<(dt/4)
