@@ -1,18 +1,18 @@
 base = fopen('base_file.txt','r');
 
 j=0;
-j = j+1; names{j} = 'ndiff_1D';
-j = j+1; names{j} = 'iqs_1D';
+% j = j+1; names{j} = 'ndiff_1D';
+% j = j+1; names{j} = 'iqs_1D';
 j = j+1; names{j} = 'iqstmp_1D';
-j = j+1; names{j} = 'ndiff2_1D';
-j = j+1; names{j} = 'iqs2_1D';
-j = j+1; names{j} = 'iqstmp2_1D';
-j = j+1; names{j} = 'ndiff_TWIGL_ramp';
-j = j+1; names{j} = 'iqs_TWIGL_ramp';
-j = j+1; names{j} = 'iqstmp_TWIGL_ramp';
-j = j+1; names{j} = 'ndiff2_TWIGL_ramp';
-j = j+1; names{j} = 'iqs2_TWIGL_ramp';
-j = j+1; names{j} = 'iqstmp2_TWIGL_ramp';
+% j = j+1; names{j} = 'ndiff2_1D';
+% j = j+1; names{j} = 'iqs2_1D';
+% j = j+1; names{j} = 'iqstmp2_1D';
+% j = j+1; names{j} = 'ndiff_TWIGL_ramp';
+% j = j+1; names{j} = 'iqs_TWIGL_ramp';
+% j = j+1; names{j} = 'iqstmp_TWIGL_ramp';
+% j = j+1; names{j} = 'ndiff2_TWIGL_ramp';
+% j = j+1; names{j} = 'iqs2_TWIGL_ramp';
+% j = j+1; names{j} = 'iqstmp2_TWIGL_ramp';
 
 ndt = 12;
 for i=1:31
@@ -32,9 +32,9 @@ for k=1:j
         lab = [names{k} '_' num];
         
         A{2} = ['#PBS -N ' lab(1:4)  lab(end-5:end)];
-        A{27} = ['mpiexec -n $NSLOTS ../../yak-opt -i ' names{k} '.i '...
+        A{27} = ['mpiexec -n $NSLOTS ../../../yak-opt -i ' names{k} '.i '...
             'Executioner/dt=' sprintf('%g',dt) ' Outputs/file_base=' lab ...
-            ' --n-threads=1 > console_' lab '.txt'];
+            ' Executioner/multiphysics_updates=3' ' --n-threads=1 > console_' lab '.txt'];
         
         file = [lab '.pbs'];
         fid = fopen(file,'w+');

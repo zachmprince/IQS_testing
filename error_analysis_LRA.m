@@ -1,19 +1,21 @@
 clear; clc; close all;
 
-num_tests = 5;
+num_tests = 4;
 plot_dt=false;
 
+folder = [];
+folder = 'temp_int/';
 file_base = 'lra_';
 % eig = 0.9963786965;
 eig = 1.0;
-time = 1.44;
+time = 1.40;
 tend = 3.0;
 fac = time/tend;
 
 fig=0;
 
 % baseline_name = ['iqs_lra_05.csv'];
-baseline_name = [file_base 'baseline2.csv'];
+baseline_name = [file_base 'baseline.csv'];
 if plot_dt
     fig = fig+1;
 end
@@ -26,7 +28,7 @@ for i=0:num_tests
         num = num2str(i);
     end
     
-    filename = ['iqs_' file_base num '.csv'];
+    filename = [folder 'iqs_' file_base num '.csv'];
     if plot_dt
 %         fig = fig+1;
     end
@@ -38,22 +40,22 @@ for i=0:num_tests
     end
     [p_iqspc(i+1),dt(i+1)] = csv_reader_LRA(filename,eig,time,fig,2,plot_dt);
 
-    filename = ['ndiff_' file_base num '.csv'];
+    filename = [folder 'ndiff_' file_base num '.csv'];
     if plot_dt
 %         fig = fig+1;
     end
     [p_bf(i+1),dt(i+1)]  = csv_reader_LRA(filename,eig,time,fig,3,plot_dt);
 end
 
-diff_iqs = csvread(['console/iqs_' file_base 'Solve.csv']);
-l_iqs = csvread(['console/iqs_' file_base 'Linear.csv']);
-nl_iqs = csvread(['console/iqs_' file_base 'Nonlinear.csv']);
-diff_iqspc = csvread(['console/iqspc_' file_base 'Solve.csv']);
-l_iqspc = csvread(['console/iqspc_' file_base 'Linear.csv']);
-nl_iqspc = csvread(['console/iqspc_' file_base 'Nonlinear.csv']);
-diff_bf = csvread(['console/ndiff_' file_base 'Solve.csv']);
-l_bf = csvread(['console/ndiff_' file_base 'Linear.csv']);
-nl_bf = csvread(['console/ndiff_' file_base 'Nonlinear.csv']);
+% diff_iqs = csvread(['console/iqs_' file_base 'Solve.csv']);
+% l_iqs = csvread(['console/iqs_' file_base 'Linear.csv']);
+% nl_iqs = csvread(['console/iqs_' file_base 'Nonlinear.csv']);
+% diff_iqspc = csvread(['console/iqspc_' file_base 'Solve.csv']);
+% l_iqspc = csvread(['console/iqspc_' file_base 'Linear.csv']);
+% nl_iqspc = csvread(['console/iqspc_' file_base 'Nonlinear.csv']);
+% diff_bf = csvread(['console/ndiff_' file_base 'Solve.csv']);
+% l_bf = csvread(['console/ndiff_' file_base 'Linear.csv']);
+% nl_bf = csvread(['console/ndiff_' file_base 'Nonlinear.csv']);
 
 e_iqs = abs(p_iqs-p_baseline)/p_baseline;
 slope_iqs = polyfit(log10(dt),log10(e_iqs),1);
@@ -71,32 +73,32 @@ legend(['IQS, slope=' num2str(slope_iqs(1))],['IQS P-C, slope=' num2str(slope_iq
 grid on
 saveas(gcf,['plots/' file_base 'dt1.jpg'])
 
-% % % Diff 1st Order
-fig = fig+1;
-figure(fig)
-loglog(diff_iqs*fac,e_iqs,'.-',diff_iqspc*fac,e_iqspc,'.-',diff_bf,e_bf,'.-')
-xlabel('# Diffusion Solves'); ylabel('Error'); title('Diffusion Solves')
-legend('IQS','IQS P-C','Brute force','Location','Best')
-grid on
-saveas(gcf,['plots/' file_base 'diff.jpg'])
-
-% % % Linear 1st Order
-fig = fig+1;
-figure(fig)
-loglog(l_iqs*fac,e_iqs,'.-',l_iqspc*fac,e_iqspc,'.-',l_bf*fac,e_bf,'.-')
-xlabel('# Linear Iterations'); ylabel('Error'); title('Linear Iterations')
-legend('IQS','IQS P-C','Brute force','Location','Best')
-grid on
-saveas(gcf,['plots/' file_base 'lin1.jpg'])
-
-% % % Nonlinear 1st Order
-fig = fig+1;
-figure(fig)
-loglog(nl_iqs*fac,e_iqs,'.-',nl_iqspc*fac,e_iqspc,'.-',nl_bf*fac,e_bf,'.-')
-xlabel('# Nonlinear Iterations'); ylabel('Error'); title('Nonlinear Iterations')
-legend('IQS','IQS P-C','Brute force','Location','Best')
-grid on
-saveas(gcf,['plots/' file_base 'nlin.jpg'])
+% % % % Diff 1st Order
+% fig = fig+1;
+% figure(fig)
+% loglog(diff_iqs*fac,e_iqs,'.-',diff_iqspc*fac,e_iqspc,'.-',diff_bf,e_bf,'.-')
+% xlabel('# Diffusion Solves'); ylabel('Error'); title('Diffusion Solves')
+% legend('IQS','IQS P-C','Brute force','Location','Best')
+% grid on
+% saveas(gcf,['plots/' file_base 'diff.jpg'])
+% 
+% % % % Linear 1st Order
+% fig = fig+1;
+% figure(fig)
+% loglog(l_iqs*fac,e_iqs,'.-',l_iqspc*fac,e_iqspc,'.-',l_bf*fac,e_bf,'.-')
+% xlabel('# Linear Iterations'); ylabel('Error'); title('Linear Iterations')
+% legend('IQS','IQS P-C','Brute force','Location','Best')
+% grid on
+% saveas(gcf,['plots/' file_base 'lin1.jpg'])
+% 
+% % % % Nonlinear 1st Order
+% fig = fig+1;
+% figure(fig)
+% loglog(nl_iqs*fac,e_iqs,'.-',nl_iqspc*fac,e_iqspc,'.-',nl_bf*fac,e_bf,'.-')
+% xlabel('# Nonlinear Iterations'); ylabel('Error'); title('Nonlinear Iterations')
+% legend('IQS','IQS P-C','Brute force','Location','Best')
+% grid on
+% saveas(gcf,['plots/' file_base 'nlin.jpg'])
 
 
 
