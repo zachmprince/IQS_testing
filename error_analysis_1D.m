@@ -1,8 +1,10 @@
 clear; clc; close all;
 
-num_tests = 10;
+num_tests = 5;
 plot_dt=false;
 
+folder = [];
+% folder = 'mp_update_1D/';
 file_base = '1D_';
 eig = 0.9999439186;
 time = 1.1;
@@ -26,7 +28,7 @@ for i=0:num_tests
         num = num2str(i);
     end
     
-    filename = ['iqs_' file_base num '.csv'];
+    filename = [folder 'iqs_' file_base num '.csv'];
     if plot_dt
         fig = fig+1;
     end
@@ -42,7 +44,7 @@ for i=0:num_tests
 %     console = ['console/console_iqs2_' file_base num '.txt'];
 %     [diff_iqs2(i+1),l_iqs2(i+1),nl_iqs2(i+1)] = count_instance(console,'Solve ','Linear ','Nonlinear ');
     
-    filename = ['iqstmp_' file_base num '.csv'];
+    filename = [folder 'iqstmp_' file_base num '.csv'];
     if plot_dt
         fig = fig+1;
     end
@@ -108,14 +110,15 @@ slope_iqstmp2 = polyfit(log10(dt(3:end-3)),log10(e_iqstmp2(3:end-3)),1);
 e_bf2 = abs(p_bf2-p_baseline)/p_baseline;
 slope_bf2 = polyfit(log10(dt(3:end-3)),log10(e_bf2(3:end-3)),1);
 
-% % % % dt 1st Order
-% fig = fig+1;
-% figure(fig)
-% loglog(dt,e_iqs,'o-',dt,e_iqstmp,'o-',dt,e_bf,'o-')
-% xlabel('\Delta t'); ylabel('Error'); title('1st Order (\Delta t)')
-% legend(['IQS, slope=' num2str(slope_iqs(1))],['IQS P-C, slope=' num2str(slope_iqstmp(1))],['Brute Force, slope=' num2str(slope_bf(1))],'Location','Best')
-% grid on
-% saveas(gcf,['plots/' file_base 'dt1.jpg'])
+% % % dt 1st Order
+fig = fig+1;
+figure(fig)
+% hold on
+loglog(dt,e_iqs,'o-',dt,e_iqstmp,'o-',dt,e_bf,'o-')
+xlabel('\Delta t'); ylabel('Error'); title('1st Order (\Delta t)')
+legend(['IQS, slope=' num2str(slope_iqs(1))],['IQS P-C, slope=' num2str(slope_iqstmp(1))],['Brute Force, slope=' num2str(slope_bf(1))],'Location','Best')
+grid on
+saveas(gcf,['plots/' file_base 'dt1.jpg'])
 % 
 % % % % dt 2nd Order
 % fig = fig+1;
@@ -126,15 +129,15 @@ slope_bf2 = polyfit(log10(dt(3:end-3)),log10(e_bf2(3:end-3)),1);
 % grid on
 % saveas(gcf,['plots/' file_base 'dt2.jpg'])
 
-% % % dt both Order
-fig = fig+1;
-figure(fig)
-loglog(dt,e_iqs,'ro-',dt,e_iqstmp,'bo-',dt,e_bf,'ko-',dt,e_iqs2,'r.-',dt,e_iqstmp2,'b.-',dt,e_bf2,'k.-')
-xlabel('\Delta t'); ylabel('Error'); title('Error vs. \Delta t')
-legend(['IQS IE, slope=' num2str(slope_iqs(1))],['IQS P-C IE, slope=' num2str(slope_iqstmp(1))],['Brute Force IE, slope=' num2str(slope_bf(1))],...
-        ['IQS BDF2, slope=' num2str(slope_iqs2(1))],['IQS P-C BDF2, slope=' num2str(slope_iqstmp2(1))],['Brute Force BDF2, slope=' num2str(slope_bf2(1))],'Location','Best')
-grid on
-saveas(gcf,['plots/' file_base 'dt.jpg'])
+% % % % dt both Order
+% fig = fig+1;
+% figure(fig)
+% loglog(dt,e_iqs,'ro-',dt,e_iqstmp,'bo-',dt,e_bf,'ko-',dt,e_iqs2,'r.-',dt,e_iqstmp2,'b.-',dt,e_bf2,'k.-')
+% xlabel('\Delta t'); ylabel('Error'); title('Error vs. \Delta t')
+% legend(['IQS IE, slope=' num2str(slope_iqs(1))],['IQS P-C IE, slope=' num2str(slope_iqstmp(1))],['Brute Force IE, slope=' num2str(slope_bf(1))],...
+%         ['IQS BDF2, slope=' num2str(slope_iqs2(1))],['IQS P-C BDF2, slope=' num2str(slope_iqstmp2(1))],['Brute Force BDF2, slope=' num2str(slope_bf2(1))],'Location','Best')
+% grid on
+% saveas(gcf,['plots/' file_base 'dt.jpg'])
 
 % % % % Diff 1st Order
 % fig = fig+1;
@@ -173,13 +176,13 @@ saveas(gcf,['plots/' file_base 'dt.jpg'])
 % saveas(gcf,['plots/' file_base 'lin2.jpg'])
 
 % % % Linear Both Order
-fig = fig+1;
-figure(fig)
-loglog(l_iqs*fac,e_iqs,'ro-',l_iqstmp*fac,e_iqstmp,'bo-',l_bf*fac,e_bf,'ko-',l_iqs2(1:end-2)*fac,e_iqs2(1:end-2),'r.-',l_iqstmp2(1:end-2)*fac,e_iqstmp2(1:end-2),'b.-',l_bf2(1:end-2)*fac,e_bf2(1:end-2),'k.-')
-xlabel('# Linear Iterations'); ylabel('Error'); title('Error vs. # Linear Iterations')
-legend('IQS IE','IQS P-C IE','Brute force IE','IQS BDF2','IQS P-C BDF2','Brute force BDF2','Location','Best')
-grid on
-saveas(gcf,['plots/' file_base 'lin.jpg'])
+% fig = fig+1;
+% figure(fig)
+% loglog(l_iqs*fac,e_iqs,'ro-',l_iqstmp*fac,e_iqstmp,'bo-',l_bf*fac,e_bf,'ko-',l_iqs2(1:end-2)*fac,e_iqs2(1:end-2),'r.-',l_iqstmp2(1:end-2)*fac,e_iqstmp2(1:end-2),'b.-',l_bf2(1:end-2)*fac,e_bf2(1:end-2),'k.-')
+% xlabel('# Linear Iterations'); ylabel('Error'); title('Error vs. # Linear Iterations')
+% legend('IQS IE','IQS P-C IE','Brute force IE','IQS BDF2','IQS P-C BDF2','Brute force BDF2','Location','Best')
+% grid on
+% saveas(gcf,['plots/' file_base 'lin.jpg'])
 
 % % % % Nonlinear 1st Order
 % fig = fig+1;

@@ -3,26 +3,31 @@ function [v,dt] = csv_reader_LRA(filename,eig,time,fig,type,plot_fig)
 M = csvread(filename,1,0);
 
 t = M(1:end,1);
-t = [0 ; t];
+% t = [0 ; t];
 dt = t(3)-t(2);
 
 T = M(1:end,2);
 switch type
     case 1
-        P = M(1:end,3) ;%.* M(1:end,2) / eig;
+        P = M(1:end,end) .* M(1:end,2) / eig;
+        T = M(1:end,3);
         fig_name = ['IQS, dt = ' num2str(dt,'%g')];
-        sym = 'rs-'; 
+        sym = 's-'; 
     case 2
         P = M(1:end,3) / eig;
         fig_name = ['IQS P-C, dt = ' num2str(dt,'%g')];
-        sym = 'bd-';
-    otherwise
+        sym = 'd-';
+    case 3
         P = M(1:end,3) / eig;
         fig_name = ['Brute Force, dt = ' num2str(dt,'%g')];
-        sym = 'ko-';
+        sym = 'o-';
+    case 4
+        P = M(1:end,3) / eig;
+        fig_name = 'Baseline';
+        sym = 'k-';
 end
-P = [1e-6 ; P];
-T = [300 ; T];
+P(1) = 1e-6;
+T(1) = 300;
 
 if plot_fig
     figure(fig)
@@ -91,7 +96,7 @@ end
 % end
 
 for i=1:length(t)
-    if abs(time-t(i))<(dt/4)
+    if abs(time-t(i))<(dt/10)
         v = P(i);
 %         v(2) = T(i);
     end
