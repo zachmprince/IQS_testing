@@ -1,0 +1,57 @@
+
+[MultiApps]
+  [./initial_solve]
+    type = FullSolveMultiApp
+    execute_on = initial
+    input_files = LMW_initial.i
+  [../]
+[]
+
+[Transfers]
+  [./copy_solution]
+    type = TransportSystemVariableTransfer
+    direction = from_multiapp
+    multi_app = initial_solve
+    execute_on = initial
+    from_transport_system = diff
+    to_transport_system = diff
+  [../]
+[]
+
+[Postprocessors]
+  [./unscaled_power]
+    type = ElementIntegralVariablePostprocessor
+    execute_on = 'initial timestep_end'
+    variable = fission_source
+    outputs = none
+  [../]
+  [./power]
+    type = ScalePostprocessor
+    execute_on = 'initial timestep_end'
+    value = unscaled_power
+    scaling_factor = 150
+  [../]
+[]
+
+[Executioner]
+  type = Transient
+
+  start_time = 0
+  end_time = 60
+  dt = 1.0
+
+  l_tol = 1e-2
+  nl_max_its = 200
+  nl_rel_tol = 1e-6
+  nl_abs_tol = 1e-8
+
+  petsc_options_iname = '-pc_type -pc_hypre_type -ksp_gmres_restart'
+  petsc_options_value = 'hypre boomeramg 100'
+
+  timestep_tolerance = 1e-12
+[]
+
+[Outputs]
+  exodus = false
+  csv = true
+[]

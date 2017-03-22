@@ -1,0 +1,18 @@
+
+[TransportSystems]
+ particle = neutron
+ equation_type = eigenvalue
+
+ G = 2
+
+ DirichletBoundary = 'top right front back'
+ ReflectingBoundary = 'left bottom'
+
+ [./diff]
+  scheme = CFEM-Diffusion
+  n_delay_groups = 6
+  family = LAGRANGE
+  order = FIRST
+  fission_source_as_material = false
+ [../]
+[]

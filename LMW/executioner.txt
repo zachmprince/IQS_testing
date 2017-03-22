@@ -1,0 +1,27 @@
+[Executioner]
+  type = NonlinearEigen
+
+  #Preconditioned JFNK (default)
+  solve_type = 'PJFNK'
+  petsc_options_iname = '-pc_type -pc_hypre_type -ksp_gmres_restart '
+  petsc_options_value = 'hypre boomeramg 100'
+
+  free_power_iterations = 15
+  source_abs_tol = 1e-10
+
+# we do not normalize to power due to numerical issues
+# 1e-6 * volume
+#  power = 0.01755
+[]
+
+[Outputs]
+  exodus = true
+[]
+
+[Postprocessors]
+  [./power]
+   type = ElementIntegralVariablePostprocessor
+   variable = fission_source
+   execute_on = 'initial timestep_end'
+  [../]
+[]

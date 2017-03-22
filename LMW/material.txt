@@ -1,0 +1,856 @@
+[GlobalParams]
+  neutron_speed = '12500000 250000'
+[]
+
+[Materials]
+ [./reflector]
+  type = ConstantNeutronicsMaterial
+  block = 101
+  diffusion_coef = '1.634227 0.264002'
+  sigma_r = '0.030257503 0.04936351'
+  sigma_t = '0.2039700319070321 1.262616697348252'
+  sigma_s = '0.1737125289070321 0
+             0.02759693 1.213253187348252'
+  fissile = false
+ [../]
+ [./fuel2]
+  type = ConstantNeutronicsMaterial
+  block = 102
+  diffusion_coef = '1.425611 0.350574'
+  sigma_r = '0.02817031 0.09925634'
+  sigma_t = '0.2338178741138595 0.9508216049488363'
+  sigma_s = '0.2056475641138595 0
+             0.01717768 0.8515652649488363'
+  fissile = true
+  nu_sigma_f = '0.007503284 0.1378004'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel1]
+  type = ConstantNeutronicsMaterial
+  block = 103
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = '0.02795756 0.08766217'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = '0.2061391392599501 0
+             0.0175555 0.8478632865831991'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_201]
+  type = FunctionNeutronicsMaterial
+  block = 201
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_201 removal2_201'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_201 0
+            0.0175555 scat2_201'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_202]
+  type = FunctionNeutronicsMaterial
+  block = 202
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_202 removal2_202'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_202 0
+            0.0175555 scat2_202'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_203]
+  type = FunctionNeutronicsMaterial
+  block = 203
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_203 removal2_203'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_203 0
+            0.0175555 scat2_203'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_204]
+  type = FunctionNeutronicsMaterial
+  block = 204
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_204 removal2_204'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_204 0
+            0.0175555 scat2_204'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_205]
+  type = FunctionNeutronicsMaterial
+  block = 205
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_205 removal2_205'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_205 0
+            0.0175555 scat2_205'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_206]
+  type = FunctionNeutronicsMaterial
+  block = 206
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_206 removal2_206'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_206 0
+            0.0175555 scat2_206'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_207]
+  type = FunctionNeutronicsMaterial
+  block = 207
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_207 removal2_207'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_207 0
+            0.0175555 scat2_207'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_208]
+  type = FunctionNeutronicsMaterial
+  block = 208
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_208 removal2_208'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_208 0
+            0.0175555 scat2_208'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_209]
+  type = FunctionNeutronicsMaterial
+  block = 209
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_209 removal2_209'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_209 0
+            0.0175555 scat2_209'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_210]
+  type = FunctionNeutronicsMaterial
+  block = 210
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_210 removal2_210'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_210 0
+            0.0175555 scat2_210'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_211]
+  type = FunctionNeutronicsMaterial
+  block = 211
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_211 removal2_211'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_211 0
+            0.0175555 scat2_211'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_212]
+  type = FunctionNeutronicsMaterial
+  block = 212
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_212 removal2_212'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_212 0
+            0.0175555 scat2_212'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_213]
+  type = FunctionNeutronicsMaterial
+  block = 213
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_213 removal2_213'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_213 0
+            0.0175555 scat2_213'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_214]
+  type = FunctionNeutronicsMaterial
+  block = 214
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_214 removal2_214'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_214 0
+            0.0175555 scat2_214'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_215]
+  type = FunctionNeutronicsMaterial
+  block = 215
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_215 removal2_215'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_215 0
+            0.0175555 scat2_215'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_216]
+  type = FunctionNeutronicsMaterial
+  block = 216
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_216 removal2_216'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_216 0
+            0.0175555 scat2_216'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_301]
+  type = FunctionNeutronicsMaterial
+  block = 301
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_301 removal2_301'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_301 0
+            0.0175555 scat2_301'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_302]
+  type = FunctionNeutronicsMaterial
+  block = 302
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_302 removal2_302'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_302 0
+            0.0175555 scat2_302'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_303]
+  type = FunctionNeutronicsMaterial
+  block = 303
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_303 removal2_303'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_303 0
+            0.0175555 scat2_303'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_304]
+  type = FunctionNeutronicsMaterial
+  block = 304
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_304 removal2_304'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_304 0
+            0.0175555 scat2_304'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_305]
+  type = FunctionNeutronicsMaterial
+  block = 305
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_305 removal2_305'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_305 0
+            0.0175555 scat2_305'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_306]
+  type = FunctionNeutronicsMaterial
+  block = 306
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_306 removal2_306'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_306 0
+            0.0175555 scat2_306'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_307]
+  type = FunctionNeutronicsMaterial
+  block = 307
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_307 removal2_307'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_307 0
+            0.0175555 scat2_307'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_308]
+  type = FunctionNeutronicsMaterial
+  block = 308
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_308 removal2_308'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_308 0
+            0.0175555 scat2_308'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_309]
+  type = FunctionNeutronicsMaterial
+  block = 309
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_309 removal2_309'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_309 0
+            0.0175555 scat2_309'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_310]
+  type = FunctionNeutronicsMaterial
+  block = 310
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_310 removal2_310'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_310 0
+            0.0175555 scat2_310'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_311]
+  type = FunctionNeutronicsMaterial
+  block = 311
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_311 removal2_311'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_311 0
+            0.0175555 scat2_311'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_312]
+  type = FunctionNeutronicsMaterial
+  block = 312
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_312 removal2_312'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_312 0
+            0.0175555 scat2_312'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_313]
+  type = FunctionNeutronicsMaterial
+  block = 313
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_313 removal2_313'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_313 0
+            0.0175555 scat2_313'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_314]
+  type = FunctionNeutronicsMaterial
+  block = 314
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_314 removal2_314'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_314 0
+            0.0175555 scat2_314'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_315]
+  type = FunctionNeutronicsMaterial
+  block = 315
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_315 removal2_315'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_315 0
+            0.0175555 scat2_315'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_316]
+  type = FunctionNeutronicsMaterial
+  block = 316
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_316 removal2_316'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_316 0
+            0.0175555 scat2_316'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_317]
+  type = FunctionNeutronicsMaterial
+  block = 317
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_317 removal2_317'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_317 0
+            0.0175555 scat2_317'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_318]
+  type = FunctionNeutronicsMaterial
+  block = 318
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_318 removal2_318'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_318 0
+            0.0175555 scat2_318'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_319]
+  type = FunctionNeutronicsMaterial
+  block = 319
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_319 removal2_319'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_319 0
+            0.0175555 scat2_319'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_320]
+  type = FunctionNeutronicsMaterial
+  block = 320
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_320 removal2_320'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_320 0
+            0.0175555 scat2_320'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_321]
+  type = FunctionNeutronicsMaterial
+  block = 321
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_321 removal2_321'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_321 0
+            0.0175555 scat2_321'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_322]
+  type = FunctionNeutronicsMaterial
+  block = 322
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_322 removal2_322'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_322 0
+            0.0175555 scat2_322'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_323]
+  type = FunctionNeutronicsMaterial
+  block = 323
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_323 removal2_323'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_323 0
+            0.0175555 scat2_323'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+ [./fuel_324]
+  type = FunctionNeutronicsMaterial
+  block = 324
+  diffusion_coef = '1.423913 0.356306'
+  sigma_r = 'removal1_324 removal2_324'
+  sigma_t = '0.2340966992599501 0.9355254565831991'
+  sigma_s = 'scat1_324 0
+            0.0175555 scat2_324'
+  fissile = true
+  nu_sigma_f = '0.006477691 0.1127328'
+  chi = '1 0'
+  delay_fraction = '0.000247 0.0013845 0.001222 0.0026455 0.0008319999999999999 0.000169'
+  decay_constant = '0.0127 0.0317 0.115 0.311 1.4 3.87'
+  delay_spectrum = '1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0
+                     1 0'
+ [../]
+[]
